@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: ee4ba6a1ab628ec4c985ab0a4031c44a
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass Sensor extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    OnTriggerEnter(other) {\r\n        console.log(\"on\");\r\n        if
+    (other.gameObject.tag == \"Player\") {\r\n            this.StartCoroutine(this.OpenDoor());\r\n       
+    }\r\n    }\r\n    *OpenDoor() {\r\n        this.anim.SetFloat(\"asdf\", 1);\r\n       
+    yield new UnityEngine_1.WaitForSeconds(2);\r\n        this.anim.SetFloat(\"asdf\",
+    -1);\r\n    }\r\n}\r\nexports.default = Sensor;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2Vuc29yLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiU2Vuc29yLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQWlFO0FBQ2pFLGlEQUFxRDtBQUVyRCxNQUFxQixNQUFPLFNBQVEscUNBQXFCO0lBSXJELGNBQWMsQ0FBQyxLQUFlO1FBQzFCLE9BQU8sQ0FBQyxHQUFHLENBQUMsSUFBSSxDQUFDLENBQUM7UUFDbEIsSUFBSSxLQUFLLENBQUMsVUFBVSxDQUFDLEdBQUcsSUFBSSxRQUFRLEVBQUU7WUFDbEMsSUFBSSxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsUUFBUSxFQUFFLENBQUMsQ0FBQztTQUN4QztJQUNMLENBQUM7SUFFRCxDQUFDLFFBQVE7UUFDTCxJQUFJLENBQUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxNQUFNLEVBQUUsQ0FBQyxDQUFDLENBQUM7UUFDOUIsTUFBTSxJQUFJLDRCQUFjLENBQUMsQ0FBQyxDQUFDLENBQUM7UUFDNUIsSUFBSSxDQUFDLElBQUksQ0FBQyxRQUFRLENBQUMsTUFBTSxFQUFFLENBQUMsQ0FBQyxDQUFDLENBQUM7SUFDbkMsQ0FBQztDQUVKO0FBakJELHlCQWlCQyJ9","assetPath":"Assets/ZepetoScripts/Sensor.ts","manifest":{"properties":[{"assembly":"UnityEngine.AnimationModule","name":"anim","type":"UnityEngine.Animator","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Sensor","description":""},"isCompiled":true}'
+  typescriptHash: bd1c4c618e866d659c97fdb13fa36361

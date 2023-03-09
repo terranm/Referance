@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 708a58a4bd3b67d4597ad3b2ba2d4870
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    PlayerCtrl_1 = require(\"./PlayerCtrl\");\r\nclass Teleport extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    OnTriggerEnter(coll) {\r\n        if (coll.gameObject.tag === \"Player\")
+    {\r\n            coll.gameObject.transform.GetComponentInChildren($typeof(PlayerCtrl_1.default)).Teleport();\r\n       
+    }\r\n    }\r\n}\r\nexports.default = Teleport;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGVsZXBvcnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUZWxlcG9ydC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLGlEQUFxRDtBQUNyRCw2Q0FBc0M7QUFFdEMsTUFBcUIsUUFBUyxTQUFRLHFDQUFxQjtJQUN2RCxjQUFjLENBQUMsSUFBZTtRQUMxQixJQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsR0FBRyxLQUFLLFFBQVEsRUFBQztZQUNoQyxJQUFJLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxzQkFBc0IsU0FBQyxvQkFBVSxHQUFJLFFBQVEsRUFBRSxDQUFDO1NBQzdFO0lBQ0wsQ0FBQztDQUNKO0FBTkQsMkJBTUMifQ==","assetPath":"Assets/ZepetoScripts/preset/Teleport.ts","manifest":{"properties":[],"name":"Teleport","description":""},"isCompiled":true}'
+  typescriptHash: 88f0dbb651064c04ff678e4130801f01

@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: 635d22d28fb5fb04dbecb4b89ec4f540
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst Lip_1 = require(\"./Lip\");\r\nclass
+    Securitybox extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n   
+    }\r\n    OnTriggerEnter(other) {\r\n        if (other.gameObject.tag == \"Cosme\")
+    {\r\n            let random = UnityEngine_1.Random.Range(0.176, 0.31);\r\n           
+    let material = other.gameObject.GetComponent($typeof(Lip_1.default)).material;\r\n           
+    material.color = new UnityEngine_1.Color(1, 0.1745, random, 1);\r\n        }\r\n   
+    }\r\n}\r\nexports.default = Securitybox;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2VjdXJpdHlib3guanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJTZWN1cml0eWJveC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUE2RDtBQUM3RCxpREFBcUQ7QUFDckQsK0JBQXdCO0FBRXhCLE1BQXFCLFdBQVksU0FBUSxxQ0FBcUI7SUFFMUQsS0FBSztJQUVMLENBQUM7SUFFRCxjQUFjLENBQUMsS0FBZTtRQUUxQixJQUFJLEtBQUssQ0FBQyxVQUFVLENBQUMsR0FBRyxJQUFJLE9BQU8sRUFDbkM7WUFDSSxJQUFJLE1BQU0sR0FBRyxvQkFBTSxDQUFDLEtBQUssQ0FBQyxLQUFLLEVBQUUsSUFBSSxDQUFDLENBQUM7WUFDdkMsSUFBSSxRQUFRLEdBQUcsS0FBSyxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsYUFBRyxHQUFJLFFBQVEsQ0FBQztZQUM3RCxRQUFRLENBQUMsS0FBSyxHQUFHLElBQUksbUJBQUssQ0FBQyxDQUFDLEVBQUUsTUFBTSxFQUFFLE1BQU0sRUFBRSxDQUFDLENBQUMsQ0FBQztTQUNwRDtJQUNMLENBQUM7Q0FFSjtBQWhCRCw4QkFnQkMifQ==","assetPath":"Assets/ZepetoScripts/Securitybox.ts","manifest":{"properties":[],"name":"Securitybox","description":""},"isCompiled":true}'
+  typescriptHash: 2c43c24c1847cb5300bc9bb6069267c1

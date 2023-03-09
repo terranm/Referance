@@ -1,0 +1,39 @@
+fileFormatVersion: 2
+guid: b7451930a39960b47aa7ae7e0636dfa7
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass PlayerCtrl extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.layerMask_Player
+    = 1 << UnityEngine_1.LayerMask.NameToLayer(\"Player\");\r\n    }\r\n    Start()
+    {\r\n        this.StartCoroutine(this.FindCharacter());\r\n    }\r\n    *FindCharacter()
+    {\r\n        while (true) {\r\n            if (this.multiplay.Room != null &&
+    this.multiplay.Room.IsConnected) {\r\n                if (this.transform.parent
+    != null) {\r\n                    this.transform.parent.gameObject.tag = \"Player\";\r\n                   
+    this.transform.parent.gameObject.layer = 23;\r\n                    let capCol
+    = this.transform.parent.gameObject.AddComponent($typeof(UnityEngine_1.CapsuleCollider));\r\n                   
+    capCol.center = new UnityEngine_1.Vector3(0, 0.6, 0);\r\n                   
+    capCol.radius = 0.23;\r\n                    capCol.height = 1.2;\r\n                   
+    capCol.isTrigger = true;\r\n                    capCol.enabled = false;\r\n                   
+    let rbod = this.transform.parent.gameObject.AddComponent($typeof(UnityEngine_1.Rigidbody));\r\n                   
+    rbod.useGravity = false;\r\n                    rbod.isKinematic = true;\r\n                   
+    return;\r\n                }\r\n            }\r\n            yield null;\r\n       
+    }\r\n    }\r\n}\r\nexports.default = PlayerCtrl;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUGxheWVyQ3RybC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlBsYXllckN0cmwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBNEU7QUFDNUUsaURBQXFEO0FBR3JELE1BQXFCLFVBQVcsU0FBUSxxQ0FBcUI7SUFBN0Q7O1FBR0kscUJBQWdCLEdBQVcsQ0FBQyxJQUFJLHVCQUFTLENBQUMsV0FBVyxDQUFDLFFBQVEsQ0FBQyxDQUFDO0lBNkJwRSxDQUFDO0lBNUJHLEtBQUs7UUFDRCxJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxhQUFhLEVBQUUsQ0FBQyxDQUFDO0lBRTlDLENBQUM7SUFFRCxDQUFDLGFBQWE7UUFDVixPQUFPLElBQUksRUFBRTtZQUVULElBQUksSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLElBQUksSUFBSSxJQUFJLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLFdBQVcsRUFBRztnQkFDakUsSUFBSSxJQUFJLENBQUMsU0FBUyxDQUFDLE1BQU0sSUFBSSxJQUFJLEVBQUU7b0JBQy9CLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLFVBQVUsQ0FBQyxHQUFHLEdBQUcsUUFBUSxDQUFDO29CQUNoRCxJQUFJLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxVQUFVLENBQUMsS0FBSyxHQUFHLEVBQUUsQ0FBQztvQkFDNUMsSUFBSSxNQUFNLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsVUFBVSxDQUFDLFlBQVksU0FBQyw2QkFBZSxFQUFHLENBQUM7b0JBQzlFLE1BQU0sQ0FBQyxNQUFNLEdBQUcsSUFBSSxxQkFBTyxDQUFDLENBQUMsRUFBRSxHQUFHLEVBQUUsQ0FBQyxDQUFDLENBQUM7b0JBQ3ZDLE1BQU0sQ0FBQyxNQUFNLEdBQUcsSUFBSSxDQUFDO29CQUNyQixNQUFNLENBQUMsTUFBTSxHQUFHLEdBQUcsQ0FBQztvQkFDcEIsTUFBTSxDQUFDLFNBQVMsR0FBRyxJQUFJLENBQUM7b0JBQ3hCLE1BQU0sQ0FBQyxPQUFPLEdBQUcsS0FBSyxDQUFDO29CQUN2QixJQUFJLElBQUksR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLHVCQUFTLEVBQUcsQ0FBQztvQkFDdEUsSUFBSSxDQUFDLFVBQVUsR0FBRyxLQUFLLENBQUM7b0JBQ3hCLElBQUksQ0FBQyxXQUFXLEdBQUcsSUFBSSxDQUFDO29CQUN4QixPQUFPO2lCQUNWO2FBQ0o7WUFDRCxNQUFNLElBQUksQ0FBQztTQUNkO0lBQ0wsQ0FBQztDQUVKO0FBaENELDZCQWdDQyJ9","assetPath":"Assets/ZepetoScripts/Plyer/PlayerCtrl.ts","manifest":{"properties":[{"assembly":"ZEPETO.World","name":"multiplay","type":"ZEPETO.World.ZepetoWorldMultiplay","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"layerMask_Player","type":"System.Single","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"PlayerCtrl","description":""},"isCompiled":true}'
+  typescriptHash: 6e5484af9052a159f5bbd8d573c71942

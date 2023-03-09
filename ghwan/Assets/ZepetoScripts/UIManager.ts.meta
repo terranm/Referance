@@ -1,0 +1,144 @@
+fileFormatVersion: 2
+guid: b87e6e4b7ed78214b9d7b21c46700c3d
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"// import { GameObject, Resources, Sprite, Transform,
+    WaitForSeconds } from ''UnityEngine'';\r\n// import { Button, Image } from ''UnityEngine.UI'';\r\n//
+    import { Room } from ''ZEPETO.Multiplay'';\r\n// import GameManager from ''./GameManager'';\r\n//
+    export default class UIManager{\r\n//     private sprites: Map<string, Sprite>
+    = new Map<string, Sprite>();\r\n//     private spritesBtn: Map<string, Sprite>
+    = new Map<string, Sprite>();\r\n//     private popup:Map<string, GameObject>
+    = new Map<string, GameObject>();\r\n//     private room:Room;\r\n//     private
+    gameManager:GameManager;\r\n//     private boolObj:GameObject = null;\r\n//    
+    private questUI:GameObject[];\r\n//     private cfUI:GameObject[];\r\n//    
+    private iemtUI:GameObject;\r\n//     public canvasObj:GameObject;\r\n//     private
+    cfImags: Sprite[];\r\n//     private questImags:Sprite[];\r\n//     public questUICloseBtn:Button;\r\n//    
+    public colseBtn:Button;\r\n//     private itemColseBtn:Button;\r\n//     private
+    questBtn:Button;\r\n//     private glassesBtn:Button;\r\n//     private glassesOffBtn:Button;\r\n//    
+    private balloonBtn:Button;\r\n//     private balloonOffBtn:Button;\r\n//    
+    private wingBtn:Button;\r\n//     private wingOffBtn:Button;\r\n//     public
+    Init() {\r\n//         this.gameManager = GameManager.GetInstance;\r\n//        
+    this.canvasObj = GameObject.Find(\"Canvas_UI\").gameObject;\r\n//         let
+    questUI  = this.canvasObj.transform.GetChild(8).GetComponentsInChildren<Transform>();\r\n//        
+    let cfUI = this.canvasObj.transform.GetChild(7).GetComponentsInChildren<Transform>();\r\n//        
+    for(let i = 1; i < questUI.length; i++){\r\n//             if(i % 2 == 1){\r\n//                
+    this.popup.set(questUI[i].name, questUI[i].gameObject);\r\n//                
+    questUI[i].gameObject.SetActive(false);\r\n//             }\r\n//            
+    else{\r\n//                 let btn = questUI[i].transform.GetComponent<Button>();\r\n//                
+    if(questUI[i].transform.parent.name == \"5\" || questUI[i].transform.parent.name
+    == \"11\" || questUI[i].transform.parent.name == \"17\"){\r\n//                    
+    btn.onClick.AddListener(()=>{\r\n//                         this.ClosePopui(questUI[i].transform);\r\n//                        
+    if(GameManager.player.quest == 5){\r\n//                             this.gameManager.WearGlasses();\r\n//                            
+    //GameManager.UI().ShowUI(\"6\", 1);\r\n//                             this.ShowUI(\"6\",1);\r\n//                            
+    this.gameManager.DestroyHandObj();\r\n//                             this.GetItem(\"glasses\");\r\n//                        
+    }\r\n//                         else if(GameManager.player.quest == 11){\r\n//                            
+    this.gameManager.WearBalloon();\r\n//                             //GameManager.UI().ShowUI(\"12\",
+    1);\r\n//                             this.ShowUI(\"12\", 1);\r\n//                            
+    this.gameManager.DestroyHandObj();\r\n//                             this.GetItem(\"balloon\");\r\n//                        
+    }\r\n//                         else if(GameManager.player.quest == 17){\r\n//                            
+    this.gameManager.WearWing();\r\n//                             //GameManager.UI.ShowUI(\"18\",
+    1);\r\n//                             this.ShowUI(\"18\",1);\r\n//                            
+    this.gameManager.DestroyHandObj();\r\n//                             this.GetItem(\"wing\");\r\n//                        
+    }\r\n//                     });\r\n//                 }else{\r\n//                    
+    btn.onClick.AddListener(()=>{\r\n//                         this.ClosePopui(questUI[i].transform);\r\n//                    
+    });\r\n//                 }\r\n//             }\r\n//         }\r\n//        
+    for(let i = 1; i < cfUI.length; i++){\r\n//             if(i % 2 == 1){\r\n//                
+    this.popup.set(cfUI[i].name, cfUI[i].gameObject);\r\n//                 cfUI[i].gameObject.SetActive(false);\r\n//            
+    }\r\n//             else{\r\n//                 let btn = cfUI[i].transform.GetComponent<Button>();\r\n//                
+    btn.onClick.AddListener(()=>{\r\n//                     this.ClosePopui(cfUI[i].transform);\r\n//                
+    });\r\n//             }\r\n//         }\r\n//         this.questBtn = this.canvasObj.transform.GetChild(0).GetComponent<Button>();\r\n//        
+    this.glassesBtn = this.canvasObj.transform.GetChild(5).GetComponent<Button>();\r\n//        
+    this.balloonBtn = this.canvasObj.transform.GetChild(3).GetComponent<Button>();\r\n//        
+    this.wingBtn = this.canvasObj.transform.GetChild(1).GetComponent<Button>();\r\n//        
+    this.glassesOffBtn= this.canvasObj.transform.GetChild(6).GetComponent<Button>();\r\n//        
+    this.balloonOffBtn= this.canvasObj.transform.GetChild(4).GetComponent<Button>();\r\n//        
+    this.wingOffBtn= this.canvasObj.transform.GetChild(2).GetComponent<Button>();\r\n//        
+    this.questBtn.onClick.AddListener(()=>{\r\n//             let obj = this.popup.get(GameManager.player.quest.toString());\r\n//            
+    obj.SetActive(true);\r\n//         });\r\n//         this.glassesBtn.onClick.AddListener(()=>{\r\n//            
+    this.Glasses();\r\n//         });\r\n//         this.glassesOffBtn.onClick.AddListener(()=>{\r\n//            
+    this.Glasses();\r\n//         });\r\n//         this.balloonBtn.onClick.AddListener(()=>{\r\n//            
+    this.Balloon();\r\n//         });\r\n//         this.balloonOffBtn.onClick.AddListener(()=>{\r\n//            
+    this.Balloon();\r\n//         });\r\n//         this.wingBtn.onClick.AddListener(()=>{\r\n//            
+    this.Wing();\r\n//         });\r\n//         this.wingOffBtn.onClick.AddListener(()=>{\r\n//            
+    this.Wing();\r\n//         });\r\n//        this.glassesOffBtn.gameObject.SetActive(false);\r\n//       
+    this.balloonOffBtn.gameObject.SetActive(false);\r\n//        this.wingOffBtn.gameObject.SetActive(false);\r\n//    
+    }\r\n//     public RoomInit(room:Room){\r\n//         this.room = room;    \r\n//    
+    }\r\n//     // public StartUI(){\r\n//     //     if(this.questUI.activeSelf
+    == false){\r\n//     //         this.questUI.SetActive(true);\r\n//     //    
+    }\r\n//     // }\r\n//     public ShowUI(name:string, level:number = null, delay:number
+    = null){\r\n//         // let image = this.sprites.get(name);\r\n//         //
+    if(level == null){\r\n//         //     let _cfui = this.cfUI.GetComponent<Image>();\r\n//        
+    //     _cfui.sprite = image;\r\n//         //     if(this.cfUI.activeSelf ==
+    false){\r\n//         //         this.cfUI.SetActive(true);\r\n//         //    
+    }\r\n//         // }\r\n//         // else if(name == \"5\" || name == \"11\"
+    || name == \"17\"){\r\n//         //     let _iemtUI = this.iemtUI.GetComponent<Image>();\r\n//        
+    //     _iemtUI.sprite = image;\r\n//         //     if(this.iemtUI.activeSelf
+    == false)\r\n//         //     {\r\n//         //         this.iemtUI.SetActive(true);\r\n//        
+    //     }\r\n//         //     let _itemCloseBtn = this.itemColseBtn.gameObject.GetComponent<Image>();\r\n//        
+    //     _itemCloseBtn.sprite = this.sprites.get(name+\"_\");\r\n//         //    
+    GameManager.Room().Send(\"QuestUpdate\", parseInt(image.name));\r\n//        
+    // }\r\n//         // else{\r\n//         //     let _questUi = this.questUI.GetComponent<Image>();\r\n//        
+    //     this.room.Send(\"questUi\", image);\r\n//         //     console.log(image);\r\n//        
+    //     _questUi.sprite = image;\r\n//         //     // if(this.questUI.activeSelf
+    == false){\r\n//         //     //     this.room.Send(\"Questui\", this.questUI.gameObject.activeSelf);\r\n//        
+    //     //     this.questUI.SetActive(true);\r\n//         //     //     this.room.Send(\"Questui\",
+    this.questUI.gameObject.activeSelf);\r\n//         //     // }\r\n//        
+    //     this.questUI.SetActive(true);\r\n//         //     this.room.Send(\"Questui\",
+    this.questUI.gameObject.activeSelf);\r\n//         //     GameManager.Room().Send(\"QuestUpdate\",
+    parseInt(image.name));\r\n//         // }\r\n//         if(this.boolObj == null
+    || this.boolObj == undefined){\r\n//             this.boolObj = this.popup.get(name);\r\n//        
+    }\r\n//         else{\r\n//             this.boolObj.SetActive(false);\r\n//            
+    this.boolObj = this.popup.get(name);\r\n//         }\r\n//         this.boolObj.SetActive(true);\r\n//        
+    if(level != null && name != \"x\"){\r\n//             GameManager.Room().Send(\"QuestUpdate\",
+    parseInt(name));\r\n//         }\r\n//     }\r\n//     public ClosePopui(tr:Transform){\r\n//        
+    tr.transform.parent.gameObject.SetActive(false);\r\n//     }\r\n//     public
+    GetItem(name:string){\r\n//         if(name == \"glasses\"){\r\n//            
+    this.glassesOffBtn.gameObject.SetActive(true);\r\n//         }\r\n//        
+    else if(name == \"balloon\"){\r\n//             this.balloonOffBtn.gameObject.SetActive(true);\r\n//        
+    }\r\n//         else{\r\n//             this.wingOffBtn.gameObject.SetActive(true);\r\n//        
+    }\r\n//     }\r\n//     Glasses(){\r\n//         if(GameManager.player.quest
+    >= 6){  \r\n//             let glasses = GameManager.GetGlasses();\r\n//            
+    if(glasses == null || glasses.gameObject.activeSelf == false)\r\n//            
+    {\r\n//                 this.gameManager.WearGlasses();\r\n//                
+    this.glassesBtn.gameObject.SetActive(false);\r\n//                 this.glassesOffBtn.gameObject.SetActive(true);\r\n//            
+    }  \r\n//             else{\r\n//                 this.gameManager.TurnOffObj(\"glasses\");\r\n//                
+    this.glassesBtn.gameObject.SetActive(true);\r\n//                 this.glassesOffBtn.gameObject.SetActive(false);\r\n//            
+    }\r\n//         }\r\n//        else{\r\n//             //GameManager.UI().ShowUI(\"x\",
+    1);\r\n//             this.ShowUI(\"x\", 1);\r\n//        }\r\n//     }\r\n//    
+    Balloon(){\r\n//         if(GameManager.player.quest >= 12){\r\n//            
+    let balloon = GameManager.GetBalloon();\r\n//             if(balloon.activeSelf
+    == false)\r\n//             {\r\n//                 this.gameManager.WearBalloon();\r\n//                
+    this.balloonBtn.gameObject.SetActive(false);\r\n//                 this.balloonOffBtn.gameObject.SetActive(true);\r\n//            
+    }\r\n//             else{\r\n//                 this.gameManager.TurnOffObj(\"balloon\");\r\n//                
+    this.balloonBtn.gameObject.SetActive(true);\r\n//                 this.balloonOffBtn.gameObject.SetActive(false);\r\n//            
+    }\r\n//        }\r\n//        else{\r\n//             //GameManager.UI().ShowUI(\"x\",
+    1);\r\n//             this.ShowUI(\"x\",1);\r\n//         }\r\n//     }\r\n//    
+    Wing(){\r\n//         if(GameManager.player.quest >= 18){\r\n//             let
+    wing = GameManager.GetWing();\r\n//             if(wing.activeSelf == false)\r\n//            
+    {\r\n//                 this.gameManager.WearWing();\r\n//                 this.wingBtn.gameObject.SetActive(false);\r\n//                
+    this.wingOffBtn.gameObject.SetActive(true);\r\n//             }\r\n//            
+    else{\r\n//                 this.gameManager.TurnOffObj(\"wing\");\r\n//                
+    this.wingBtn.gameObject.SetActive(true);\r\n//                 this.wingOffBtn.gameObject.SetActive(false);\r\n//            
+    }\r\n//     }\r\n//     else{\r\n//             //GameManager.UI().ShowUI(\"x\",
+    1);\r\n//             this.ShowUI(\"x\",1);\r\n//     }\r\n//     }\r\n//    
+    *Delay(num:string){\r\n//         yield new WaitForSeconds(1);\r\n//        
+    console.log(\"startcour\");\r\n//         this.ShowUI(num, 1);\r\n//     }\r\n//
+    }\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVUlNYW5hZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVUlNYW5hZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDBGQUEwRjtBQUMxRixrREFBa0Q7QUFDbEQsMkNBQTJDO0FBQzNDLDJDQUEyQztBQUUzQyxrQ0FBa0M7QUFFbEMsd0VBQXdFO0FBQ3hFLDJFQUEyRTtBQUMzRSw2RUFBNkU7QUFDN0UseUJBQXlCO0FBQ3pCLHVDQUF1QztBQUV2Qyx5Q0FBeUM7QUFDekMsb0NBQW9DO0FBQ3BDLGlDQUFpQztBQUNqQyxpQ0FBaUM7QUFDakMsbUNBQW1DO0FBRW5DLGlDQUFpQztBQUNqQyxtQ0FBbUM7QUFHbkMscUNBQXFDO0FBQ3JDLDhCQUE4QjtBQUM5QixtQ0FBbUM7QUFDbkMsK0JBQStCO0FBQy9CLGlDQUFpQztBQUNqQyxvQ0FBb0M7QUFDcEMsaUNBQWlDO0FBQ2pDLG9DQUFvQztBQUNwQyw4QkFBOEI7QUFDOUIsaUNBQWlDO0FBRWpDLHNCQUFzQjtBQUN0QixzREFBc0Q7QUFDdEQsb0VBQW9FO0FBQ3BFLG9HQUFvRztBQUNwRyxnR0FBZ0c7QUFFaEcsbURBQW1EO0FBQ25ELDhCQUE4QjtBQUM5QiwwRUFBMEU7QUFDMUUsMERBQTBEO0FBQzFELGdCQUFnQjtBQUNoQixvQkFBb0I7QUFDcEIseUVBQXlFO0FBQ3pFLHVKQUF1SjtBQUN2SixvREFBb0Q7QUFDcEQsaUVBQWlFO0FBQ2pFLDZEQUE2RDtBQUM3RCw4REFBOEQ7QUFDOUQsaUVBQWlFO0FBQ2pFLGtEQUFrRDtBQUNsRCxpRUFBaUU7QUFDakUsdURBQXVEO0FBQ3ZELDRCQUE0QjtBQUM1QixtRUFBbUU7QUFDbkUsOERBQThEO0FBQzlELGtFQUFrRTtBQUNsRSxvREFBb0Q7QUFDcEQsaUVBQWlFO0FBQ2pFLHVEQUF1RDtBQUN2RCw0QkFBNEI7QUFDNUIsbUVBQW1FO0FBQ25FLDJEQUEyRDtBQUMzRCxnRUFBZ0U7QUFDaEUsbURBQW1EO0FBQ25ELGlFQUFpRTtBQUNqRSxv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","assetPath":"Assets/ZepetoScripts/UIManager.ts","manifest":{"properties":[],"name":"UIManager","description":""},"isCompiled":true}'
+  typescriptHash: 6e0ea3a766ad0e1763e5793617efad0c
+  onlyWriteTrigger: 0

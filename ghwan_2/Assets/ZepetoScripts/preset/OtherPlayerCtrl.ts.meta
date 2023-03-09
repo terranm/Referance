@@ -1,0 +1,59 @@
+fileFormatVersion: 2
+guid: 9ab061c7bb239014d8de1cf2e6949065
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    UnityEngine = require(\\\"UnityEngine\\\");\\r\\nconst ZEPETO_Multiplay_Schema_1
+    = require(\\\"ZEPETO.Multiplay.Schema\\\");\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst
+    DataSc_1 = require(\\\"./DataSc\\\");\\r\\nconst Interaction_1 = require(\\\"./Interaction\\\");\\r\\nconst
+    PlayerCtrl_1 = require(\\\"./PlayerCtrl\\\");\\r\\nclass OtherPlayerCtrl extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    Start() {\\r\\n        //this.data
+    = Resources.Load(\\\"ScriptableObject\\\") as ZepetoScriptableObject;\\r\\n       
+    this.anim = this.transform.parent.gameObject.AddComponent($typeof(UnityEngine_1.Animator));\\r\\n       
+    this.anim.runtimeAnimatorController = this.data.get_Item(\\\"anim\\\");\\r\\n       
+    this.anim.avatar = this.data.get_Item(\\\"avatar\\\");\\r\\n        this.anim.enabled
+    = false;\\r\\n    }\\r\\n    //\uACE0\uC815 \uC2DC\uAC04(0.25 \uAC04\uACA9\uC73C\uB85C
+    \uD638\uCD9C)\\r\\n    FixedUpdate() {\\r\\n        if (this.player == null)
+    // \uD50C\uB808\uC774\uC5B4 \uC5C6\uC73C\uBA74 \uBB34\uC2DC\\r\\n           
+    return;\\r\\n        if (!this.player.isRide) {\\r\\n            //\uD50C\uB808\uC774\uC5B4\uAC00
+    \uD0D1\uC2B9\uC0C1\uD0DC\uAC00 \uC544\uB2C8\uBA74 \\r\\n            //\uC560\uB2C8\uBA54\uC774\uC158
+    \uB054\\r\\n            this.anim.enabled = false;\\r\\n            this.anim.SetBool(\\\"isDrive\\\",
+    false);\\r\\n            return;\\r\\n        }\\r\\n        else if (this.player.isRide)
+    {\\r\\n            //\uD50C\uB808\uC774\uC5B4\uAC00 \uD0D1\uC2B9\uC911\uC774\uBA74\\r\\n           
+    //\uBE44\uD589 \uC560\uB2C8\uBA54\uC774\uC158\uC73C\uB85C \uBCC0\uACBD \uD6C4
+    \uC704\uCE58 \uBC0F \uD68C\uC804\uAC12 \uBCC0\uACBD\\r\\n            this.anim.enabled
+    = true;\\r\\n            this.anim.SetBool(\\\"isDrive\\\", true);\\r\\n           
+    let position = this.ParseVector3(this.player.transform.position);\\r\\n           
+    let rotation = UnityEngine_1.Quaternion.Euler(this.ParseVector3(this.player.transform.rotation));\\r\\n           
+    this.transform.parent.transform.position = UnityEngine.Vector3.Lerp(this.transform.parent.transform.position,
+    position, UnityEngine_1.Time.deltaTime * 10);\\r\\n            this.transform.parent.transform.rotation
+    = UnityEngine_1.Quaternion.Slerp(this.transform.parent.transform.rotation, rotation,
+    UnityEngine_1.Time.deltaTime * 10);\\r\\n            //let car:UnityEngine.GameObject
+    = (new Interaction()).CarCreate();\\r\\n            //car.transform.SetParent(this.transform.parent);\\r\\n           
+    if (this.car == null) {\\r\\n                this.car = UnityEngine.GameObject.Instantiate(this.carPrefeb);\\r\\n               
+    this.car.transform.SetPositionAndRotation(this.transform.parent.transform.position,
+    this.transform.parent.transform.rotation);\\r\\n                this.car.transform.Rotate(-90,
+    0, 0);\\r\\n                this.car.transform.Translate(0.27, 0, -0.28);\\r\\n               
+    this.car.transform.SetParent(this.transform.parent);\\r\\n            }\\r\\n       
+    }\\r\\n    }\\r\\n    //schemas\uC758 vector3\uAC12\uC744 UnityEngine Vector3\uB85C
+    \uBCC0\uACBD\\r\\n    ParseVector3(vector3) {\\r\\n        return new UnityEngine.Vector3(vector3.x,
+    vector3.y, vector3.z);\\r\\n    }\\r\\n}\\r\\nexports.default = OtherPlayerCtrl;\\r\\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiT3RoZXJQbGF5ZXJDdHJsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiT3RoZXJQbGF5ZXJDdHJsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXNHO0FBQ3RHLDJDQUEyQztBQUUzQyxxRUFBeUQ7QUFDekQsaURBQTRFO0FBQzVFLHFDQUE4QjtBQUM5QiwrQ0FBd0M7QUFDeEMsNkNBQXNDO0FBRXRDLE1BQXFCLGVBQWdCLFNBQVEscUNBQXFCO0lBUzlELEtBQUs7UUFDRCwyRUFBMkU7UUFDM0UsSUFBSSxDQUFDLElBQUksR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLHNCQUFRLEVBQUcsQ0FBQztRQUN0RSxJQUFJLENBQUMsSUFBSSxDQUFDLHlCQUF5QixHQUFHLElBQUksQ0FBQyxJQUFJLFVBQUMsTUFBTSxDQUE4QixDQUFDO1FBQ3JGLElBQUksQ0FBQyxJQUFJLENBQUMsTUFBTSxHQUFHLElBQUksQ0FBQyxJQUFJLFVBQUMsUUFBUSxDQUFXLENBQUM7UUFDakQsSUFBSSxDQUFDLElBQUksQ0FBQyxPQUFPLEdBQUcsS0FBSyxDQUFDO0lBQzlCLENBQUM7SUFDRCxxQkFBcUI7SUFDckIsV0FBVztRQUNQLElBQUksSUFBSSxDQUFDLE1BQU0sSUFBSSxJQUFJLEVBQUUsY0FBYztZQUNuQyxPQUFPO1FBRVgsSUFBRyxDQUFDLElBQUksQ0FBQyxNQUFNLENBQUMsTUFBTSxFQUFDO1lBQ25CLGtCQUFrQjtZQUNsQixTQUFTO1lBQ1QsSUFBSSxDQUFDLElBQUksQ0FBQyxPQUFPLEdBQUcsS0FBSyxDQUFDO1lBQzFCLElBQUksQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLFNBQVMsRUFBRSxLQUFLLENBQUMsQ0FBQztZQUNwQyxPQUFPO1NBQ1Y7YUFDSSxJQUFHLElBQUksQ0FBQyxNQUFNLENBQUMsTUFBTSxFQUFDO1lBRXZCLGFBQWE7WUFDYiw2QkFBNkI7WUFDN0IsSUFBSSxDQUFDLElBQUksQ0FBQyxPQUFPLEdBQUcsSUFBSSxDQUFDO1lBQ3pCLElBQUksQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLFNBQVMsRUFBRSxJQUFJLENBQUMsQ0FBQztZQUNuQyxJQUFJLFFBQVEsR0FBRyxJQUFJLENBQUMsWUFBWSxDQUFDLElBQUksQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDO1lBQ2pFLElBQUksUUFBUSxHQUFHLHdCQUFVLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxZQUFZLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQztZQUNuRixJQUFJLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLFdBQVcsQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEVBQUUsUUFBUSxFQUFFLGtCQUFJLENBQUMsU0FBUyxHQUFHLEVBQUUsQ0FBQyxDQUFDO1lBQzdJLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEdBQUcsd0JBQVUsQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLFFBQVEsRUFBRSxRQUFRLEVBQUUsa0JBQUksQ0FBQyxTQUFTLEdBQUcsRUFBRSxDQUFDLENBQUM7WUFDckksbUVBQW1FO1lBQ25FLGlEQUFpRDtZQUNqRCxJQUFJLElBQUksQ0FBQyxHQUFHLElBQUksSUFBSSxFQUFDO2dCQUNqQixJQUFJLENBQUMsR0FBRyxHQUFHLFdBQVcsQ0FBQyxVQUFVLENBQUMsV0FBVyxDQUF5QixJQUFJLENBQUMsU0FBUyxDQUFDLENBQUM7Z0JBQ3RGLElBQUksQ0FBQyxHQUFHLENBQUMsU0FBUyxDQUFDLHNCQUFzQixDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEVBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDO2dCQUM3SCxJQUFJLENBQUMsR0FBRyxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsQ0FBQyxFQUFFLEVBQUMsQ0FBQyxFQUFDLENBQUMsQ0FBQyxDQUFDO2dCQUNuQyxJQUFJLENBQUMsR0FBRyxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsSUFBSSxFQUFFLENBQUMsRUFBRSxDQUFDLElBQUksQ0FBQyxDQUFDO2dCQUM3QyxJQUFJLENBQUMsR0FBRyxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsQ0FBQzthQUN2RDtTQUNKO0lBRUwsQ0FBQztJQUVELDRDQUE0QztJQUNwQyxZQUFZLENBQUMsT0FBZ0I7UUFDakMsT0FBTyxJQUFJLFdBQVcsQ0FBQyxPQUFPLENBRTFCLE9BQU8sQ0FBQyxDQUFDLEVBQ1QsT0FBTyxDQUFDLENBQUMsRUFDVCxPQUFPLENBQUMsQ0FBQyxDQUNaLENBQUM7SUFDTixDQUFDO0NBRUo7QUE3REQsa0NBNkRDIn0=\",\"assetPath\":\"Assets/ZepetoScripts/preset/OtherPlayerCtrl.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"\",\"name\":\"room\",\"type\":\"ZEPETO.Multiplay.Room\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"\",\"name\":\"player\",\"type\":\"ZEPETO.Multiplay.Schema.Player\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"ZEPETO.Script\",\"name\":\"data\",\"type\":\"ZEPETO.Script.ZepetoScriptableObject\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"carPrefeb\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"OtherPlayerCtrl\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: fd5c2461968551c5b36cd6893e8bd7a1

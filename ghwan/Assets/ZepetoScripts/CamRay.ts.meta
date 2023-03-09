@@ -1,0 +1,74 @@
+fileFormatVersion: 2
+guid: 6e04dae341c105d40a67d2301b7caa38
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Character_Controller_1 = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst GameManager_1 =
+    require(\\\"./GameManager\\\");\\r\\nclass CamRay extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\\r\\n    constructor() {\\r\\n        super(...arguments);\\r\\n        this.layerMask
+    = 1 << UnityEngine_1.LayerMask.NameToLayer(\\\"Button\\\");\\r\\n    }\\r\\n   
+    Start() {\\r\\n        this.layerMask = 1 << UnityEngine_1.LayerMask.NameToLayer(\\\"Button\\\");\\r\\n   
+    }\\r\\n    Update() {\\r\\n        if (UnityEngine_1.Input.GetMouseButtonDown(0))
+    {\\r\\n            let ray = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoCamera.camera.ScreenPointToRay(UnityEngine_1.Input.mousePosition);\\r\\n           
+    let ref = $ref();\\r\\n            if (UnityEngine_1.Physics.Raycast(ray, ref,
+    UnityEngine_1.Mathf.Infinity, this.layerMask)) {\\r\\n                // RaycatHit
+    \uB370\uC774\uD130\uB97C \uD655\uC778\uD558\uAE30 \uC704\uD574, $unref \uC5F0\uC0B0\uC790\uB85C
+    \uB2E4\uC2DC unwrapping \uD558\uB294 \uBD80\uBD84\uC5D0 \uC720\uC758\uD574\uC8FC\uC138\uC694.\\r\\n               
+    let hitInfo = $unref(ref);\\r\\n                if (hitInfo.collider.tag == \\\"Contect\\\")
+    {\\r\\n                    hitInfo.collider.gameObject.SetActive(false);\\r\\n               
+    }\\r\\n                if (hitInfo.collider.tag == \\\"CF\\\") {\\r\\n                   
+    GameManager_1.default.UI.ShowUI(hitInfo.collider.name);\\r\\n               
+    }\\r\\n                else if (hitInfo.collider.name != \\\"5\\\" && hitInfo.collider.name
+    != \\\"11\\\" && hitInfo.collider.name != \\\"17\\\" && hitInfo.collider.name
+    != \\\"CarBtn\\\") {\\r\\n                    GameManager_1.default.UI.ShowUI(hitInfo.collider.name,
+    1);\\r\\n                }\\r\\n                if (hitInfo.collider.name ==
+    \\\"3\\\") {\\r\\n                    GameManager_1.default.GetInstance.HoldSomething(\\\"Lemon\\\");\\r\\n                   
+    this.StartCoroutine(this.Delay(\\\"4\\\"));\\r\\n                }\\r\\n               
+    else if (hitInfo.collider.name == \\\"5\\\") {\\r\\n                    //\\r\\n                   
+    GameManager_1.default.GetInstance.HoldSomething(\\\"PetLemon\\\");\\r\\n               
+    }\\r\\n                else if (hitInfo.collider.name == \\\"9\\\") {\\r\\n                   
+    GameManager_1.default.GetInstance.HoldSomething(\\\"Kiwi\\\");\\r\\n                   
+    this.StartCoroutine(this.Delay(\\\"10\\\"));\\r\\n                }\\r\\n               
+    else if (hitInfo.collider.name == \\\"11\\\") {\\r\\n                    //\\r\\n                   
+    GameManager_1.default.GetInstance.HoldSomething(\\\"PetKiwi\\\");\\r\\n               
+    }\\r\\n                else if (hitInfo.collider.name == \\\"15\\\") {\\r\\n                   
+    GameManager_1.default.GetInstance.HoldSomething(\\\"Orange\\\");\\r\\n                   
+    this.StartCoroutine(this.Delay(\\\"16\\\"));\\r\\n                }\\r\\n               
+    else if (hitInfo.collider.name == \\\"17\\\") {\\r\\n                    //\\r\\n                   
+    GameManager_1.default.GetInstance.HoldSomething(\\\"PetOrange\\\");\\r\\n               
+    }\\r\\n                if (hitInfo.collider.name == \\\"CarBtn\\\") {\\r\\n                   
+    console.log(\\\"?\\\");\\r\\n                    if (GameManager_1.default.GetInstance.car
+    == null)\\r\\n                        console.log(\\\"?\\\");\\r\\n                   
+    GameManager_1.default.GetInstance.RideCar();\\r\\n                }\\r\\n           
+    }\\r\\n        }\\r\\n    }\\r\\n    OnTriggerEnter(col) {\\r\\n        if (col.gameObject.tag
+    == \\\"Player\\\") {\\r\\n            let layerMask = (1 << UnityEngine_1.LayerMask.NameToLayer(\\\"Player\\\"));
+    // Everything\uC5D0\uC11C Player \uB808\uC774\uC5B4\uB9CC \uC81C\uC678\uD558\uACE0
+    \uCDA9\uB3CC \uCCB4\uD06C\uD568\\r\\n            layerMask = ~layerMask;\\r\\n           
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoCamera.camera.cullingMask
+    = layerMask;\\r\\n        }\\r\\n    }\\r\\n    OnTriggerExit(col) {\\r\\n       
+    if (col.gameObject.tag == \\\"Player\\\") {\\r\\n            let layerMask =
+    (1 << UnityEngine_1.LayerMask.NameToLayer(\\\"Everything\\\"));\\r\\n           
+    layerMask = ~layerMask;\\r\\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoCamera.camera.cullingMask
+    = layerMask;\\r\\n        }\\r\\n    }\\r\\n    *Delay(num) {\\r\\n        yield
+    new UnityEngine_1.WaitForSeconds(1);\\r\\n        GameManager_1.default.UI.ShowUI(num,
+    1);\\r\\n    }\\r\\n}\\r\\nexports.default = CamRay;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2FtUmF5LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQ2FtUmF5LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQTJIO0FBQzNILDZFQUEyRDtBQUMzRCxpREFBcUQ7QUFDckQsK0NBQXdDO0FBRXhDLE1BQXFCLE1BQU8sU0FBUSxxQ0FBcUI7SUFBekQ7O1FBRUksY0FBUyxHQUFHLENBQUMsSUFBSSx1QkFBUyxDQUFDLFdBQVcsQ0FBQyxRQUFRLENBQUMsQ0FBQztJQXFGckQsQ0FBQztJQXBGRyxLQUFLO1FBQ0QsSUFBSSxDQUFDLFNBQVMsR0FBRyxDQUFDLElBQUksdUJBQVMsQ0FBQyxXQUFXLENBQUMsUUFBUSxDQUFDLENBQUM7SUFDMUQsQ0FBQztJQUVELE1BQU07UUFDRixJQUFHLG1CQUFLLENBQUMsa0JBQWtCLENBQUMsQ0FBQyxDQUFDLEVBQUM7WUFDM0IsSUFBSSxHQUFHLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxNQUFNLENBQUMsZ0JBQWdCLENBQUMsbUJBQUssQ0FBQyxhQUFhLENBQUMsQ0FBQztZQUN2RyxJQUFJLEdBQUcsR0FBRyxJQUFJLEVBQWMsQ0FBQztZQUU3QixJQUFHLHFCQUFPLENBQUMsT0FBTyxDQUFDLEdBQUcsRUFBRSxHQUFHLEVBQUMsbUJBQUssQ0FBQyxRQUFRLEVBQUUsSUFBSSxDQUFDLFNBQVMsQ0FBQyxFQUMzRDtnQkFFSSxtRUFBbUU7Z0JBQ25FLElBQUksT0FBTyxHQUFHLE1BQU0sQ0FBQyxHQUFHLENBQUMsQ0FBQztnQkFDMUIsSUFBRyxPQUFPLENBQUMsUUFBUSxDQUFDLEdBQUcsSUFBSSxTQUFTLEVBQUM7b0JBQ2pDLE9BQU8sQ0FBQyxRQUFRLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztpQkFDaEQ7Z0JBRUQsSUFBRyxPQUFPLENBQUMsUUFBUSxDQUFDLEdBQUcsSUFBSSxJQUFJLEVBQy9CO29CQUNJLHFCQUFXLENB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\",\"assetPath\":\"Assets/ZepetoScripts/CamRay.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"mscorlib\",\"name\":\"layerMask\",\"type\":\"System.Single\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"CamRay\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 8789dc9b1ffb3b86a5565371f58d2c00
+  onlyWriteTrigger: 0

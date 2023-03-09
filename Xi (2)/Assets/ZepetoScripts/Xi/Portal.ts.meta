@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 65d3d32eadfe0284998244b8eb78e364
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass Portal extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n    }\r\n    OnTriggerEnter(col) {\r\n        if (col.gameObject.tag
+    == \"Player\") {\r\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.Teleport(this.returnTr.position,
+    this.returnTr.rotation);\r\n        }\r\n    }\r\n}\r\nexports.default = Portal;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUG9ydGFsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiUG9ydGFsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0EsNkVBQTREO0FBQzVELGlEQUFxRDtBQUVyRCxNQUFxQixNQUFPLFNBQVEscUNBQXFCO0lBSXJELEtBQUs7SUFFTCxDQUFDO0lBRUQsY0FBYyxDQUFDLEdBQVk7UUFDdkIsSUFBRyxHQUFHLENBQUMsVUFBVSxDQUFDLEdBQUcsSUFBSSxRQUFRLEVBQUM7WUFDOUIsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLElBQUksQ0FBQyxRQUFRLENBQUMsUUFBUSxFQUFFLElBQUksQ0FBQyxRQUFRLENBQUMsUUFBUSxDQUFDLENBQUM7U0FDdEg7SUFDTCxDQUFDO0NBQ0o7QUFiRCx5QkFhQyJ9","assetPath":"Assets/ZepetoScripts/Xi/Portal.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"returnTr","type":"UnityEngine.Transform","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Portal","description":""},"isCompiled":true}'
+  typescriptHash: d1c02760f4a3b5d064507f55522e3405

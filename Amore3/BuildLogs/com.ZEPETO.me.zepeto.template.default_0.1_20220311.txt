@@ -1,0 +1,718 @@
+[World Settings]
+world id             com.zepeto.me.zepeto.template.default
+version              0.1                 
+max clients          8                   
+orientation          horizontal          
+disable invite       false               
+disable room list    false               
+disable private room false               
+
+[Build Manifest]
+[scenes]
+37 mb                assets/scenes/1.unity
+[assets]
+2 kb                 assets/materials/serum.mat
+30 kb                assets/sprites/1/0046.png
+19 kb                assets/sprites/1/0030.png
+36 kb                assets/sprites/라네즈/0092.png
+21 kb                assets/sprites/3/0017.png
+37 kb                assets/sprites/라네즈/0072.png
+33 kb                assets/sprites/3/0040.png
+43 kb                assets/sprites/라네즈/0098.png
+36 kb                assets/sprites/라네즈/0117.png
+34 kb                packages/zepeto.character.controller/runtime/_resources/inputactions/zepetoinputcontrol.inputactions
+2 kb                 assets/materials/top.mat
+11 kb                assets/sprites/1/sul.anim
+704 kb               assets/animation/idle_self.anim
+2 kb                 assets/materials/_2.mat
+39 kb                assets/sprites/3/0063.png
+2 kb                 assets/materials/[color_c25].mat
+24 kb                assets/sprites/1/0016.png
+38 kb                assets/sprites/3/0055.png
+39 kb                assets/sprites/라네즈/0074.png
+18 kb                assets/sprites/3/0012.png
+2 kb                 assets/materials/_charcoal_.mat
+43 kb                assets/sprites/라네즈/0009.png
+2 kb                 assets/materials/_19.mat
+29 kb                assets/sprites/라네즈/0134.png
+425 kb               assets/scenes/1/lightingdata.asset
+2 kb                 assets/materials/color_d01.mat
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/walk.anim
+28 kb                assets/sprites/라네즈/0132.png
+2 kb                 assets/materials/bark.001.mat
+2 kb                 assets/materials/[color b08].mat
+36 kb                assets/sprites/3/0081.png
+39 kb                assets/sprites/3/0052.png
+2 kb                 assets/materials/[color m08].mat
+30 kb                assets/sprites/3/0036.png
+36 kb                assets/sprites/3/0082.png
+34 kb                assets/sprites/3/0042.png
+1 kb                 assets/materials/shaders/doublesided.shader
+28 kb                assets/sprites/3/0033.png
+2 kb                 assets/materials/_5.mat
+1 mb                 assets/materials/textures/laneige_skin veil base_2020_vmd_product_eng_1x1.jpg
+2 kb                 assets/materials/_32.mat
+44 kb                assets/sprites/라네즈/0037.png
+18 kb                assets/sprites/3/0112.png
+2 kb                 assets/materials/[color_a02].mat
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_horizontal.prefab
+630 kb               assets/materials/textures/shs_essence.png
+40 kb                assets/sprites/3/0068.png
+28 kb                assets/sprites/3/0032.png
+2 kb                 assets/materials/white pedal.mat
+31 kb                assets/sprites/라네즈/0137.png
+3 kb                 assets/materials/textures/pla_shd_albedo.png
+28 kb                assets/sprites/라네즈/0131.png
+30 kb                assets/sprites/1/0008.png
+2 kb                 assets/materials/[translucent glass gray]1.mat
+1 mb                 assets/materials/textures/sulwhasoo_essential_ritual_01(윤조7종).jpg
+2 kb                 assets/materials/skin.mat
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_vertical.prefab
+2 kb                 assets/materials/gold2.mat
+2 kb                 assets/materials/videobooth_sky.mat
+2 kb                 assets/materials/cgaxis_models_08_03_6.mat
+53 kb                assets/model/summer_land_sky.fbx
+29 kb                assets/sprites/1/0045.png
+20 kb                assets/ciconia studio/shaders/standard shaders/builtin/cs_standard (specular setup) opaque.shader
+1 kb                 packages/com.unity.inputsystem/inputsystem/editor/icons/inputsystemuiinputmodule@64.png
+2 kb                 assets/materials/watersleep_top.mat
+2 kb                 assets/materials/defaultmaterial~1.mat
+5 kb                 assets/materials/textures/leaf_half_btm_007_tint0x81ba3fff.png
+2 kb                 assets/materials/clenser_top.mat
+32 kb                assets/sprites/라네즈/0089.png
+2 kb                 assets/materials/_34.mat
+2 kb                 assets/materials/camira hwp04.mat
+37 kb                assets/sprites/3/0059.png
+29 kb                assets/sprites/3/0035.png
+2 kb                 assets/materials/[metal corrugated shiny]4.mat
+2 kb                 assets/materials/[metal silver].mat
+2 kb                 assets/materials/[color_000].mat
+25 kb                assets/sprites/3/0026.png
+30 kb                assets/materials/textures/granite 03.jpg
+3 kb                 assets/_resources/000_sample/texture/videobooth_sky.png
+38 kb                assets/sprites/3/0077.png
+32 kb                assets/sprites/1/0051.png
+15 kb                assets/sprites/3/0119.png
+2 kb                 assets/materials/[color l01].mat
+32 kb                assets/sprites/라네즈/0068.png
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/gesture.anim
+2 kb                 assets/materials/chr_shd.mat
+26 kb                assets/sprites/3/0027.png
+40 kb                assets/sprites/3/0066.png
+40 kb                assets/sprites/3/0074.png
+29 kb                assets/sprites/3/0091.png
+21 kb                assets/sprites/3/0109.png
+43 kb                assets/sprites/라네즈/0016.png
+2 kb                 assets/materials/plate_metal.mat
+169 kb               assets/materials/textures/limestone_none_kjgi2f.jpg
+5 kb                 assets/materials/textures/cube.png
+48 kb                assets/sprites/라네즈/0023.png
+2 kb                 assets/materials/material.1.mat
+2 kb                 assets/materials/hera_3_blaskcushion_image3.mat
+24 kb                assets/sprites/3/0097.png
+4 kb                 assets/animation/dooropen.anim
+106 kb               assets/materials/textures/kare_64003_default_color.jpg
+23 kb                assets/sprites/3/0106.png
+25 kb                assets/sprites/1/0014.png
+20 kb                assets/sprites/1/0034.png
+2 kb                 assets/materials/agapan green.mat
+37 kb                assets/sprites/3/0057.png
+2 kb                 assets/materials/hera_8_spicy_color.mat
+32 kb                assets/sprites/라네즈/0115.png
+33 kb                assets/sprites/라네즈/0085.png
+744 kb               assets/materials/textures/hera_7_iglowme_image.png
+33 kb                assets/sprites/라네즈/0084.png
+32 kb                assets/sprites/라네즈/0139.png
+560 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/idle.anim
+17 kb                assets/sprites/3/0115.png
+2 kb                 assets/materials/darkolivegreen2.mat
+43 kb                assets/sprites/라네즈/0099.png
+36 kb                assets/sprites/라네즈/0046.png
+2 kb                 assets/materials/material.001.mat
+28 kb                assets/sprites/1/0060.png
+8 kb                 assets/materials/textures/hera_0_common.png
+2 kb                 assets/model/materials/[color e08].mat
+23 kb                assets/sprites/1/0038.png
+16 kb                assets/sprites/3/0117.png
+38 kb                assets/sprites/라네즈/0041.png
+252 kb               assets/materials/textures/travertine_stack_c4kdzo.jpg
+2 kb                 assets/materials/[color m06].mat
+30 kb                assets/sprites/라네즈/0113.png
+2 kb                 assets/materials/[granite dark gray]2.mat
+39 kb                assets/sprites/3/0075.png
+38 kb                assets/sprites/3/0061.png
+26 kb                assets/animations/zepetoanimator.controller
+40 kb                assets/sprites/라네즈/0005.png
+2 kb                 assets/materials/[color_c17].mat
+30 kb                assets/sprites/라네즈/0110.png
+36 kb                assets/sprites/라네즈/0047.png
+16 kb                assets/sprites/3/0005.png
+2 kb                 assets/materials/_11.mat
+33 kb                assets/sprites/라네즈/0108.png
+34 kb                assets/sprites/라네즈/0070.png
+46 kb                assets/sprites/라네즈/0022.png
+33 kb                assets/sprites/라네즈/0090.png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_idle.anim
+4 kb                 assets/materials/videobooth_sky_cloud.mat
+2 kb                 assets/materials/darkolivegreen.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_off.anim
+19 kb                assets/sprites/3/0010.png
+44 kb                assets/sprites/라네즈/0014.png
+21 kb                assets/sprites/1/0025.png
+29 kb                assets/sprites/1/0055.png
+28 kb                assets/materials/textures/granite 02.jpg
+47 kb                assets/materials/textures/body_shd_albedo.png
+2 kb                 assets/materials/[color_c15].mat
+40 kb                assets/sprites/라네즈/0094.png
+38 kb                assets/sprites/3/0047.png
+30 kb                assets/sprites/라네즈/0111.png
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_icon.png
+40 kb                assets/sprites/3/0064.png
+99 kb                assets/materials/textures/9858700a3b32599b81c098147166371d.jpg
+36 kb                assets/sprites/3/0079.png
+20 kb                assets/sprites/3/0016.png
+16 kb                assets/sprites/3/0004.png
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_icon.png
+20 kb                assets/sprites/1/0026.png
+32 kb                assets/sprites/라네즈/0059.png
+48 kb                assets/sprites/라네즈/0030.png
+6 kb                 assets/materials/textures/leaf1_smaller_clean.png
+27 kb                assets/sprites/3/0094.png
+2 kb                 assets/materials/color_d05.mat
+26 kb                assets/materials/textures/hwp04 1.jpg
+34 kb                assets/sprites/라네즈/0057.png
+36 kb                assets/sprites/라네즈/0081.png
+44 kb                assets/sprites/라네즈/0019.png
+30 kb                assets/sprites/1/0001.png
+37 kb                assets/sprites/라네즈/0045.png
+40 kb                assets/sprites/라네즈/0103.png
+2 kb                 assets/materials/_6.mat
+2 kb                 assets/materials/[translucent_glass_gold]1.mat
+37 kb                assets/sprites/라네즈/0124.png
+2 kb                 assets/materials/[color i03].mat
+90 kb                assets/materials/textures/62_carrara white marble pbr texture-seamless.jpg
+25 kb                assets/sprites/3/0100.png
+15 kb                assets/sprites/3/0118.png
+41 kb                assets/sprites/3/0069.png
+18 kb                assets/sprites/3/0008.png
+39 kb                assets/sprites/3/0062.png
+3 kb                 assets/materials/travertine_stack_c4kdzo.mat
+2 kb                 assets/materials/[color g07].mat
+44 kb                assets/sprites/라네즈/0018.png
+114 kb               assets/materials/textures/sulwhasoo_essential_ritual_02(윤조7종).jpg
+19 kb                assets/sprites/1/0033.png
+22 kb                assets/sprites/1/0037.png
+2 kb                 assets/materials/body_shd.001.mat
+26 kb                assets/sprites/1/0041.png
+2 kb                 assets/materials/[color d03].mat
+2 kb                 assets/materials/clenser_body1.mat
+32 kb                assets/sprites/라네즈/0127.png
+2 kb                 assets/materials/hera_4_20ssspicy_color.mat
+1 mb                 assets/model/lip0310.skp
+20 kb                assets/materials/textures/lip_uv.png
+45 kb                assets/sprites/라네즈/0013.png
+42 kb                assets/sprites/라네즈/0096.png
+25 kb                assets/sprites/1/0040.png
+2 kb                 assets/materials/[color c05].mat
+2 kb                 assets/materials/_38.mat
+2 kb                 assets/materials/hera_7_iglowme_color.mat
+481 kb               assets/materials/textures/워터슬리핑마스크uv.png
+861 kb               assets/materials/textures/hera_2_glowresting_image.png
+2 kb                 assets/materials/_28.mat
+2 kb                 assets/materials/hera_7_iglowme_image.mat
+2 kb                 assets/materials/#10.mat
+2 kb                 assets/materials/[0059_darkolivegreen].mat
+2 kb                 assets/materials/_35.mat
+2 kb                 assets/materials/blinn3.mat
+30 kb                assets/sprites/3/0090.png
+5 kb                 assets/materials/textures/b769c87fc94ef454b7ea2d7ffca84a9a.jpg
+35 kb                assets/sprites/라네즈/0048.png
+34 kb                assets/sprites/라네즈/0050.png
+665 b                assets/materials/textures/translucent_glass_tinted_tint0xfff6aa4f.jpg
+42 kb                assets/sprites/라네즈/0095.png
+2 kb                 assets/materials/marc_shoes4.mat
+2 kb                 assets/materials/spotlight.mat
+28 kb                assets/sprites/1/0057.png
+23 kb                assets/sprites/3/0021.png
+2 kb                 assets/materials/clothworks orange.mat
+35 kb                assets/sprites/3/0083.png
+1 kb                 assets/model/textures/4-1.png
+689 kb               assets/materials/textures/hera_1_fix_mist_image.png
+20 kb                assets/sprites/3/0110.png
+2 kb                 assets/materials/leaf2_smaller_clean.mat
+35 kb                assets/sprites/3/0080.png
+2 kb                 assets/materials/top1.mat
+217 mb               assets/model/2-1.skp
+24 kb                assets/sprites/3/0099.png
+14 kb                assets/sprites/3/0120.png
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandle.controller
+21 kb                assets/sprites/3/0019.png
+1 mb                 assets/scenes/1/lightmap-0_comp_light.exr
+2 kb                 assets/materials/_25.mat
+26 kb                assets/sprites/1/0013.png
+2 kb                 assets/materials/succulent_color stem.mat
+2 kb                 assets/materials/cgaxis_models_08_03_4.mat
+44 kb                assets/sprites/라네즈/0020.png
+2 kb                 assets/materials/[granite light gray].mat
+38 kb                assets/sprites/라네즈/0043.png
+2 kb                 assets/materials/[color b06].mat
+2 kb                 assets/materials/marc_shirt.mat
+2 kb                 assets/materials/watersleep_body2.mat
+12 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_base.png
+50 kb                assets/sprites/라네즈/0026.png
+25 kb                assets/sprites/3/0101.png
+2 kb                 assets/materials/coffee 3.mat
+41 kb                assets/sprites/라네즈/0102.png
+2 kb                 assets/materials/_56.mat
+1 kb                 assets/materials/textures/metal_corrogated_shiny_tint0x848484ff.jpg
+39 kb                assets/sprites/라네즈/0121.png
+36 kb                assets/materials/textures/uv3.png
+49 kb                assets/sprites/라네즈/0024.png
+2 kb                 assets/materials/[color c04].mat
+42 kb                assets/sprites/3/0073.png
+5 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/6_dance.anim
+2 kb                 assets/materials/chrome1.mat
+41 kb                assets/sprites/라네즈/0101.png
+30 kb                assets/sprites/1/0054.png
+2 kb                 assets/materials/neo_green.001.mat
+41 kb                assets/sprites/라네즈/0077.png
+49 kb                assets/sprites/라네즈/0028.png
+34 kb                assets/sprites/라네즈/0107.png
+2 kb                 assets/materials/_27.mat
+31 kb                assets/sprites/3/0089.png
+2 kb                 assets/materials/neo_cushion.001.mat
+2 kb                 assets/materials/_21.mat
+27 kb                assets/sprites/3/0093.png
+2 kb                 assets/materials/_37.mat
+31 kb                assets/sprites/1/0053.png
+43 kb                assets/sprites/라네즈/0015.png
+2 kb                 assets/materials/[color d08].mat
+48 kb                assets/sprites/라네즈/0032.png
+2 kb                 assets/materials/common_metal_shd6.mat
+2 kb                 assets/materials/[aluminum].mat
+2 kb                 assets/materials/_24.mat
+34 kb                assets/sprites/라네즈/0126.png
+50 kb                assets/sprites/라네즈/0025.png
+620 b                assets/materials/textures/chr_shd_base_color_1002.png
+26 kb                assets/sprites/3/0025.png
+13 kb                assets/materials/textures/aluminum.jpg
+2 kb                 assets/materials/[color m02].mat
+2 kb                 assets/materials/clenser_purple.mat
+2 kb                 assets/materials/grass.mat
+2 kb                 assets/materials/mid1.mat
+2 kb                 assets/materials/body2.mat
+2 kb                 assets/materials/neo_write.001.mat
+43 kb                assets/sprites/라네즈/0007.png
+11 kb                assets/materials/textures/stone_vein_gray.jpg
+3 kb                 assets/materials/[color m00].mat
+24 kb                assets/materials/textures/1318-1434-large.jpg
+2 kb                 assets/materials/clothworks white.mat
+26 kb                assets/sprites/3/0030.png
+38 kb                assets/sprites/라네즈/0093.png
+1 kb                 assets/materials/textures/metal_corrogated_shiny_tint0xe1b550ff.jpg
+30 kb                assets/sprites/라네즈/0128.png
+2 kb                 assets/materials/neo_green_non.001.mat
+23 kb                assets/materials/textures/hwp04.jpg
+29 kb                assets/sprites/라네즈/0112.png
+2 kb                 assets/materials/material.2.mat
+21 kb                assets/sprites/1/0036.png
+23 kb                assets/sprites/3/0107.png
+23 kb                assets/materials/textures/hwp04_tint0xe8d4d3ff.jpg
+38 kb                assets/sprites/라네즈/0119.png
+2 kb                 assets/materials/default.mat
+50 kb                assets/sprites/라네즈/0027.png
+37 kb                assets/sprites/라네즈/0044.png
+33 kb                assets/sprites/3/0041.png
+85 kb                assets/materials/textures/레티놀프로30ml_무드컷1.jpg
+2 kb                 assets/materials/[carpet plush charcoal].mat
+2 kb                 assets/materials/clothworks black.mat
+2 kb                 assets/prefabs/click.prefab
+42 kb                assets/sprites/라네즈/0038.png
+32 kb                assets/sprites/1/0050.png
+42 kb                assets/sprites/라네즈/0017.png
+1 kb                 assets/animation/airplane.controller
+15 kb                assets/sprites/3/0002.png
+38 kb                assets/sprites/3/0056.png
+2 kb                 assets/materials/[color f07].mat
+2 kb                 assets/model/materials/[color m01].mat
+2 kb                 assets/materials/succulent_color.mat
+21 kb                assets/sprites/1/0024.png
+35 kb                assets/sprites/3/0084.png
+2 kb                 assets/materials/골드  메탈.mat
+2 kb                 assets/_resources/[materials]/colortexture_001.mat
+2 kb                 assets/materials/body.mat
+2 kb                 assets/materials/[color g08].mat
+4 kb                 assets/animation/sky_animation.anim
+26 kb                assets/sprites/1/0012.png
+29 kb                assets/sprites/1/0044.png
+16 kb                assets/materials/textures/metal silver.jpg
+652 kb               assets/materials/textures/leaves0088_2_s.png
+2 kb                 assets/materials/[color d05].mat
+2 kb                 assets/materials/hera_6_holics_color.mat
+3 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/5_sleep.anim
+2 kb                 assets/materials/[color_c21].mat
+4 kb                 assets/sprites/spotlight.png
+2 kb                 assets/materials/[translucent glass gray].mat
+2 kb                 assets/materials/top_dark.mat
+2 kb                 assets/materials/[color i08].mat
+17 kb                assets/animation/airplane.anim
+12 kb                assets/materials/textures/carpet_plush_charcoal.jpg
+51 kb                assets/materials/textures/cutout_moon_18.jpg
+31 kb                assets/sprites/1/0006.png
+6 kb                 assets/animation/door.controller
+3 kb                 assets/materials/#7.mat
+2 kb                 assets/materials/_3.mat
+2 kb                 assets/materials/sulwhasoo_jaumsenge_image.mat
+19 kb                assets/sprites/1/0028.png
+42 kb                assets/sprites/3/0071.png
+2 kb                 assets/materials/_13.mat
+26 kb                assets/sprites/3/0028.png
+1 kb                 assets/materials/textures/metal_corrogated_shiny_tint0x9b9b9bff.jpg
+21 kb                assets/sprites/3/gif.anim
+31 kb                assets/sprites/3/0034.png
+2 kb                 assets/materials/_31.mat
+2 kb                 assets/materials/_33.mat
+531 kb               assets/materials/textures/e9b78e6133b03c561fa389de9eed71da.jpg
+33 kb                assets/sprites/라네즈/0140.png
+37 kb                assets/sprites/라네즈/0105.png
+31 kb                assets/sprites/1/0002.png
+30 kb                assets/sprites/1/0047.png
+2 kb                 assets/materials/hera_2_glowresting_image.mat
+23 kb                assets/sprites/1/0018.png
+717 kb               assets/materials/textures/hera_4_20ssspicy_image.png
+2 kb                 assets/materials/b113_bs1.mat
+21 kb                assets/sprites/1/0023.png
+31 kb                packages/com.unity.inputsystem/inputsystem/plugins/playerinput/defaultinputactions.inputactions
+2 kb                 assets/materials/leaf_half_top_007.mat
+2 kb                 assets/materials/listy.mat
+39 kb                assets/sprites/3/0048.png
+38 kb                assets/sprites/3/0051.png
+38 kb                assets/sprites/라네즈/0042.png
+2 kb                 assets/materials/_4.mat
+32 kb                assets/sprites/라네즈/0069.png
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_ziggle.anim
+41 kb                assets/sprites/라네즈/0075.png
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_off.anim
+29 kb                assets/sprites/1/0010.png
+35 kb                assets/sprites/라네즈/0056.png
+2 kb                 assets/materials/dark olive leaves.mat
+22 kb                assets/sprites/1/0020.png
+2 kb                 assets/materials/남색 가죽.mat
+39 kb                assets/sprites/라네즈/0040.png
+90 kb                assets/_resources/000_sample/texture/videobooth_sky_cloud.png
+1 mb                 assets/model/123.fbx
+48 kb                assets/sprites/라네즈/0031.png
+2 kb                 assets/materials/succulent_mud and grass.mat
+22 kb                assets/sprites/1/0021.png
+2 kb                 assets/materials/drawer_pink.mat
+30 kb                assets/sprites/1/0004.png
+2 kb                 assets/materials/[metal corrugated shiny].mat
+32 kb                assets/sprites/1/0049.png
+123 kb               assets/materials/textures/reconstituted_stone_none_4aslq1.jpg
+34 kb                assets/sprites/라네즈/0051.png
+43 kb                assets/sprites/라네즈/0012.png
+47 kb                assets/materials/textures/uv.png
+320 kb               assets/materials/textures/클렌저uv.png
+1 kb                 assets/sprites/3/0001.controller
+28 kb                assets/sprites/1/0056.png
+126 b                assets/materials/textures/7-1.png
+2 kb                 assets/materials/mirror.001.mat
+2 kb                 assets/materials/_.mat
+1 kb                 assets/_resources/[scriptsshader]/resources-internal/standardnocolor.shader
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_move.anim
+38 kb                assets/sprites/3/0053.png
+45 kb                assets/sprites/라네즈/0036.png
+35 kb                assets/sprites/라네즈/0052.png
+30 kb                assets/sprites/1/0009.png
+2 kb                 assets/materials/[color d04].mat
+39 kb                assets/sprites/라네즈/0004.png
+40 kb                assets/sprites/라네즈/0078.png
+2 kb                 assets/materials/stonek.mat
+2 kb                 assets/materials/notshine_body.mat
+34 kb                assets/sprites/라네즈/0001.png
+5 kb                 assets/materials/textures/cf8739f4df6e4f878c4cdd21312bd933.jpg
+2 kb                 assets/materials/lip.mat
+2 kb                 assets/materials/fondulac_slate.mat
+1 mb                 assets/model/bus.skp
+867 b                assets/materials/textures/3988f40c48c53926bed4ed6bf118df56.jpg
+2 kb                 assets/materials/common_metal_shd.mat
+2 kb                 assets/materials/marc_shirt2.mat
+24 kb                assets/sprites/3/0023.png
+2 kb                 assets/materials/[color_004].mat
+21 kb                assets/sprites/1/0022.png
+2 kb                 assets/materials/[color m03].mat
+2 kb                 assets/materials/leaf_half_btm_007.mat
+35 kb                assets/sprites/라네즈/0071.png
+2 kb                 assets/materials/leaf1_smaller_clean.mat
+37 kb                assets/sprites/라네즈/0002.png
+24 kb                assets/sprites/3/0105.png
+43 kb                assets/sprites/라네즈/0100.png
+31 kb                assets/sprites/3/0088.png
+847 kb               assets/materials/textures/hera_3_fix_blaskcushion_image.png
+2 kb                 assets/materials/_55.mat
+2 kb                 assets/materials/_beige_1.mat
+2 kb                 assets/materials/limestone_none_kjgi2f.mat
+239 kb               assets/materials/textures/레티놀프로30ml_무드컷7.jpg
+16 kb                assets/_resources/[scriptsshader]/resources-internal/tonemappinglut.png
+2 kb                 assets/materials/pla_shd.mat
+30 kb                assets/sprites/라네즈/0062.png
+2 kb                 assets/materials/[granite dark gray].mat
+2 kb                 assets/materials/[color_007].mat
+29 kb                assets/sprites/라네즈/0135.png
+25 kb                assets/sprites/3/0029.png
+3 kb                 assets/materials/reconstituted_stone_none_4aslq1.mat
+2 kb                 assets/materials/_8.mat
+34 kb                assets/sprites/라네즈/0116.png
+32 kb                assets/sprites/라네즈/0088.png
+2 kb                 assets/materials/[color_001]1.mat
+4 kb                 assets/materials/textures/leaf2_smaller_clean.png
+20 kb                assets/sprites/1/0027.png
+19 kb                assets/sprites/3/0009.png
+31 kb                assets/sprites/3/0038.png
+1 mb                 assets/scenes/1/occlusioncullingdata.asset
+321 kb               assets/materials/textures/레티놀프로30ml_무드컷4.jpg
+38 kb                assets/sprites/라네즈/0080.png
+19 kb                assets/sprites/3/0013.png
+25 kb                assets/sprites/라네즈/laneige.anim
+25 kb                assets/sprites/3/0098.png
+32 kb                assets/sprites/라네즈/0087.png
+21 kb                assets/sprites/3/0018.png
+126 b                assets/materials/textures/8-1.png
+34 kb                assets/sprites/3/0085.png
+24 kb                assets/sprites/1/0017.png
+38 kb                assets/sprites/라네즈/0122.png
+2 kb                 assets/materials/[stone vein gray].mat
+2 kb                 assets/materials/pasted__lambert6.mat
+21 kb                assets/sprites/3/0020.png
+2 kb                 assets/materials/top2.mat
+21 kb                assets/model/textures/aluminum.jpg
+2 kb                 assets/materials/common_nometal_shd6.mat
+2 kb                 assets/materials/12_s1.mat
+2 kb                 assets/materials/hera_5_holics_color.mat
+37 kb                assets/sprites/3/0078.png
+21 kb                assets/materials/textures/세럼uv.png
+40 kb                assets/sprites/라네즈/0039.png
+2 kb                 assets/materials/cromo1.mat
+20 kb                assets/sprites/3/0015.png
+23 kb                assets/sprites/3/0022.png
+31 kb                assets/sprites/1/0052.png
+19 kb                assets/sprites/3/0014.png
+7 kb                 assets/materials/textures/워터뱅크에센스.png
+2 kb                 assets/materials/cgaxis_models_08_03_2.mat
+5 mb                 assets/model/여권.skp 
+38 kb                assets/sprites/라네즈/0073.png
+2 kb                 assets/materials/[color_003].mat
+24 kb                assets/sprites/1/0039.png
+30 kb                assets/sprites/라네즈/0064.png
+28 kb                assets/sprites/라네즈/0133.png
+2 kb                 assets/materials/common_nometal_shd.mat
+38 kb                assets/sprites/라네즈/0123.png
+31 kb                assets/sprites/라네즈/0109.png
+2 kb                 assets/materials/[color k01].mat
+130 kb               assets/materials/textures/아모레퍼시픽.jpg
+24 kb                assets/sprites/3/0104.png
+2 kb                 assets/model/materials/[color f08].mat
+37 kb                assets/sprites/3/0049.png
+39 kb                assets/sprites/3/0076.png
+2 kb                 assets/materials/[0053_ivory].mat
+2 kb                 assets/materials/[color m07].mat
+31 kb                assets/sprites/라네즈/0066.png
+2 kb                 assets/materials/cgaxis_models_08_03_3.mat
+2 kb                 assets/materials/black paint1.mat
+26 kb                assets/sprites/3/0024.png
+30 kb                assets/sprites/라네즈/0065.png
+2 kb                 assets/materials/gold4.mat
+33 kb                assets/sprites/라네즈/0058.png
+2 kb                 assets/materials/_18.mat
+21 kb                assets/sprites/1/0035.png
+349 b                assets/animation/upper.mask
+41 kb                assets/sprites/3/0067.png
+2 kb                 assets/materials/hera_8_spicy_image.mat
+154 kb               assets/materials/textures/sulwhasoo_essential_ritual_04(윤조7종).jpg
+2 kb                 assets/model/materials/[color d07].mat
+15 kb                assets/sprites/3/0003.png
+2 kb                 assets/materials/glass vase.mat
+27 kb                assets/sprites/1/0058.png
+41 kb                assets/sprites/3/0070.png
+2 kb                 assets/materials/_39.mat
+2 kb                 assets/materials/[metal_aluminum_anodized]1.mat
+31 kb                assets/sprites/라네즈/0114.png
+23 kb                assets/model/roller.skp
+31 kb                assets/sprites/라네즈/0060.png
+2 kb                 assets/materials/_20.mat
+2 kb                 assets/materials/[color m05].mat
+1 kb                 assets/sprites/1/0001.controller
+2 kb                 assets/materials/_14.mat
+2 kb                 assets/materials/pink.mat
+2 kb                 assets/materials/_12.mat
+2 kb                 assets/materials/[color_006].mat
+19 kb                assets/sprites/3/0111.png
+39 kb                assets/sprites/라네즈/0120.png
+39 kb                assets/sprites/라네즈/0079.png
+1 kb                 assets/new lighting settings.lighting
+2 kb                 assets/materials/light/new material.mat
+2 kb                 assets/materials/color_001.mat
+27 kb                assets/sprites/1/0042.png
+47 kb                assets/sprites/라네즈/0034.png
+68 kb                assets/model/summer_land_sky_cloud.fbx
+2 kb                 assets/materials/[color i04].mat
+2 kb                 assets/materials/[translucent_glass_gray]1.mat
+37 kb                assets/sprites/라네즈/0118.png
+13 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_base.png
+2 kb                 assets/materials/common_metal_shd7.mat
+33 kb                assets/sprites/3/0087.png
+24 kb                assets/sprites/3/0103.png
+30 kb                assets/sprites/라네즈/0063.png
+30 kb                assets/sprites/1/0003.png
+2 kb                 assets/materials/[metal_corrogated_shiny]8.mat
+35 kb                assets/sprites/라네즈/0125.png
+15 kb                assets/ciconia studio/shaders/standard shaders/builtin/cs_lite standard (specular setup) opaque.shader
+2 mb                 assets/materials/textures/hera_8_spicy_image.png
+34 kb                assets/sprites/3/0086.png
+2 kb                 assets/materials/_16.mat
+351 kb               assets/materials/textures/coffee 3.jpg
+126 b                assets/materials/textures/6-1.png
+28 kb                assets/sprites/1/0011.png
+283 kb               assets/animation/sitting2.anim
+2 kb                 assets/materials/hera_5_holics_image.mat
+2 kb                 assets/materials/textures/metal_aluminum_anodized.jpg
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_ziggle.anim
+41 kb                assets/sprites/라네즈/0006.png
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_on.anim
+29 kb                assets/materials/textures/granite 01_tint0x312c2aff.jpg
+2 kb                 assets/materials/[translucent glass blue].mat
+2 kb                 assets/materials/[color c08].mat
+694 b                assets/sprites/kakaotalk_20220311_161047665.png
+2 kb                 assets/materials/_7.mat
+35 kb                assets/sprites/라네즈/0082.png
+34 kb                assets/sprites/라네즈/0091.png
+18 kb                assets/sprites/3/0007.png
+40 kb                assets/sprites/3/0065.png
+46 kb                assets/sprites/라네즈/0035.png
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandleorigin.controller
+35 kb                assets/sprites/3/0045.png
+11 kb                assets/materials/textures/carpet_plush_charcoal 1.jpg
+2 kb                 assets/materials/_charcoal_1.mat
+31 kb                assets/sprites/라네즈/0136.png
+17 kb                assets/sprites/3/0006.png
+6 mb                 assets/model/airplane.skp
+32 kb                assets/sprites/3/0039.png
+38 kb                assets/sprites/라네즈/0003.png
+38 kb                assets/sprites/3/0060.png
+1 kb                 assets/materials/textures/metal_corrogated_shiny.jpg
+27 kb                assets/sprites/라네즈/0130.png
+2 kb                 assets/materials/cgaxis_models_08_03_5.mat
+2 kb                 assets/materials/[color_008].mat
+43 kb                assets/sprites/라네즈/0097.png
+26 kb                assets/sprites/3/0095.png
+17 kb                assets/sprites/3/0113.png
+2 kb                 assets/materials/[color a05].mat
+19 kb                assets/sprites/1/0032.png
+1 kb                 assets/sprites/라네즈/0001.controller
+45 kb                assets/sprites/라네즈/0021.png
+2 kb                 assets/materials/[color b01].mat
+3 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/charactershadow.prefab
+38 kb                assets/sprites/3/0054.png
+37 kb                assets/sprites/3/0046.png
+2 kb                 assets/materials/saddlebrown.mat
+347 kb               assets/materials/textures/limestone_none_kjgi2f 1.jpg
+31 kb                assets/sprites/1/0005.png
+2 kb                 assets/materials/[color m04].mat
+35 kb                assets/sprites/라네즈/0049.png
+2 kb                 assets/materials/cgaxis_models_08_03_1.mat
+2 kb                 assets/model/materials/[color d01].mat
+2 kb                 assets/materials/silver_shd.001.mat
+2 kb                 assets/materials/[translucent_glass_blue]2.mat
+2 kb                 assets/materials/[0054_lightyellow].mat
+1 kb                 assets/animation/summer_land_sky_cloud.controller
+25 kb                assets/sprites/3/0096.png
+2 kb                 assets/materials/_defaultmat.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_on.anim
+36 kb                assets/sprites/라네즈/0054.png
+43 kb                assets/sprites/라네즈/0011.png
+14 kb                assets/sprites/3/0001.png
+2 kb                 assets/materials/[metal_corrogated_shiny]7.mat
+3 kb                 assets/materials/textures/leaf_half_top_007_tint0x727f60ff.png
+2 kb                 assets/materials/[color e01].mat
+31 kb                assets/sprites/라네즈/0067.png
+27 kb                assets/materials/textures/fondulac_slate.jpg
+2 kb                 assets/materials/gold3.mat
+17 kb                assets/sprites/3/0116.png
+30 kb                assets/sprites/3/0037.png
+2 kb                 assets/materials/hera_1_mist_image2.mat
+1 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.png
+41 kb                assets/sprites/라네즈/0076.png
+2 kb                 assets/materials/white1.mat
+2 kb                 assets/materials/_26.mat
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/4_ok.anim
+36 kb                assets/sprites/라네즈/0106.png
+19 kb                assets/sprites/1/0029.png
+2 kb                 assets/materials/[0136_charcoal].mat
+29 kb                assets/sprites/라네즈/0129.png
+31 kb                assets/sprites/1/0048.png
+36 kb                assets/sprites/라네즈/0053.png
+31 kb                assets/sprites/1/0007.png
+912 kb               assets/materials/textures/sulwhasoo_jaumsenge_image_base_color_1001.png
+2 kb                 assets/materials/common_nometal_shd5.mat
+25 kb                assets/sprites/3/0102.png
+39 kb                assets/sprites/3/0050.png
+44 kb                assets/sprites/라네즈/0008.png
+2 kb                 assets/materials/_darkgoldenrod_1.mat
+5 kb                 assets/materials/textures/워터뱅크fhttus.png
+37 kb                assets/materials/textures/geometrics09.jpg
+2 kb                 assets/materials/common_metal_shd2.mat
+2 kb                 assets/materials/_auto_2.mat
+41 kb                assets/sprites/3/0072.png
+19 kb                assets/sprites/1/0031.png
+2 kb                 assets/materials/[color_002].mat
+27 kb                assets/sprites/3/0031.png
+34 kb                assets/sprites/라네즈/0083.png
+2 kb                 assets/materials/[color_a20].mat
+19 kb                assets/sprites/3/0011.png
+2 kb                 assets/materials/color_000.mat
+48 kb                assets/sprites/라네즈/0033.png
+2 kb                 assets/materials/검정메탈.mat
+2 kb                 assets/materials/_17.mat
+36 kb                assets/sprites/라네즈/0055.png
+28 kb                assets/sprites/3/0092.png
+2 kb                 assets/materials/[color j01].mat
+37 kb                assets/sprites/3/0058.png
+22 kb                assets/sprites/3/0108.png
+43 kb                assets/sprites/라네즈/0010.png
+38 kb                assets/sprites/라네즈/0104.png
+4 mb                 assets/animations/sitting.fbx
+940 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/run.anim
+3 kb                 assets/prefabs/camera.prefab
+113 kb               assets/materials/textures/3ae3ea5364a7bfaa53df4cf225fc47fc.jpg
+27 kb                assets/sprites/1/0059.png
+49 kb                assets/sprites/라네즈/0029.png
+31 kb                assets/sprites/라네즈/0138.png
+2 kb                 assets/materials/_22.mat
+30 kb                assets/sprites/라네즈/0061.png
+28 kb                assets/_resources/[materials]/texture/colortexture_001.png
+32 kb                assets/sprites/라네즈/0086.png
+2 kb                 assets/materials/bottom.mat
+29 kb                assets/materials/textures/granite 01.jpg
+28 kb                assets/sprites/1/0043.png
+1 kb                 assets/sprites/click.png
+2 kb                 assets/materials/_dimgray_.mat
+292 kb               assets/materials/textures/hera_5_holics_image.png
+17 kb                assets/sprites/3/0114.png
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.mat
+2 kb                 assets/materials/succulent_marble 01.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/eventsystem.prefab
+1 kb                 assets/materials/textures/metal_seamed_tint0x000000ff.jpg
+1 kb                 assets/materials/textures/metal_corrogated_shiny_tint0x969696ff.jpg
+6 kb                 assets/materials/textures/wood_bamboo_medium_tint0x4f2e13ff.jpg
+35 kb                assets/sprites/3/0043.png
+2 kb                 assets/materials/body1.mat
+23 kb                assets/sprites/1/0019.png
+2 kb                 assets/materials/hera_4_20ssspicy_image.mat
+34 kb                assets/sprites/3/0044.png
+24 kb                assets/sprites/1/0015.png
+2 kb                 assets/materials/[color m09].mat
+2 kb                 assets/materials/[color_f18].mat
+313 kb               assets/materials/textures/reconstituted_stone_none_4aslq1 1.jpg
+[resources]
+0 b                  assets/resources    
+[streamingAssets]

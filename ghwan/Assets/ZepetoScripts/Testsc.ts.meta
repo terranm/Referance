@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 463268f7c1d41914c97f2f317e09aa7a
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nclass Testsc {\r\n    Start() {\r\n    }\r\n}\r\nexports.default
+    = Testsc;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGVzdHNjLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVGVzdHNjLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0EsTUFBcUIsTUFBTTtJQUV2QixLQUFLO0lBRUwsQ0FBQztDQUVKO0FBTkQseUJBTUMifQ==","assetPath":"Assets/ZepetoScripts/Testsc.ts","manifest":{"properties":[],"name":"Testsc","description":""},"isCompiled":true}'
+  typescriptHash: 5bf9925c262b76f1d27c82f1415c8b29
+  onlyWriteTrigger: 0

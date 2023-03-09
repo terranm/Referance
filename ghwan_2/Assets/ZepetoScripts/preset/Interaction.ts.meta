@@ -1,0 +1,59 @@
+fileFormatVersion: 2
+guid: ecc9d82b9bacc0d4c9271bc645b00b31
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Character_Controller_1 = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst PlayerCtrl_1 = require(\\\"./PlayerCtrl\\\");\\r\\n//
+    import custom script from path\\r\\nconst UIController_1 = require(\\\"./UIController\\\");\\r\\nclass
+    Interaction extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    Start()
+    {\\r\\n        // Set EventCamera \\r\\n        this.interactionCanvas.worldCamera
+    = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.camera;\\r\\n       
+    // Set character\\r\\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\\r\\n            this.zepetoCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\\r\\n       
+    });\\r\\n        //Button Hide\\r\\n        this.openUIGesture.gameObject.SetActive(false);\\r\\n       
+    //When Button Click\\r\\n        this.openUIGesture.onClick.AddListener(() =>
+    {\\r\\n            this.StartCoroutine(this.CarRideCoroutine());\\r\\n       
+    });\\r\\n    }\\r\\n    OnTriggerEnter(collider) {\\r\\n        if (collider.gameObject.tag
+    == \\\"Player\\\" && !this.zepetoCharacter.gameObject.GetComponentInChildren($typeof(PlayerCtrl_1.default)).isRide)
+    {\\r\\n            console.log(collider.gameObject.name + \\\"OnTriggerEnter\\\");\\r\\n           
+    this.openUIGesture.gameObject.SetActive(true);\\r\\n        }\\r\\n    }\\r\\n   
+    OnTriggerExit(collider) {\\r\\n        if (collider.gameObject.tag == \\\"Player\\\")
+    {\\r\\n            console.log(collider.gameObject.name + \\\"OnTriggerExit\\\");\\r\\n           
+    this.openUIGesture.gameObject.SetActive(false);\\r\\n        }\\r\\n    }\\r\\n   
+    *CarRideCoroutine() {\\r\\n        //if (this.car == null){ \uCC28\uB7C9 \uC774\uBBF8
+    \uD560\uB2F9\uB41C \uACBD\uC6B0 \uC7AC \uD560\uB2F9 \uD558\uC9C0 \uC54A\uB294
+    \uCF54\uB4DC \uACE0\uBBFC \uD544\uC694\\r\\n        this.car = UnityEngine_1.GameObject.Instantiate(this.carPrefeb);\\r\\n       
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.position
+    = this.gameObject.transform.position;\\r\\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.Translate(5,
+    0, 0);\\r\\n        this.car.transform.SetPositionAndRotation(this.zepetoCharacter.transform.position,
+    this.zepetoCharacter.transform.rotation);\\r\\n        this.car.transform.Rotate(-90,
+    0, 0);\\r\\n        this.car.transform.Translate(0.27, 0, -0.28);\\r\\n       
+    var obj = UnityEngine_1.Object.Instantiate(this.rideEffectFactory);\\r\\n       
+    obj.transform.position = this.zepetoCharacter.transform.position;\\r\\n       
+    //} \\r\\n        this.zepetoCharacter.gameObject.GetComponentInChildren($typeof(PlayerCtrl_1.default)).CarRide(this.car.gameObject);\\r\\n       
+    //this.zepetoCharacter.transform.parent = this.car.transform;\\r\\n        this.openUIGesture.gameObject.SetActive(false);\\r\\n       
+    //ZepetoPlayers.instance.ZepetoCamera.transform.position = new Vector3(this.zepetoCharacter.transform.position.x,
+    this.zepetoCharacter.transform.position.y, this.zepetoCharacter.transform.position.z);\\r\\n       
+    //ZepetoPlayers.instance.ZepetoCamera.transform.Translate(5, 5, 0);\\r\\n       
+    //ZepetoPlayers.instance.ZepetoCamera.transform.LookAt(this.zepetoCharacter.transform.position);\\r\\n       
+    yield new UnityEngine_1.WaitForSeconds(3);\\r\\n        UnityEngine_1.GameObject.Destroy(obj);\\r\\n   
+    }\\r\\n}\\r\\nexports.default = Interaction;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSW50ZXJhY3Rpb24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJJbnRlcmFjdGlvbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUErSDtBQUUvSCw2RUFBNkU7QUFFN0UsaURBQXNEO0FBQ3RELDZDQUFzQztBQUV0QyxpQ0FBaUM7QUFDakMsaURBQTBDO0FBRTFDLE1BQXFCLFdBQVksU0FBUSxxQ0FBcUI7SUFXMUQsS0FBSztRQUVELG1CQUFtQjtRQUNuQixJQUFJLENBQUMsaUJBQWlCLENBQUMsV0FBVyxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFlBQVksQ0FBQyxNQUFNLENBQUM7UUFDaEYsZ0JBQWdCO1FBQ2hCLDJDQUFhLENBQUMsUUFBUSxDQUFDLGtCQUFrQixDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDdkQsSUFBSSxDQUFDLGVBQWUsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQztRQUNyRixDQUFDLENBQUMsQ0FBQztRQUVILGFBQWE7UUFDYixJQUFJLENBQUMsYUFBYSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7UUFFL0MsbUJBQW1CO1FBQ25CLElBQUksQ0FBQyxhQUFhLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFFLEVBQUU7WUFDdkMsSUFBSSxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsZ0JBQWdCLEVBQUUsQ0FBQyxDQUFDO1FBQ2pELENBQUMsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztJQUVELGNBQWMsQ0FBQyxRQUFpQjtRQUU1QixJQUFJLFFBQVEsQ0FBQyxVQUFVLENBQUMsR0FBRyxJQUFJLFFBQVEsSUFBSSxDQUFDLElBQUksQ0FBQyxlQUFlLENBQUMsVUFBVSxDQUFDLHNCQUFzQixTQUFDLG9CQUFVLEdBQUksTUFBTSxFQUFDO1lBQ3BILE9BQU8sQ0FBQyxHQUFHLENBQUMsUUFBUSxDQUFDLFVBQVUsQ0FBQyxJQUFJLEdBQUcsZ0JBQWdCLENBQUMsQ0FBQTtZQUN4RCxJQUFJLENBQUMsYUFBYSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDakQ7SUFDTCxDQUFDO0lBRUQsYUFBYSxDQUFDLFFBQWlCO1FBRTNCLElBQUksUUFBUSxDQUFDLFVBQVUsQ0FBQyxHQUFHLElBQUksUUFBUSxFQUFDO1lBQ3BDLE9BQU8sQ0FBQyxHQUFHLENBQUMsUUFBUSxDQUFDLFVBQVUsQ0FBQyxJQUFJLEdBQUcsZUFBZSxDQUFDLENBQUE7WUFDdkQsSUFBSSxDQUFDLGFBQWEsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1NBQ2xEO0lBQ0wsQ0FBQztJQUVELENBQUMsZ0JBQWdCO1FBRWIseURBQXlEO1FBQ3pELElBQUksQ0FBQyxHQUFHLEdBQUcsd0JBQVUsQ0FBQyxXQUFXLENBQWEsSUFBSSxDQUFDLFNBQVMsQ0FBQyxDQUFDO1FBQzlELDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDO1FBQ2xILDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsQ0FBQyxFQUFDLENBQUMsRUFBQyxDQUFDLENBQUMsQ0FBQztRQUNyRixJQUFJLENBQUMsR0FBRyxDQUFDLFNBQVMsQ0FBQyxzQkFBc0IsQ0FBQyxJQUFJLENBQUMsZUFBZSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEVBQUMsSUFBSSxDQUFDLGVBQWUsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUM7UUFDM0gsSUFBSSxDQUFDLEdBQUcsQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLENBQUMsRUFBRSxFQUFDLENBQUMsRUFBQyxDQUFDLENBQUMsQ0FBQztRQUNuQyxJQUFJLENBQUMsR0FBRyxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsSUFBSSxFQUFFLENBQUMsRUFBRSxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQzdDLElBQUksR0FBRyxHQUFHLG9CQUFNLENBQUMsV0FBVyxDQUFDLElBQUksQ0FBQyxpQkFBaUIsQ0FBZSxDQUFDO1FBQ25FLEdBQUcsQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQyxlQUFlLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQztRQUNqRSxJQUFJO1FBQ0osSUFBSSxDQUFDLGVBQWUsQ0FBQyxVQUFVLENBQUMsc0JBQXNCLFNBQUMsb0JBQVUsR0FBSSxPQUFPLENBQUMsSUFBSSxDQUFDLEdBQUcsQ0FBQyxVQUFVLENBQUMsQ0FBQztRQUNsRyw2REFBNkQ7UUFDN0QsSUFBSSxDQUFDLGFBQWEsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBRS9DLHdNQUF3TTtRQUN4TSxtRUFBbUU7UUFDbkUsZ0dBQWdHO1FBQ2hHLE1BQU0sSUFBSSw0QkFBYyxDQUFDLENBQUMsQ0FBQyxDQUFDO1FBQzVCLHdCQUFVLENBQUMsT0FBTyxDQUFDLEdBQUcsQ0FBQyxDQUFDO0lBQzVCLENBQUM7Q0EwQ0o7QUE1R0QsOEJBNEdDIn0=\",\"assetPath\":\"Assets/ZepetoScripts/preset/Interaction.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.UI\",\"name\":\"openUIGesture\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UIModule\",\"name\":\"interactionCanvas\",\"type\":\"UnityEngine.Canvas\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.AnimationModule\",\"name\":\"animationClip\",\"type\":\"UnityEngine.AnimationClip\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"rideEffectFactory\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"carPrefeb\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"Interaction\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 5d47bef3cd9d150d3259bddeaa730b39

@@ -1,0 +1,77 @@
+fileFormatVersion: 2
+guid: 9cf0fb5f82217c84fbabbab0f8e9c177
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst
+    UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst ZEPETO_Multiplay_1 =
+    require(\\\"ZEPETO.Multiplay\\\");\\r\\nconst ZEPETO_World_1 = require(\\\"ZEPETO.World\\\");\\r\\nclass
+    wayPoint extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    constructor()
+    {\\r\\n        super(...arguments);\\r\\n        this.number = 0;\\r\\n       
+    this.speed = 1;\\r\\n        this.foodNum = 0;\\r\\n    }\\r\\n    Start() {\\r\\n       
+    this.multiplay = UnityEngine_1.GameObject.Find(\\\"WorldMultiplay\\\").GetComponent($typeof(ZEPETO_World_1.ZepetoWorldMultiplay));\\r\\n       
+    // this.multiplay.RoomCreated += (room: Room) => {\\r\\n        //     this.room
+    = room;\\r\\n        //     room.OnStateChange += this.OnStateChange;\\r\\n       
+    //     this.room.AddMessageHandler(\\\"Bus\\\", (message:BusInfo)=>{\\r\\n       
+    //         this.foodNum = message.index;\\r\\n        //         this.transform.position
+    = this.ParseVector3(message.position);\\r\\n        //         this.transform.rotation
+    = Quaternion.Euler(this.ParseVector3(message.rotation));\\r\\n        //    
+    });\\r\\n        // };\\r\\n    }\\r\\n    FixedUpdate() {\\r\\n        if (this.multiplay.Room
+    != null && this.multiplay.Room.IsConnected && !this.isStop)\\r\\n           
+    this.MovePath();\\r\\n    }\\r\\n    MovePath() {\\r\\n        this.transform.position
+    = UnityEngine_1.Vector3.MoveTowards(this.transform.position, this.foodPos[this.foodNum].transform.position,
+    this.speed * UnityEngine_1.Time.deltaTime);\\r\\n        let dir = UnityEngine_1.Vector3.zero;\\r\\n       
+    dir = (UnityEngine_1.Vector3.op_Subtraction(this.foodPos[this.foodNum].transform.position,
+    this.transform.position)).normalized;\\r\\n        let dist = UnityEngine_1.Vector3.Distance(this.foodPos[this.foodNum].transform.position,
+    this.transform.position);\\r\\n        if (dist > 0.5) {\\r\\n            this.transform.rotation
+    = UnityEngine_1.Quaternion.Slerp(this.transform.rotation, UnityEngine_1.Quaternion.LookRotation(dir),
+    UnityEngine_1.Time.deltaTime * 1);\\r\\n        }\\r\\n        else {\\r\\n           
+    if (this.foodNum + 1 < this.foodPos.Length) {\\r\\n                dir = (UnityEngine_1.Vector3.op_Subtraction(this.foodPos[this.foodNum++].transform.position,
+    this.transform.position)).normalized;\\r\\n            }\\r\\n            else
+    if (this.foodNum + 1 > this.foodPos.Length) {\\r\\n                dir = (UnityEngine_1.Vector3.op_Subtraction(this.foodPos[0].transform.position,
+    this.transform.position)).normalized;\\r\\n            }\\r\\n            this.transform.rotation
+    = UnityEngine_1.Quaternion.Slerp(this.transform.rotation, UnityEngine_1.Quaternion.LookRotation(dir),
+    UnityEngine_1.Time.deltaTime * 1);\\r\\n        }\\r\\n        //this.transform.LookAt(this.foodPos[this.foodNum].transform.position);\\r\\n       
+    if (UnityEngine_1.Vector3.op_Equality(this.transform.position, this.foodPos[this.foodNum].transform.position))
+    {\\r\\n            this.dir = new UnityEngine_1.Vector3((this.foodPos[this.foodNum].transform.position.x
+    - this.transform.position.x), (this.foodPos[this.foodNum].transform.position.y
+    - this.transform.position.y), 0).normalized;\\r\\n            //this.transform.rotation
+    = Quaternion.LookRotation(this.dir);\\r\\n            this.foodNum++;\\r\\n       
+    }\\r\\n        // if (this.foodNum == 11 && this.number == 0 && !this.isDown)
+    {\\r\\n        //     this.StopDown();\\r\\n        // }\\r\\n        if (this.foodNum
+    == this.foodPos.Length) {\\r\\n            this.foodNum = 0;\\r\\n        }\\r\\n       
+    if (this.player != null && this.player.King)\\r\\n            this.SendTransform(this.gameObject.transform);\\r\\n   
+    }\\r\\n    OnStateChange(state, isFirst) {\\r\\n        // \uCCAB OnStateChange
+    \uC774\uBCA4\uD2B8 \uC218\uC2E0 \uC2DC, State \uC804\uCCB4 \uC2A4\uB0C5\uC0F7\uC744
+    \uC218\uC2E0\uD569\uB2C8\uB2E4.\\r\\n        if (isFirst) {\\r\\n           
+    state.players.ForEach((sessionId, player) => {\\r\\n                if (this.room.SessionId
+    == sessionId) {\\r\\n                    this.player = player;\\r\\n               
+    }\\r\\n            });\\r\\n        }\\r\\n    }\\r\\n    SendTransform(transform)
+    {\\r\\n        const data = new ZEPETO_Multiplay_1.RoomData();\\r\\n        const
+    pos = new ZEPETO_Multiplay_1.RoomData();\\r\\n        pos.Add(\\\"x\\\", transform.position.x);\\r\\n       
+    pos.Add(\\\"y\\\", transform.position.y);\\r\\n        pos.Add(\\\"z\\\", transform.position.z);\\r\\n       
+    data.Add(\\\"position\\\", pos.GetObject());\\r\\n        const rot = new ZEPETO_Multiplay_1.RoomData();\\r\\n       
+    rot.Add(\\\"x\\\", transform.localEulerAngles.x);\\r\\n        rot.Add(\\\"y\\\",
+    transform.localEulerAngles.y);\\r\\n        rot.Add(\\\"z\\\", transform.localEulerAngles.z);\\r\\n       
+    data.Add(\\\"rotation\\\", rot.GetObject());\\r\\n        data.Add(\\\"index\\\",
+    this.foodNum);\\r\\n        this.multiplay.Room.Send(\\\"BusInfo\\\", data.GetObject());\\r\\n   
+    }\\r\\n    ParseVector3(vector3) {\\r\\n        return new UnityEngine_1.Vector3(vector3.x,
+    vector3.y, vector3.z);\\r\\n    }\\r\\n}\\r\\nexports.default = wayPoint;\\r\\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoid2F5UG9pbnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ3YXlQb2ludC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLGlEQUFxRDtBQUNyRCw2Q0FBeUc7QUFDekcsdURBQWtEO0FBQ2xELCtDQUFvRDtBQVNwRCxNQUFxQixRQUFTLFNBQVEscUNBQXFCO0lBQTNEOztRQUVXLFdBQU0sR0FBVyxDQUFDLENBQUM7UUFFbkIsVUFBSyxHQUFVLENBQUMsQ0FBQztRQUNqQixZQUFPLEdBQUcsQ0FBQyxDQUFDO0lBOEd2QixDQUFDO0lBdkdHLEtBQUs7UUFFRCxJQUFJLENBQUMsU0FBUyxHQUFHLHdCQUFVLENBQUMsSUFBSSxDQUFDLGdCQUFnQixDQUFDLENBQUMsWUFBWSxTQUFDLG1DQUFvQixFQUFHLENBQUM7UUFDeEYsa0RBQWtEO1FBQ2xELHdCQUF3QjtRQUN4QixnREFBZ0Q7UUFDaEQsOERBQThEO1FBQzlELHdDQUF3QztRQUN4Qyx5RUFBeUU7UUFDekUsMkZBQTJGO1FBQzNGLFVBQVU7UUFDVixLQUFLO0lBRVQsQ0FBQztJQUVELFdBQVc7UUFFUCxJQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxJQUFJLElBQUksSUFBSSxJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxXQUFXLElBQUksQ0FBQyxJQUFJLENBQUMsTUFBTTtZQUM3RSxJQUFJLENBQUMsUUFBUSxFQUFFLENBQUM7SUFDeEIsQ0FBQztJQUVNLFFBQVE7UUFFWCxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyxxQkFBTyxDQUFDLFdBQVcsQ0FDeEMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEVBQUUsSUFBSSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLENBQUMsU0FBUyxDQUFDLFFBQVEsRUFBRSxJQUFJLENBQUMsS0FBSyxHQUFHLGtCQUFJLENBQUMsU0FBUyxDQUFDLENBQUM7UUFDMUcsSUFBSSxHQUFHLEdBQVkscUJBQU8sQ0FB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\",\"assetPath\":\"Assets/ZepetoScripts/wayPoint.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"mscorlib\",\"name\":\"number\",\"type\":\"System.Single\",\"isArray\":false,\"initValue\":[\"0\"],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"foodPos\",\"type\":\"UnityEngine.Transform[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"speed\",\"type\":\"System.Single\",\"isArray\":false,\"initValue\":[\"1\"],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"foodNum\",\"type\":\"System.Single\",\"isArray\":false,\"initValue\":[\"0\"],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"dir\",\"type\":\"UnityEngine.Vector3\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"isStop\",\"type\":\"System.Boolean\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"isDown\",\"type\":\"System.Boolean\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"ZEPETO.World\",\"name\":\"multiplay\",\"type\":\"ZEPETO.World.ZepetoWorldMultiplay\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"\",\"name\":\"room\",\"type\":\"ZEPETO.Multiplay.Room\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"\",\"name\":\"player\",\"type\":\"ZEPETO.Multiplay.Schema.Player\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"wayPoint\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 508a9e035f8c75a03207ab8c18b9e224

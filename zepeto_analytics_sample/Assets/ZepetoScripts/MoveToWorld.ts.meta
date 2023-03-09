@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: a12b25343166d8245a46e223e2f0d4d6
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nclass MoveToWorld extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.worldId
+    = \"com.default.jumpworld\"; // ex: com.default.jumpworld\r\n    }\r\n    Start()
+    {\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.zepetoCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n       
+    });\r\n    }\r\n    OnTriggerEnter(collider) {\r\n        if ((this.zepetoCharacter
+    == null) || (collider.gameObject != this.zepetoCharacter.gameObject)) {\r\n           
+    return;\r\n        }\r\n        ZEPETO_World_1.ZepetoWorldContent.MoveToWorld(this.worldId,
+    (errCode, errMsg) => {\r\n            // Example of error callback processing
+    (When implementing , try to implement it in various ways, such as pop-up windows)\r\n           
+    console.log(`${errCode} - ${errMsg}`);\r\n        });\r\n    }\r\n}\r\nexports.default
+    = MoveToWorld;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTW92ZVRvV29ybGQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJNb3ZlVG9Xb3JsZC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFzRDtBQUN0RCwrQ0FBa0Q7QUFFbEQsNkVBQTJGO0FBRTNGLE1BQXFCLFdBQVksU0FBUSxxQ0FBcUI7SUFBOUQ7O1FBR1ksWUFBTyxHQUFXLHVCQUF1QixDQUFDLENBQUMsNEJBQTRCO0lBbUJuRixDQUFDO0lBakJHLEtBQUs7UUFDRCwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxrQkFBa0IsQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQ3ZELElBQUksQ0FBQyxlQUFlLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUM7UUFDckYsQ0FBQyxDQUFDLENBQUM7SUFDUCxDQUFDO0lBRUQsY0FBYyxDQUFDLFFBQWtCO1FBQzdCLElBQUksQ0FBQyxJQUFJLENBQUMsZUFBZSxJQUFJLElBQUksQ0FBQyxJQUFJLENBQUMsUUFBUSxDQUFDLFVBQVUsSUFBSSxJQUFJLENBQUMsZUFBZSxDQUFDLFVBQVUsQ0FBQyxFQUFFO1lBQzVGLE9BQU87U0FDVjtRQUVELGlDQUFrQixDQUFDLFdBQVcsQ0FBQyxJQUFJLENBQUMsT0FBTyxFQUFFLENBQUMsT0FBTyxFQUFFLE1BQU0sRUFBRSxFQUFFO1lBQzdELHlIQUF5SDtZQUN6SCxPQUFPLENBQUMsR0FBRyxDQUFDLEdBQUcsT0FBTyxNQUFNLE1BQU0sRUFBRSxDQUFDLENBQUM7UUFDMUMsQ0FBQyxDQUFDLENBQUM7SUFDUCxDQUFDO0NBRUo7QUF0QkQsOEJBc0JDIn0=","assetPath":"Assets/ZepetoScripts/MoveToWorld.ts","manifest":{"properties":[],"name":"MoveToWorld","description":""},"isCompiled":true}'
+  typescriptHash: d61e79e3dcde3f40ac77579ddaa7ea4a
+  onlyWriteTrigger: 0

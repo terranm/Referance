@@ -1,0 +1,99 @@
+[World Settings]
+world id             com.zepeto.me.zepeto.template.default
+version              0.1                 
+max clients          8                   
+orientation          horizontal          
+disable invite       false               
+disable room list    false               
+disable private room false               
+
+[Build Manifest]
+[scenes]
+1 mb                 assets/scenes/xi_0630.unity
+[assets]
+44 kb                assets/prefabs/uicontroller_touchpad_horizontal.prefab
+13 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_base.png
+560 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/idle.anim
+3 kb                 assets/_resources/004_camping/[prefabs]/campingground/material/fxt_cp_aurora3_m.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_off.anim
+813 b                assets/_resources/004_camping/[materials]/fxt_galaxy_star.mat
+34 kb                assets/_resources/[scriptsshader]/dynamicstarrysky/models/skysphere.fbx
+768 kb               assets/_resources/004_camping/[texture]/fxt_flareline_01.tga
+1 kb                 assets/models/fx/star_02.png
+139 kb               assets/models/gs_xi_mobility.fbx
+246 kb               assets/xi_0630/campingtexture_2_low_2_camping_texture_2_basecolor.png
+35 kb                packages/zepeto.character.controller/runtime/_resources/inputactions/zepetoinputcontrol.inputactions
+1 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.png
+2 kb                 assets/models/fx/magic_01.png
+682 kb               assets/models/fx/portal.prefab
+4 kb                 assets/xi_0630/color_chart_256.png
+3 mb                 assets/prefabs/zepetobasemodel.prefab
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_ziggle.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/walk.anim
+19 kb                assets/_resources/004_camping/[texture]/star_01.png
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_on.anim
+3 kb                 assets/_resources/004_camping/[prefabs]/campingground/material/fxt_cp_aurora_m.mat
+48 kb                assets/_resources/004_camping/[texture]/fxt_line_01.png
+7 kb                 assets/_resources/004_camping/[texture]/star_02.png
+38 kb                assets/_resources/004_camping/[fbx]/fx_aurora_01.fbx
+152 kb               assets/xi_0630/apple_none_basecolor.png
+192 kb               assets/_resources/004_camping/[texture]/fxt_normal_01.tga
+2 kb                 assets/models/fx/power_02.mat
+2 kb                 assets/models/fx/power_01.png
+65 kb                assets/_resources/004_camping/[texture]/fxt_colorpattern_07.png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_idle.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_move.anim
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_horizontal.prefab
+11 mb                assets/models/gs_xi_home.fbx
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_off.anim
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandleorigin.controller
+1 kb                 assets/_resources/[scriptsshader]/resources-internal/standardnocolor.shader
+1 kb                 assets/zepetoscripts/xi/new lighting settings.lighting
+2 kb                 assets/models/fx/power_01.mat
+2 kb                 assets/models/fx/magic_02.mat
+14 kb                assets/_resources/004_camping/[shader]/fx_master_addtive.shader
+4 kb                 assets/_resources/004_camping/game_jump/materials/texture/gimmick_001.png
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_vertical.prefab
+17 kb                assets/_resources/[scriptsshader]/dynamicstarrysky/shaders/starrysky.shader
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_icon.png
+1 kb                 packages/com.unity.inputsystem/inputsystem/editor/icons/inputsystemuiinputmodule@64.png
+29 kb                assets/_resources/004_camping/[texture]/fxt_splash_01.png
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_icon.png
+256 kb               assets/_resources/004_camping/[texture]/fxt_galaxy_star.tga
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandle.controller
+4 mb                 assets/_resources/004_camping/[materials]/camping_ground_sky_night 1.mat
+772 b                assets/models/click.png
+24 kb                assets/prefabs/zepetoanimator.controller
+15 mb                assets/prefabs/erika_archer@flying.fbx
+186 kb               assets/_resources/004_camping/[skybox]/texture/moon-4.png
+15 mb                assets/xi_0630/xi_mod_02.fbx
+940 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/run.anim
+2 kb                 assets/_resources/004_camping/game_jump/materials/gimmick_color.mat
+3 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/charactershadow.prefab
+1 kb                 assets/_resources/004_camping/[materials]/fxt_rind_light.mat
+12 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_base.png
+4 kb                 assets/models/color_chart_256.png
+32 kb                assets/_resources/004_camping/game_jump/mesh/gimmick/red_halfsphere_basic.fbx
+2 kb                 assets/prefabs/camera.prefab
+16 kb                assets/_resources/[scriptsshader]/resources-internal/tonemappinglut.png
+63 kb                assets/_resources/004_camping/[texture]/fxt_line_03_1.png
+2 kb                 assets/models/fx/magic_01.mat
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/gesture.anim
+14 kb                assets/_resources/004_camping/[shader]/fx_master_addtive_two.shader
+18 kb                packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimator.controller
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/eventsystem.prefab
+2 kb                 assets/models/fx/line_03.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_on.anim
+43 kb                assets/prefabs/uicontroller_touchpad_vertical.prefab
+3 kb                 assets/_resources/004_camping/[prefabs]/campingground/material/fxt_cp_aurora2_m.mat
+324 kb               assets/xi_0630/campingtexture_1.png
+428 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/hand_idle_01.anim
+1 kb                 assets/_resources/004_camping/[materials]/fxt_aurora_02.mat
+65 kb                assets/_resources/004_camping/[texture]/fxt_colorpattern_03.png
+3 kb                 assets/_resources/004_camping/[texture]/fxt_line_04.png
+31 kb                packages/com.unity.inputsystem/inputsystem/plugins/playerinput/defaultinputactions.inputactions
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_ziggle.anim
+[resources]
+0 b                  assets/resources    
+[streamingAssets]

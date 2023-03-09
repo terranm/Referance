@@ -1,0 +1,43 @@
+fileFormatVersion: 2
+guid: 3c8a93674c4d98d4cbf22ba720995ad6
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass UIOnOff extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.sit
+    = false;\r\n    }\r\n    Start() {\r\n        this.StartCoroutine(this.UICheck());\r\n   
+    }\r\n    *UICheck() {\r\n        while (true) {\r\n            yield new UnityEngine_1.WaitForSeconds(0.1);\r\n           
+    if (this.multiplay.Room != null && this.multiplay.Room.IsConnected) {\r\n               
+    let has = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.HasPlayer(this.multiplay.Room.SessionId);\r\n               
+    if (has) {\r\n                    let player = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.gameObject;\r\n                   
+    //let dist = Vector3.Distance(player.transform.position, this.button.transform.position);\r\n                   
+    let dist = (UnityEngine_1.Vector3.op_Subtraction(player.transform.position, this.transform.position)).magnitude;\r\n                   
+    if (dist > 3 && !this.sit) {\r\n                        this.button.SetActive(false);\r\n                   
+    }\r\n                    else if (dist < 3 && this.sit == true) {\r\n                       
+    this.button.SetActive(false);\r\n                    }\r\n                   
+    else if (dist < 3 && this.sit == false) {\r\n                        this.button.SetActive(true);\r\n                   
+    }\r\n                }\r\n            }\r\n        }\r\n    }\r\n    OnTriggerEnter(other)
+    {\r\n        if (other.gameObject.tag == \"Player\") {\r\n            this.sit
+    = true;\r\n            this.button.SetActive(false);\r\n        }\r\n    }\r\n   
+    OnTriggerExit(other) {\r\n        if (other.gameObject.tag == \"Player\") {\r\n           
+    this.sit = false;\r\n            this.button.SetActive(true);\r\n        }\r\n   
+    }\r\n}\r\nexports.default = UIOnOff;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVUlPbk9mZi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlVJT25PZmYudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBMkU7QUFDM0UsNkVBQTREO0FBQzVELGlEQUFxRDtBQUdyRCxNQUFxQixPQUFRLFNBQVEscUNBQXFCO0lBQTFEOztRQUtXLFFBQUcsR0FBVyxLQUFLLENBQUM7SUE0Qy9CLENBQUM7SUEzQ0csS0FBSztRQUNELElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLE9BQU8sRUFBRSxDQUFDLENBQUM7SUFDeEMsQ0FBQztJQUVELENBQUMsT0FBTztRQUNKLE9BQU0sSUFBSSxFQUFDO1lBQ1AsTUFBTSxJQUFJLDRCQUFjLENBQUMsR0FBRyxDQUFDLENBQUM7WUFDOUIsSUFBSSxJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksSUFBSSxJQUFJLElBQUksSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsV0FBVyxFQUFFO2dCQUNoRSxJQUFJLEdBQUcsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLENBQUM7Z0JBQzFFLElBQUksR0FBRyxFQUFFO29CQUNMLElBQUksTUFBTSxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLFVBQVUsQ0FBQztvQkFDbEYseUZBQXlGO29CQUN6RixJQUFJLElBQUksR0FBRyxDQXZCQSxxQkFBTyxDQXNEMjFuQixjQUFlLENBL0JoM25CLE1BQU0sQ0FBQyxTQUFTLENBQUMsUUFBUSxFQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxFQUFDLENBQUMsU0FBUyxDQUFDO29CQUMzRSxJQUFHLElBQUksR0FBRyxDQUFDLElBQUssQ0FBQyxJQUFJLENBQUMsR0FBRyxFQUFDO3dCQUN0QixJQUFJLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQTtxQkFFL0I7eUJBQ0ksSUFBRyxJQUFJLEdBQUcsQ0FBQyxJQUFLLElBQUksQ0FBQyxHQUFHLElBQUksSUFBSSxFQUFDO3dCQUNsQyxJQUFJLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQTtxQkFDL0I7eUJBQ0ksSUFBRyxJQUFJLEdBQUcsQ0FBQyxJQUFLLElBQUksQ0FBQyxHQUFHLElBQUksS0FBSyxFQUFDO3dCQUNuQyxJQUFJLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQTtxQkFFOUI7aUJBQ0o7YUFDSjtTQUNKO0lBQ0wsQ0FBQztJQUVELGNBQWMsQ0FBQyxLQUFlO1FBQzFCLElBQUksS0FBSyxDQUFDLFVBQVUsQ0FBQyxHQUFHLElBQUksUUFBUSxFQUNwQztZQUNJLElBQUksQ0FBQyxHQUFHLEdBQUcsSUFBSSxDQUFDO1lBQ2hCLElBQUksQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1NBQ2hDO0lBQ0wsQ0FBQztJQUVELGFBQWEsQ0FBQyxLQUFlO1FBQ3pCLElBQUksS0FBSyxDQUFDLFVBQVUsQ0FBQyxHQUFHLElBQUksUUFBUSxFQUFFO1lBQ2xDLElBQUksQ0FBQyxHQUFHLEdBQUcsS0FBSyxDQUFDO1lBQ2pCLElBQUksQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1NBQy9CO0lBQ0wsQ0FBQztDQUNKO0FBakRELDBCQWlEQyJ9","assetPath":"Assets/ZepetoScripts/UI/UIOnOff.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"button","type":"UnityEngine.GameObject","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"ZEPETO.World","name":"multiplay","type":"ZEPETO.World.ZepetoWorldMultiplay","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"sit","type":"System.Boolean","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"UIOnOff","description":""},"isCompiled":true}'
+  typescriptHash: 608d68ade8c9384ce5b7065079d3c9fb

@@ -1,0 +1,36 @@
+fileFormatVersion: 2
+guid: af920123f0247a44f9c588f659348815
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass CarrierCreater extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n        this.carrier;\r\n       
+    this.carrierList = [];\r\n        for (let i = 0; i < 10; i++) {\r\n           
+    let Obj = UnityEngine_1.GameObject.Instantiate(this.carrier);\r\n           
+    Obj.name = i.toString();\r\n            Obj.transform.localPosition = UnityEngine_1.Vector3.zero;\r\n           
+    Obj.transform.SetParent(this.gameObject.transform);\r\n            this.carrierList.Add(Obj);\r\n           
+    Obj.SetActive(false);\r\n        }\r\n    }\r\n    FixedUpdate() {\r\n       
+    this.cnt += UnityEngine_1.Time.deltaTime;\r\n        if (this.cnt > 3) {\r\n           
+    let Obj = this.carrierList[this.carrierNum++];\r\n            Obj.SetActive(true);\r\n       
+    }\r\n    }\r\n    CarrierDestory(carNum) {\r\n        let num = parseInt(carNum);\r\n       
+    let Obj = this.carrierList[num];\r\n        Obj.transform.localPosition = UnityEngine_1.Vector3.zero;\r\n       
+    Obj.SetActive(false);\r\n    }\r\n}\r\nexports.default = CarrierCreater;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2FycmllckNyZWF0ZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJDYXJyaWVyQ3JlYXRlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUF1RDtBQUN2RCxpREFBcUQ7QUFFckQsTUFBcUIsY0FBZSxTQUFRLHFDQUFxQjtJQU03RCxLQUFLO1FBQ0QsSUFBSSxDQUFDLE9BQU8sQ0FBQTtRQUNaLElBQUksQ0FBQyxXQUFXLEdBQUcsRUFBRSxDQUFBO1FBQ3JCLEtBQUksSUFBSSxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsR0FBRyxFQUFFLEVBQUUsQ0FBQyxFQUFFLEVBQUM7WUFDdkIsSUFBSSxHQUFHLEdBQUcsd0JBQVUsQ0FBQyxXQUFXLENBQUMsSUFBSSxDQUFDLE9BQU8sQ0FBZSxDQUFDO1lBQzdELEdBQUcsQ0FBQyxJQUFJLEdBQUcsQ0FBQyxDQUFDLFFBQVEsRUFBRSxDQUFDO1lBQ3hCLEdBQUcsQ0FBQyxTQUFTLENBQUMsYUFBYSxHQUFHLHFCQUFPLENBQUMsSUFBSSxDQUFDO1lBQzNDLEdBQUcsQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLENBQUM7WUFDbkQsSUFBSSxDQUFDLFdBQVcsQ0FBQyxHQUFHLENBQUMsR0FBRyxDQUFDLENBQUM7WUFDMUIsR0FBRyxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztTQUN4QjtJQUNMLENBQUM7SUFDRCxXQUFXO1FBQ1AsSUFBSSxDQUFDLEdBQUcsSUFBSSxrQkFBSSxDQUFDLFNBQVMsQ0FBQztRQUMzQixJQUFHLElBQUksQ0FBQyxHQUFHLEdBQUcsQ0FBQyxFQUFDO1lBQ1osSUFBSSxHQUFHLEdBQUcsSUFBSSxDQUFDLFdBQVcsQ0FBQyxJQUFJLENBQUMsVUFBVSxFQUFFLENBQWUsQ0FBQztZQUM1RCxHQUFHLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1NBQ3ZCO0lBQ0wsQ0FBQztJQUVNLGNBQWMsQ0FBQyxNQUFlO1FBQ2pDLElBQUksR0FBRyxHQUFHLFFBQVEsQ0FBQyxNQUFNLENBQUMsQ0FBQztRQUMzQixJQUFJLEdBQUcsR0FBRyxJQUFJLENBQUMsV0FBVyxDQUFDLEdBQUcsQ0FBZSxDQUFDO1FBQzlDLEdBQUcsQ0FBQyxTQUFTLENBQUMsYUFBYSxHQUFHLHFCQUFPLENBQUMsSUFBSSxDQUFDO1FBQzNDLEdBQUcsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDekIsQ0FBQztDQUNKO0FBaENELGlDQWdDQyJ9","assetPath":"Assets/ZepetoScripts/preset/CarrierCreater.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"carrier","type":"UnityEngine.GameObject","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"CarrierCreater","description":""},"isCompiled":true}'
+  typescriptHash: cb3290fad6c17312238806b09cdfddfa

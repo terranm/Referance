@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: 68f0c6a528c2618438e5a6291abaea0c
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nclass
+    GestureController extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
+    {\r\n        this.multiplay = UnityEngine_1.GameObject.Find(\"WorldMultiplay\").GetComponent($typeof(ZEPETO_World_1.ZepetoWorldMultiplay));\r\n       
+    for (let i = 0; i < this.gestureClips.length; ++i) {\r\n            this.gestureListButtons[i].onClick.AddListener(()
+    => {\r\n                this.multiplay.Room.Send(\"GestureNum\", i);\r\n               
+    this.multiplay.Room.Send(\"Gesture\", this.multiplay.Room.SessionId);\r\n               
+    const character = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n               
+    character.SetGesture(this.gestureClips[i]);\r\n                this.StartCoroutine(this.StopCharacterGesture(this.gestureClips[i].length
+    - 0.3));\r\n            });\r\n        }\r\n    }\r\n    *StopCharacterGesture(length)
+    {\r\n        yield new UnityEngine_1.WaitForSeconds(length);\r\n        const
+    character = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n       
+    character.CancelGesture();\r\n    }\r\n}\r\nexports.default = GestureController;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2VzdHVyZUNvbnRyb2xsZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJHZXN0dXJlQ29udHJvbGxlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUF3RTtBQUV4RSw2RUFBNEQ7QUFDNUQsaURBQXFEO0FBQ3JELCtDQUFvRDtBQUdwRCxNQUFxQixpQkFBa0IsU0FBUSxxQ0FBcUI7SUFNaEUsS0FBSztRQUVELElBQUksQ0FBQyxTQUFTLEdBQUcsd0JBQVUsQ0FBQyxJQUFJLENBQUMsZ0JBQWdCLENBQUMsQ0FBQyxZQUFZLFNBQUMsbUNBQW9CLEVBQUcsQ0FBQztRQUN4RixLQUFLLElBQUksQ0FBQyxHQUFHLENBQUMsRUFBRSxDQUFDLEdBQUcsSUFBSSxDQUFDLFlBQVksQ0FBQyxNQUFNLEVBQUUsRUFBRSxDQUFDLEVBQ2pEO1lBQ0ksSUFBSSxDQUFDLGtCQUFrQixDQUFDLENBQUMsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO2dCQUVoRCxJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsWUFBWSxFQUFFLENBQUMsQ0FBQyxDQUFDO2dCQUMxQyxJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsU0FBUyxFQUFFLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxDQUFDO2dCQUNuRSxNQUFNLFNBQVMsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQztnQkFDNUUsU0FBUyxDQUFDLFVBQVUsQ0FBQyxJQUFJLENBQUMsWUFBWSxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUM7Z0JBQzNDLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLG9CQUFvQixDQUFDLElBQUksQ0FBQyxZQUFZLENBQUMsQ0FBQyxDQUFDLENBQUMsTUFBTSxHQUFHLEdBQUcsQ0FBQyxDQUFDLENBQUM7WUFFdEYsQ0FBQyxDQUFDLENBQUM7U0FDTjtJQUNMLENBQUM7SUFFRCxDQUFDLG9CQUFvQixDQUFDLE1BQWM7UUFFaEMsTUFBTSxJQUFJLDRCQUFjLENBQUMsTUFBTSxDQUFDLENBQUM7UUFDakMsTUFBTSxTQUFTLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUM7UUFDNUUsU0FBUyxDQUFDLGFBQWEsRUFBRSxDQUFDO0lBQzlCLENBQUM7Q0FDSjtBQTdCRCxvQ0E2QkMifQ==","assetPath":"Assets/ZepetoScripts/ScreenShotScripts/GestureController.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"gestureListButtons","type":"UnityEngine.UI.Button[]","isArray":true,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.AnimationModule","name":"gestureClips","type":"UnityEngine.AnimationClip[]","isArray":true,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"ZEPETO.World","name":"multiplay","type":"ZEPETO.World.ZepetoWorldMultiplay","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"GestureController","description":""},"isCompiled":true}'
+  typescriptHash: cc398a685e1c78ad502724301a8baaf1

@@ -1,0 +1,113 @@
+fileFormatVersion: 2
+guid: 1c35a8e417661884f95029e403a25825
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    UnityEngine_UI_1 = require(\\\"UnityEngine.UI\\\");\\r\\nconst ZEPETO_Analytics_1
+    = require(\\\"ZEPETO.Analytics\\\");\\r\\nconst ZEPETO_Character_Controller_1
+    = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst ZEPETO_Script_1 =
+    require(\\\"ZEPETO.Script\\\");\\r\\nconst ClientStarter_1 = require(\\\"../../ZepetoScripts/Multiplay/ClientStarter\\\");\\r\\nconst
+    UIManager_1 = require(\\\"./UIManager\\\");\\r\\nclass GameManager extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\\r\\n    constructor() {\\r\\n        super(...arguments);\\r\\n        //////////////////////////////////////////////////////////////////////////////////////////////////
+    Sit Chair END\\r\\n        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Raycast Button END\\r\\n        this.count = 0;\\r\\n    }\\r\\n    static get
+    instance() { return GameManager._instance; }\\r\\n    //////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Property END\\r\\n    //////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Setting\\r\\n    Awake() {\\r\\n        GameManager._instance = this;\\r\\n       
+    this.multiplay.add_RoomCreated((room) => {\\r\\n            this.room = room;\\r\\n       
+    });\\r\\n    }\\r\\n    Start() {\\r\\n        const loadingUI = UIManager_1.default.instance.FindLoadingImage(UIManager_1.default.instance.LOADING_START);\\r\\n       
+    if (loadingUI != null)\\r\\n            this.StartCoroutine(this.StartLoading(loadingUI));\\r\\n       
+    this.buttons = this.canvas.GetComponentsInChildren($typeof(UnityEngine_UI_1.Button));\\r\\n       
+    if (this.buttons == null || this.buttons.length < 1)\\r\\n            return;\\r\\n       
+    for (let i = 0; i < this.buttons.length; i++) {\\r\\n            console.log(i);\\r\\n           
+    this.buttons[i].onClick.AddListener(() => this.AnalyticsButton(i));\\r\\n       
+    }\\r\\n    }\\r\\n    //////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Setting END\\r\\n    //////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Loading Image Start\\r\\n    *StartLoading(loadingUI) {\\r\\n        let isLoading
+    = true;\\r\\n        loadingUI.SetActive(true);\\r\\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.controllerData.inputAsset.Disable();\\r\\n       
+    while (isLoading) {\\r\\n            yield new UnityEngine_1.WaitForSeconds(2);\\r\\n           
+    if (this.room != null && this.room.IsConnected) {\\r\\n                if (ZEPETO_Character_Controller_1.ZepetoPlayers.instance.HasPlayer(this.room.SessionId))
+    {\\r\\n                    isLoading = false;\\r\\n                    loadingUI.SetActive(false);\\r\\n                   
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.controllerData.inputAsset.Enable();\\r\\n                   
+    this.StopCoroutine(this.StartLoading(loadingUI));\\r\\n                }\\r\\n           
+    }\\r\\n        }\\r\\n    }\\r\\n    //////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Loading Image END\\r\\n    //////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Raycast Button Start\\r\\n    SwitchButtonScript(btn) {\\r\\n        if (this.room
+    == null)\\r\\n            this.room = ClientStarter_1.default.instance.clientRoom;
+    // ?\\r\\n        let names = btn.name.split(`_`); // \uC774\uB984 \uBD84\uD560\uB85C
+    \uC778\uD55C \uC2A4\uD06C\uB9BD\uD2B8 \uBD84\uB958   ex) Button_Speed => ButtonScript_SpeedUp\\r\\n       
+    switch (names[names.length - 1]) {\\r\\n            case \\\"Chair\\\":\\r\\n               
+    this.ButtonScript_PlayerSitDown(btn);\\r\\n                break;\\r\\n           
+    default:\\r\\n                console.error(`\uC774\uB984\uC774 \uC124\uC815\uB418\uC9C0
+    \uC54A\uC740 \uBC84\uD2BC\uC774 \uC788\uC2B5\uB2C8\uB2E4. ${names[names.length
+    - 1]}`);\\r\\n                return;\\r\\n        }\\r\\n    }\\r\\n    //////////////////////////////////////////////////////////////////////////////////////////////////
+    Sit Chair\\r\\n    ButtonScript_PlayerSitDown(trans) {\\r\\n        let chair
+    = trans.parent.parent;\\r\\n        chair.GetComponent($typeof(UnityEngine_1.BoxCollider)).enabled
+    = false;\\r\\n        chair.GetChild(2).gameObject.SetActive(false);\\r\\n       
+    let sitPosition = chair.GetChild(1);\\r\\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.Teleport(sitPosition.position,
+    sitPosition.rotation);\\r\\n        this.StartCoroutine(this.StartContinuousAnimation());\\r\\n   
+    }\\r\\n    *StartContinuousAnimation() {\\r\\n        const anim = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.ZepetoAnimator;\\r\\n       
+    console.log(anim.GetBool(\\\"isSit\\\"));\\r\\n        while (anim.GetBool(\\\"isSit\\\"))
+    {\\r\\n            yield null;\\r\\n        }\\r\\n        anim.SetBool(\\\"isSit\\\",
+    true);\\r\\n        console.log(anim.name);\\r\\n        console.log(anim.GetBool(\\\"isSit\\\"));\\r\\n   
+    }\\r\\n    PlayerSitOut(trans) {\\r\\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.ZepetoAnimator.SetBool(\\\"isSit\\\",
+    false);\\r\\n        let chair = trans.parent;\\r\\n        chair.GetComponent($typeof(UnityEngine_1.BoxCollider)).enabled
+    = true;\\r\\n        chair.GetChild(2).gameObject.SetActive(true);\\r\\n    }\\r\\n   
+    AnalyticsButton(num) {\\r\\n        switch (num) {\\r\\n            case 0:\\r\\n               
+    this.AnalyticsButton1(true);\\r\\n                break;\\r\\n            case
+    1:\\r\\n                this.AnalyticsButton1(false);\\r\\n                break;\\r\\n           
+    case 2:\\r\\n                this.AnalyticsButton2();\\r\\n                break;\\r\\n           
+    case 3:\\r\\n                this.AnalyticsButton3();\\r\\n                break;\\r\\n           
+    case 4:\\r\\n                this.AnalyticsButton4();\\r\\n                break;\\r\\n           
+    case 5:\\r\\n                this.AnalyticsButton5();\\r\\n                break;\\r\\n       
+    }\\r\\n    }\\r\\n    AnalyticsButton1(isCanvas) {\\r\\n        const param =
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId;\\r\\n       
+    const count = isCanvas ? --this.count : ++this.count;\\r\\n        const google
+    = this.analytics.Analytics(ZEPETO_Analytics_1.AnalyticsType.GoogleAnalytics);\\r\\n       
+    const eventParams = {\\r\\n            param1: param,\\r\\n            param2:
+    count,\\r\\n        };\\r\\n        google.LogEvent(\\\"TEST_Analytics\\\", eventParams);
+    // event \uC774\uB984\uC740 \uBE48\uCE78\uC774 \uC5C6\uC5B4\uC57C\uD568 ex) TEST
+    Analytics\\r\\n        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\\r\\n       
+    console.log(eventParams.param2);\\r\\n    }\\r\\n    AnalyticsButton2() {\\r\\n       
+    const google = this.analytics.Analytics(ZEPETO_Analytics_1.AnalyticsType.GoogleAnalytics);\\r\\n       
+    var _event1 = {\\r\\n            param1: null,\\r\\n            param2: 3,\\r\\n       
+    };\\r\\n        google.LogEvent(\\\"custom_sub_param\\\", _event1); // \uB9AC\uD3EC\uD2B8\uC5D0\uB294
+    event \uC774\uB984\uC73C\uB85C \uAD6C\uBD84\uB418\uC5B4 \uC800\uC7A5\uB41C\uB2E4\\r\\n       
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\\r\\n       
+    console.log(\\\"param1 : null\\\");\\r\\n    }\\r\\n    AnalyticsButton3() {\\r\\n       
+    const google = this.analytics.Analytics(ZEPETO_Analytics_1.AnalyticsType.GoogleAnalytics);\\r\\n       
+    var _event2 = {\\r\\n            param2: 3,\\r\\n        };\\r\\n        google.LogEvent(\\\"custom_sub_param\\\",
+    _event2); // event \uC774\uB984\uC774 \uAC19\uC73C\uBA74 property \uAC1C\uC218\uAC00
+    \uB2EC\uB77C\uB3C4 \uB41C\uB2E4\\r\\n        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\\r\\n       
+    console.log(\\\"param2 : number\\\");\\r\\n    }\\r\\n    AnalyticsButton4()
+    {\\r\\n        const google = this.analytics.Analytics(ZEPETO_Analytics_1.AnalyticsType.GoogleAnalytics);\\r\\n       
+    var _event3 = {\\r\\n            param2: \\\"penguins\\\",\\r\\n        };\\r\\n       
+    google.LogEvent(\\\"custom_sub_param\\\", _event3); // event \uC774\uB984\uC774
+    \uAC19\uC73C\uBA74 property \uD0C0\uC785\uC774 \uB2EC\uB77C\uB3C4 \uB41C\uB2E4\\r\\n       
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\\r\\n       
+    console.log(\\\"param2 : string\\\");\\r\\n    }\\r\\n    AnalyticsButton5()
+    {\\r\\n        const google = this.analytics.Analytics(ZEPETO_Analytics_1.AnalyticsType.GoogleAnalytics);\\r\\n       
+    var _event3 = {\\r\\n            param2: \\\"10\\\",\\r\\n        };\\r\\n       
+    google.LogEvent(\\\"TEST_Analytics\\\", _event3); // property \uD0C0\uC785\uC740
+    string\uC73C\uB85C \uC800\uC7A5\uB41C\uB2E4\\r\\n        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\\r\\n       
+    console.log(\\\"param2 : string (number)\\\");\\r\\n    }\\r\\n}\\r\\nexports.default
+    = GameManager;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2FtZU1hbmFnZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJHYW1lTWFuYWdlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUF5RjtBQUV6RixtREFBd0M7QUFDeEMsdURBQTJFO0FBQzNFLDZFQUE0RDtBQUU1RCxpREFBcUQ7QUFFckQsK0VBQXdFO0FBQ3hFLDJDQUFvQztBQUVwQyxNQUFxQixXQUFZLFNBQVEscUNBQXFCO0lBQTlEOztRQXFISSxnSEFBZ0g7UUFDaEgsNkhBQTZIO1FBRTdILFVBQUssR0FBVSxDQUFDLENBQUM7SUE0R3JCLENBQUM7SUFoT1UsTUFBTSxLQUFLLFFBQVEsS0FBa0IsT0FBTyxXQUFXLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQztJQVMzRSx1SEFBdUg7SUFDdkgsa0hBQWtIO0lBQ2xILEtBQUs7UUFFRCxXQUFXLENBQUMsU0FBUyxHQUFHLElBQUksQ0FBQztRQUU3QixJQUFJLENBQUMsU0FBUyxpQkFBZ0IsQ0FBQyxJQUFXLEVBQUUsRUFBRTtZQUMxQyxJQUFJLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQztRQUNyQixDQUFDLEVBQUM7SUFDTixDQUFDO0lBQ0QsS0FBSztRQUVELE1BQU0sU0FBUyxHQUFHLG1CQUFTLENBQUMsUUFBUSxDQUFDLGdCQUFnQixDQUFDLG1CQUFTLENBQUMsUUFBUSxDQUFDLGFBQWEsQ0FBQyxDQUFDO1FBQ3hGLElBQUcsU0FBUyxJQUFJLElBQUk7WUFDaEIsSUFBSSxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxDQUFDLENBQUM7UUFFdEQsSUFBSSxDQUFDLE9BQU8sR0FBRyxJQUFJLENBQUMsTUFBTSxDQUFDLHVCQUF1QixTQUFDLHVCQUFNLEVBQUcsQ0FBQztRQUM3RCxJQUFHLElBQUksQ0FBQyxPQUFPLElBQUksSUFBSSxJQUFJLElBQUksQ0FBQyxPQUFPLENBQUMsTUFBTSxHQUFHLENBQUM7WUFDOUMsT0FBTztRQUVYLEtBQUksSUFBSSxDQUFDLEdBQUMsQ0FBQyxFQUFFLENBQUMsR0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLE1BQU0sRUFBRSxDQUFDLEVBQUUsRUFDdkM7WUFDSSxPQUFPLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxDQUFDO1lBRWYsSUFBSSxDQUFDLE9BQU8sQ0FBQyxDQUFDLENBQUMsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFFLEdBQUcsRUFBRSxDQUFDLElBQUksQ0FBQyxlQUFlLENBQUMsQ0FBQyxDQUFDLENBQUUsQ0FBQztTQUN4RTtJQUNMLENBQUM7SUFDRCxzSEFBc0g7SUFDdEgsOEhBQThIO0lBQ3RILENBQUUsWUFBWSxDQUFDLFNBQW9CO1FBRXZDLElBQUksU0FBUyxHQUFHLElBQUksQ0FBQztRQUNyQixTQUFTLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1FBRTFCLDJDQUFhLENBQUMsUUFBUSxDQUFDLGNBQWMsQ0FBQyxVQUFVLENBQUMsT0FBTyxFQUFFLENBQUM7UUFFM0QsT0FBTyxTQUFTLEVBQ2hCO1lBQ0ksTUFBTSxJQUFJLDRCQUFjLENBQUMsQ0FBQyxDQUFDLENBQUM7WUFDNUIsSUFBSSxJQUFJLENBQUMsSUFBSSxJQUFJLElBQUksSUFBSSxJQUFJLENBQUMsSUFBSSxDQUFDLFdBQVcsRUFDOUM7Z0JBQ0ksSUFBSSwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsRUFDekQ7b0JBQ0ksU0FBUyxHQUFHLEtBQUssQ0FBQztvQkFDbEIsU0FBUyxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztvQkFDM0IsMkNBQWEsQ0FBQyxRQUFRLENBQUMsY0FBYyxDQUFDLFVBQVUsQ0FBQyxNQUFNLEVBQUUsQ0FBQztvQkFDMUQsSUFBSSxDQUFDLGFBQWEsQ0FBQyxJQUFJLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxDQUFDLENBQUM7aUJBQ3BEO2FBQ0o7U0FDSjtJQUNMLENBQUM7SUFDRCw0SEFBNEg7SUFDNUgsK0hBQStIO0lBQy9ILGtCQUFrQixDQUFDLEdBQWU7UUFFOUIsSUFBRyxJQUFJLENBQUMsSUFBSSxJQUFJLElBQUk7WUFDaEIsSUFBSSxDQUFDLElBQUksR0FBRyx1QkFBYSxDQUFDLFFBQVEsQ0FBQyxVQUFVLENBQUMsQ0FBYyxJQUFJO1FBRXBFLElBQUksS0FBSyxHQUFHLEdBQUcsQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQWdCLCtEQUErRDtRQUMvRyxRQUFPLEtBQUssQ0FBQyxLQUFLLENBQUMsTUFBTSxHQUFDLENBQUMsQ0FBQyxFQUM1QjtZQUNJLEtBQUssT0FBTztnQkFDUixJQUFJLENBQUMsMEJBQTBCLENBQUMsR0FBRyxDQUFDLENBQUM7Z0JBQ3JDLE1BQU07WUFDVjtnQkFDSSxPQUFPLENBQUMsS0FBSyxDQUFDLHlCQUF5QixLQUFLLENBQUMsS0FBSyxDQUFDLE1BQU0sR0FBQyxDQUFDLENBQUMsRUFBRSxDQUFDLENBQUE7Z0JBQy9ELE9BQU87U0FDZDtJQUNMLENBQUM7SUFDRCw0R0FBNEc7SUFDNUcsMEJBQTBCLENBQUMsS0FBaUI7UUFFeEMsSUFBSSxLQUFLLEdBQUcsS0FBSyxDQUFDLE1BQU0sQ0FBQyxNQUFNLENBQUM7UUFDaEMsS0FBSyxDQUFDLFlBQVksU0FBQyx5QkFBVyxHQUFJLE9BQU8sR0FBRyxLQUFLLENBQUM7UUFDbEQsS0FBSyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBRTlDLElBQUksV0FBVyxHQUFHLEtBQUssQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUM7UUFDcEMsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxRQUFRLEVBQUUsV0FBVyxDQUFDLFFBQVEsQ0FBQyxDQUFDO1FBQy9HLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLHdCQUF3QixFQUFFLENBQUMsQ0FBQztJQUN6RCxDQUFDO0lBRU8sQ0FBRSx3QkFBd0I7UUFFOUIsTUFBTSxJQUFJLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsY0FBYyxDQUFDO1FBQ3RGLE9BQU8sQ0FBQyxHQUFHLENBQUMsSUFBSSxDQUFDLE9BQU8sQ0FBQyxPQUFPLENBQUMsQ0FBQyxDQUFDO1FBRW5DLE9BQU0sSUFBSSxDQUFDLE9BQU8sQ0FBQyxPQUFPLENBQUMsRUFDM0I7WUFDSSxNQUFNLElBQUksQ0FBQztTQUNkO1FBQ0QsSUFBSSxDQUFDLE9BQU8sQ0FBQyxPQUFPLEVBQUUsSUFBSSxDQUFDLENBQUM7UUFFNUIsT0FBTyxDQUFDLEdBQUcsQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLENBQUM7UUFDdkIsT0FBTyxDQUFDLEdBQUcsQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLE9BQU8sQ0FBQyxDQUFDLENBQUM7SUFDdkMsQ0FBQztJQUVELFlBQVksQ0FBQyxLQUFpQjtRQUUxQiwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxjQUFjLENBQUMsT0FBTyxDQUFDLE9BQU8sRUFBRSxLQUFLLENBQUMsQ0FBQztRQUVqRyxJQUFJLEtBQUssR0FBRyxLQUFLLENBQUMsTUFBTSxDQUFDO1FBQ3pCLEtBQUssQ0FBQyxZQUFZLFNBQUMseUJBQVcsR0FBSSxPQUFPLEdBQUcsSUFBSSxDQUFDO1FBQ2pELEtBQUssQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUNqRCxDQUFDO0lBS0QsZUFBZSxDQUFDLEdBQVU7UUFFdEIsUUFBTyxHQUFHLEVBQ1Y7WUFDSSxLQUFLLENBQUM7Z0JBQ0YsSUFBSSxDQUFDLGdCQUFnQixDQUFDLElBQUksQ0FBQyxDQUFDO2dCQUM1QixNQUFNO1lBQ1YsS0FBSyxDQUFDO2dCQUNGLElBQUksQ0FBQyxnQkFBZ0IsQ0FBQyxLQUFLLENBQUMsQ0FBQztnQkFDN0IsTUFBTTtZQUNWLEtBQUssQ0FBQztnQkFDRixJQUFJLENBQUMsZ0JBQWdCLEVBQUUsQ0FBQztnQkFDeEIsTUFBTTtZQUNWLEtBQUssQ0FBQztnQkFDRixJQUFJLENBQUMsZ0JBQWdCLEVBQUUsQ0FBQztnQkFDeEIsTUFBTTtZQUNWLEtBQUssQ0FBQztnQkFDRixJQUFJLENBQUMsZ0JBQWdCLEVBQUUsQ0FBQztnQkFDeEIsTUFBTTtZQUNWLEtBQUssQ0FBQztnQkFDRixJQUFJLENBQUMsZ0JBQWdCLEVBQUUsQ0FBQztnQkFDeEIsTUFBTTtTQUNiO0lBRUwsQ0FBQztJQUVELGdCQUFnQixDQUFDLFFBQWdCO1FBRTdCLE1BQU0sS0FBSyxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsTUFBTSxDQUFDO1FBQ3JFLE1BQU0sS0FBSyxHQUFHLFFBQVEsQ0FBQyxDQUFDLENBQUMsRUFBRSxJQUFJLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQyxFQUFFLElBQUksQ0FBQyxLQUFLLENBQUM7UUFFckQsTUFBTSxNQUFNLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsZ0NBQWEsQ0FBQyxlQUFlLENBQUMsQ0FBQztRQU12RSxNQUFNLFdBQVcsR0FBZTtZQUM1QixNQUFNLEVBQUcsS0FBSztZQUNkLE1BQU0sRUFBRyxLQUFLO1NBQ2pCLENBQUM7UUFDRixNQUFNLENBQUMsUUFBUSxDQUFjLGdCQUFnQixFQUFFLFdBQVcsQ0FBQyxDQUFDLENBQUksd0NBQXdDO1FBQ3hHLG1JQUFtSTtRQUNuSSxPQUFPLENBQUMsR0FBRyxDQUFDLFdBQVcsQ0FBQyxNQUFNLENBQUMsQ0FBQztJQUNwQyxDQUFDO0lBRUQsZ0JBQWdCO1FBRVosTUFBTSxNQUFNLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsZ0NBQWEsQ0FBQyxlQUFlLENBQUMsQ0FBQztRQU12RSxJQUFJLE9BQU8sR0FBaUI7WUFDeEIsTUFBTSxFQUFHLElBQUk7WUFDYixNQUFNLEVBQUcsQ0FBQztTQUNiLENBQUE7UUFDRCxNQUFNLENBQUMsUUFBUSxDQUFjLGtCQUFrQixFQUFFLE9BQU8sQ0FBQyxDQUFDLENBQU0sNkJBQTZCO1FBQzdGLG1JQUFtSTtRQUNuSSxPQUFPLENBQUMsR0FBRyxDQUFDLGVBQWUsQ0FBQyxDQUFDO0lBQ2pDLENBQUM7SUFFRCxnQkFBZ0I7UUFFWixNQUFNLE1BQU0sR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0FBQyxnQ0FBYSxDQUFDLGVBQWUsQ0FBQyxDQUFDO1FBS3ZFLElBQUksT0FBTyxHQUFpQjtZQUN4QixNQUFNLEVBQUcsQ0FBQztTQUNiLENBQUE7UUFDRCxNQUFNLENBQUMsUUFBUSxDQUFjLGtCQUFrQixFQUFFLE9BQU8sQ0FBQyxDQUFDLENBQUssb0NBQW9DO1FBQ25HLG1JQUFtSTtRQUNuSSxPQUFPLENBQUMsR0FBRyxDQUFDLGlCQUFpQixDQUFDLENBQUM7SUFDbkMsQ0FBQztJQUVELGdCQUFnQjtRQUVaLE1BQU0sTUFBTSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLGdDQUFhLENBQUMsZUFBZSxDQUFDLENBQUM7UUFLdkUsSUFBSSxPQUFPLEdBQWtCO1lBQ3pCLE1BQU0sRUFBRyxVQUFVO1NBQ3RCLENBQUE7UUFDRCxNQUFNLENBQUMsUUFBUSxDQUFlLGtCQUFrQixFQUFFLE9BQU8sQ0FBQyxDQUFDLENBQUcsb0NBQW9DO1FBQ2xHLG1JQUFtSTtRQUNuSSxPQUFPLENBQUMsR0FBRyxDQUFDLGlCQUFpQixDQUFDLENBQUM7SUFDbkMsQ0FBQztJQUVELGdCQUFnQjtRQUVaLE1BQU0sTUFBTSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLGdDQUFhLENBQUMsZUFBZSxDQUFDLENBQUM7UUFLdkUsSUFBSSxPQUFPLEdBQWtCO1lBQ3pCLE1BQU0sRUFBRyxJQUFJO1NBQ2hCLENBQUE7UUFDRCxNQUFNLENBQUMsUUFBUSxDQUFlLGdCQUFnQixFQUFFLE9BQU8sQ0FBQyxDQUFDLENBQUcsNkJBQTZCO1FBQ3pGLG1JQUFtSTtRQUNuSSxPQUFPLENBQUMsR0FBRyxDQUFDLDBCQUEwQixDQUFDLENBQUM7SUFDNUMsQ0FBQztDQUNKO0FBcE9ELDhCQW9PQyJ9\",\"assetPath\":\"Assets/ZepetoScripts/Managers/GameManager.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"ZEPETO.World\",\"name\":\"multiplay\",\"type\":\"ZEPETO.World.ZepetoWorldMultiplay\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"ZEPETO.Analytics\",\"name\":\"analytics\",\"type\":\"ZEPETO.Analytics.ZepetoAnalyticsComponent\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UIModule\",\"name\":\"canvas\",\"type\":\"UnityEngine.Canvas\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"count\",\"type\":\"System.Single\",\"isArray\":false,\"initValue\":[\"0\"],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"GameManager\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: aea29715972b7a93f4e6b1993396045f
+  onlyWriteTrigger: 0

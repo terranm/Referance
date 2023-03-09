@@ -1,0 +1,94 @@
+fileFormatVersion: 2
+guid: 3984b06842e82de4f95a9a8950ad3a77
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Character_Controller_1 = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst ZEPETO_World_1 =
+    require(\\\"ZEPETO.World\\\");\\r\\nconst GameManager_1 = require(\\\"./GameManager\\\");\\r\\nclass
+    CameraController extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    constructor()
+    {\\r\\n        super(...arguments);\\r\\n        this.layerMask_Button = 1 <<
+    UnityEngine_1.LayerMask.NameToLayer(\\\"Button\\\");\\r\\n        //private starter:Starter;\\r\\n       
+    this.waitForChangeTargetSeconds = new UnityEngine_1.WaitForSeconds(0.01);\\r\\n   
+    }\\r\\n    Start() {\\r\\n        this.multiplay = UnityEngine_1.GameObject.Find(\\\"WorldMultiplay\\\").GetComponent($typeof(ZEPETO_World_1.ZepetoWorldMultiplay));\\r\\n       
+    //this.starter = GameObject.FindGameObjectWithTag(\\\"Starter\\\").GetComponent<Starter>();\\r\\n       
+    this.layerMask_Button = 1 << UnityEngine_1.LayerMask.NameToLayer(\\\"Button\\\");\\r\\n       
+    this.camera = this.transform.GetComponent($typeof(UnityEngine_1.Camera));\\r\\n   
+    }\\r\\n    Update() {\\r\\n        if (this.multiplay.Room != null && this.multiplay.Room.IsConnected)
+    {\\r\\n            const hasPlayer = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.HasPlayer(this.multiplay.Room.SessionId);\\r\\n           
+    if (hasPlayer) {\\r\\n                this.UIRay();\\r\\n                this.Culling();\\r\\n           
+    }\\r\\n        }\\r\\n    }\\r\\n    UIRay() {\\r\\n        if (UnityEngine_1.Input.GetMouseButtonDown(0)
+    && !GameManager_1.default.UI.isPopupOn) {\\r\\n            // var hit = $ref<RaycastHit>();\\r\\n           
+    // var ray = this.camera.ScreenPointToRay(Input.mousePosition);\\r\\n           
+    // if ((Physics.Raycast(ray.origin, ray.direction, hit, Mathf.Infinity, this.layerMask_Button)))\\r\\n           
+    let ray = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoCamera.camera.ScreenPointToRay(UnityEngine_1.Input.mousePosition);\\r\\n           
+    let ref = $ref();\\r\\n            if (UnityEngine_1.Physics.Raycast(ray, ref,
+    UnityEngine_1.Mathf.Infinity, this.layerMask_Button)) {\\r\\n               
+    let _hit = $unref(ref); //hit.value;\\r\\n                switch (_hit.collider.gameObject.name)
+    {\\r\\n                    case \\\"PassportBtn\\\":\\r\\n                       
+    GameManager_1.default.Resource.Destroy(_hit.collider.gameObject);\\r\\n                       
+    GameManager_1.default.instance.TakePassport();\\r\\n                        break;\\r\\n                   
+    case \\\"DisembarkationCardBtn\\\":\\r\\n                        GameManager_1.default.Resource.Destroy(_hit.collider.gameObject);\\r\\n                       
+    GameManager_1.default.instance.TakeDisembarkationCard();\\r\\n                       
+    break;\\r\\n                    case \\\"CarrierBtn\\\":\\r\\n                       
+    GameManager_1.default.Resource.Destroy(_hit.collider.transform.parent.parent.gameObject);\\r\\n                       
+    GameManager_1.default.instance.TakeCarrier();\\r\\n                        break;\\r\\n                   
+    case \\\"OutCarrierBtn\\\":\\r\\n                        GameManager_1.default.instance.OutCarrier(_hit.collider.transform.parent.GetChild(0));\\r\\n                       
+    break;\\r\\n                    case \\\"RegionalP1Btn\\\":\\r\\n                       
+    GameManager_1.default.UI.Popup(\\\"Popup_Script-RegionalP1\\\");\\r\\n                       
+    break;\\r\\n                    case \\\"RegionalP2Btn\\\":\\r\\n                       
+    GameManager_1.default.UI.Popup(\\\"Popup_Script-RegionalP2\\\");\\r\\n                       
+    break;\\r\\n                    case \\\"RegionalP3Btn\\\":\\r\\n                       
+    GameManager_1.default.UI.Popup(\\\"Popup_Script-RegionalP3\\\");\\r\\n                       
+    break;\\r\\n                    case \\\"RegionalP4Btn\\\":\\r\\n                       
+    GameManager_1.default.UI.Popup(\\\"Popup_Script-RegionalP4\\\");\\r\\n                       
+    break;\\r\\n                    case \\\"RegionalP5Btn\\\":\\r\\n                       
+    GameManager_1.default.UI.Popup(\\\"Popup_Script-RegionalP5\\\");\\r\\n                       
+    break;\\r\\n                    case \\\"RegionalP6Btn\\\":\\r\\n                       
+    GameManager_1.default.UI.Popup(\\\"Popup_Script-RegionalP6\\\");\\r\\n                       
+    break;\\r\\n                    case \\\"RegionalP7Btn\\\":\\r\\n                       
+    GameManager_1.default.UI.Popup(\\\"Popup_Script-RegionalP7\\\");\\r\\n                       
+    break;\\r\\n                    case \\\"Porty1Btn\\\":\\r\\n                       
+    GameManager_1.default.Resource.Destroy(_hit.collider.gameObject);\\r\\n                       
+    GameManager_1.default.instance.NextQuest(\\\"2\\\");\\r\\n                       
+    break;\\r\\n                    case \\\"Porty2Btn\\\":\\r\\n                       
+    GameManager_1.default.Resource.Destroy(_hit.collider.gameObject);\\r\\n                       
+    GameManager_1.default.instance.NextQuest(\\\"5\\\");\\r\\n                       
+    break;\\r\\n                    case \\\"OXClearBtn\\\":\\r\\n                       
+    GameManager_1.default.Resource.Destroy(_hit.collider.gameObject);\\r\\n                       
+    GameManager_1.default.instance.NextQuest(\\\"6\\\");\\r\\n                       
+    GameManager_1.default.instance.GetPortyMask();\\r\\n                        break;\\r\\n               
+    }\\r\\n            }\\r\\n        }\\r\\n    }\\r\\n    Culling() {\\r\\n       
+    if (this.gameObject.transform.localPosition.z > -0.5) {\\r\\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);\\r\\n           
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);\\r\\n       
+    }\\r\\n        else {\\r\\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);\\r\\n           
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetChild(0).GetChild(1).gameObject.SetActive(true);\\r\\n       
+    }\\r\\n    }\\r\\n    OnTriggerEnter(col) {\\r\\n        if (col.gameObject.tag
+    == \\\"Player\\\") {\\r\\n            let layerMask = (1 << UnityEngine_1.LayerMask.NameToLayer(\\\"Player\\\"));
+    // Everything\uC5D0\uC11C Player \uB808\uC774\uC5B4\uB9CC \uC81C\uC678\uD558\uACE0
+    \uCDA9\uB3CC \uCCB4\uD06C\uD568\\r\\n            layerMask = ~layerMask;\\r\\n           
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoCamera.camera.cullingMask
+    = layerMask;\\r\\n        }\\r\\n    }\\r\\n    OnTriggerExit(col) {\\r\\n       
+    if (col.gameObject.tag == \\\"Player\\\") {\\r\\n            let layerMask =
+    (1 << UnityEngine_1.LayerMask.NameToLayer(\\\"Everything\\\"));\\r\\n           
+    layerMask = ~layerMask;\\r\\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoCamera.camera.cullingMask
+    = layerMask;\\r\\n        }\\r\\n    }\\r\\n}\\r\\nexports.default = CameraController;\\r\\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2FtZXJhQ29udHJvbGxlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkNhbWVyYUNvbnRyb2xsZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBZ0s7QUFDaEssNkVBQTREO0FBQzVELGlEQUFxRDtBQUNyRCwrQ0FBb0Q7QUFDcEQsK0NBQXdDO0FBRXhDLE1BQXFCLGdCQUFpQixTQUFRLHFDQUFxQjtJQUFuRTs7UUFFSSxxQkFBZ0IsR0FBVyxDQUFDLElBQUksdUJBQVMsQ0FBQyxXQUFXLENBQUMsUUFBUSxDQUFDLENBQUM7UUFFaEUsMEJBQTBCO1FBQ2xCLCtCQUEwQixHQUFxQixJQUFJLDRCQUFjLENBQUMsSUFBSSxDQUFDLENBQUM7SUFrSHBGLENBQUM7SUFqSEcsS0FBSztRQUNELElBQUksQ0FBQyxTQUFTLEdBQUcsd0JBQVUsQ0FBQyxJQUFJLENBQUMsZ0JBQWdCLENBQUMsQ0FBQyxZQUFZLFNBQUMsbUNBQW9CLEVBQUcsQ0FBQztRQUN4RixxRkFBcUY7UUFDckYsSUFBSSxDQUFDLGdCQUFnQixHQUFHLENBQUMsSUFBSSx1QkFBUyxDQUFDLFdBQVcsQ0FBQyxRQUFRLENBQUMsQ0FBQztRQUM3RCxJQUFJLENBQUMsTUFBTSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsWUFBWSxTQUFDLG9CQUFNLEVBQUcsQ0FBQztJQUN4RCxDQUFDO0lBRUQsTUFBTTtRQUNGLElBQUksSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLElBQUksSUFBSSxJQUFJLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLFdBQVcsRUFDbEU7WUFDSSxNQUFNLFNBQVMsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLENBQUM7WUFDbEYsSUFBSSxTQUFTLEVBQ2I7Z0JBQ0ksSUFBSSxDQUFDLEtBQUssRUFBRSxDQUFDO2dCQUNiLElBQUksQ0FBQyxPQUFPLEVB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\",\"assetPath\":\"Assets/ZepetoScripts/preset/CameraController.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"ZEPETO.World\",\"name\":\"multiplay\",\"type\":\"ZEPETO.World.ZepetoWorldMultiplay\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"layerMask_Button\",\"type\":\"System.Single\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"CameraController\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: ec28c1c249106e212bf8b49096996df8

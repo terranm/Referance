@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: f1f94e07f6043d340a55fa2840e5f239
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass RollerRotate extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.tick
+    = new UnityEngine_1.WaitForSeconds(0.1);\r\n    }\r\n    Start() {\r\n       
+    //this.StartCoroutine(this.Rotate());\r\n    }\r\n    *Rotate() {\r\n       
+    while (true) {\r\n            yield this.tick;\r\n            this.transform.Rotate(UnityEngine_1.Vector3.op_Multiply(UnityEngine_1.Vector3.right,
+    UnityEngine_1.Time.deltaTime));\r\n        }\r\n    }\r\n}\r\nexports.default
+    = RollerRotate;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUm9sbGVyUm90YXRlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiUm9sbGVyUm90YXRlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQTREO0FBQzVELGlEQUFxRDtBQUVyRCxNQUFxQixZQUFhLFNBQVEscUNBQXFCO0lBQS9EOztRQUVJLFNBQUksR0FBbUIsSUFBSSw0QkFBYyxDQUFDLEdBQUcsQ0FBQyxDQUFDO0lBZ0JuRCxDQUFDO0lBZEcsS0FBSztRQUNELHFDQUFxQztJQUN6QyxDQUFDO0lBRUQsQ0FBQyxNQUFNO1FBRUgsT0FBTyxJQUFJLEVBQ1g7WUFDSSxNQUFNLElBQUksQ0FBQyxJQUFJLENBQUM7WUFDaEIsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBaEJsQixxQkFBTyxDQXFCKy9xQixXQUFZLENBTC8vcUIscUJBQU8sQ0FBQyxLQUFLLEVBQUcsa0JBQUksQ0FBQyxTQUFTLEVBQUMsQ0FBQztTQUN6RDtJQUVMLENBQUM7Q0FFSjtBQWxCRCwrQkFrQkMifQ==","assetPath":"Assets/ZepetoScripts/RollerRotate.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"tick","type":"UnityEngine.WaitForSeconds","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"RollerRotate","description":""},"isCompiled":true}'
+  typescriptHash: 51107893fc1c42da66ae31659d9dee22

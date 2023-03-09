@@ -1,0 +1,273 @@
+[World Settings]
+world id             com.tams.tamszeroworld
+version              0.6                 
+max clients          8                   
+orientation          horizontal          
+disable invite       false               
+disable room list    false               
+disable private room false               
+
+[Build Manifest]
+[scenes]
+77 mb                assets/toms3.unity  
+[assets]
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_off.anim
+279 kb               assets/toms/can/toms_lemon_can_new.obj
+35 kb                packages/zepeto.character.controller/runtime/_resources/inputactions/zepetoinputcontrol.inputactions
+600 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_slight.anim
+530 kb               assets/prefabs/gif/탐스제로 tvc gif49.png
+385 kb               assets/prefabs/gif/탐스제로 tvc gif20.png
+94 kb                assets/toms/bottle/bottle1.fbx
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/walk.anim
+65 kb                assets/toms/fruit/greenapple_slice.obj
+7 mb                 assets/toms/toms_ad/레이어 5.png
+544 kb               assets/prefabs/gif/탐스제로 tvc gif42.png
+357 b                assets/toms/logo/plane.obj
+124 kb               assets/toms/fruit/orange.obj
+38 kb                assets/_resources/004_camping/[fbx]/fx_aurora_01.fbx
+192 kb               assets/_resources/004_camping/[texture]/fxt_normal_01.tga
+2 kb                 assets/twinkle_effect/sparkle_m.mat
+1 mb                 assets/_resources/[skybox]/dayskygradient.mat
+577 kb               assets/prefabs/gif/탐스제로 tvc gif32.png
+65 kb                assets/_resources/004_camping/[texture]/fxt_colorpattern_07.png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_move.anim
+575 kb               assets/toms/fruit/apple-inner-texture.png
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_horizontal.prefab
+2 kb                 assets/toms/car/chairt.mat
+574 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_roll.anim
+401 kb               assets/prefabs/gif/탐스제로 tvc gif24.png
+2 mb                 assets/prefabs/4. dance on the beach.mp3
+561 kb               assets/prefabs/gif/탐스제로 tvc gif29.png
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_vertical.prefab
+39 kb                assets/toms/toms_ad/kakaotalk_20220608_180816254.png
+2 kb                 assets/models/001.mat
+123 kb               assets/models/fruit/kiwi_slice.obj
+1 kb                 packages/com.unity.inputsystem/inputsystem/editor/icons/inputsystemuiinputmodule@64.png
+2 kb                 assets/toms/bottle/tomsbottle.mat
+4 mb                 assets/_resources/004_camping/[materials]/camping_ground_sky_night 1.mat
+2 kb                 assets/toms/shader/rainbow.mat
+3 kb                 assets/_resources/[skybox]/sk_skygradient_day.prefab
+1 mb                 assets/models/anim/ani_drink.fbx
+1 kb                 assets/toms/tomsgan/materials/건물간판.mat
+425 kb               assets/prefabs/gif/탐스제로 tvc gif27.png
+399 kb               assets/prefabs/gif/탐스제로 tvc gif19.png
+447 kb               assets/toms/car/tams_car_02.fbx
+2 kb                 assets/toms/can/tomscan_lemon.mat
+2 kb                 assets/toms/tomsnew/left_gan.mat
+164 kb               assets/toms/board/tams-board-2.png
+442 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_move.anim
+267 kb               assets/toms/can/tams_can_orange.png
+391 kb               assets/prefabs/gif/탐스제로 tvc gif13.png
+3 kb                 assets/prefabs/zepetocamera.prefab
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/gesture.anim
+18 kb                packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimator.controller
+302 kb               assets/toms/can/tams_can_kiwiapple.png
+141 kb               assets/toms/water/water.png
+2 kb                 assets/toms/car/car_logo.mat
+44 kb                assets/toms/mixer/mixer 1.fbx
+499 kb               assets/prefabs/gif/탐스제로 tvc gif36.png
+1 mb                 assets/toms3/occlusioncullingdata.asset
+2 kb                 assets/toms/logo/bottom.mat
+65 kb                assets/_resources/004_camping/[texture]/fxt_colorpattern_03.png
+110 kb               assets/toms/tomsgan/건물간판.png
+362 kb               assets/prefabs/gif/탐스제로 tvc gif03.png
+560 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/idle.anim
+2 kb                 assets/prefabs/zepetoanalytics.prefab
+813 b                assets/_resources/004_camping/[materials]/fxt_galaxy_star.mat
+596 kb               assets/prefabs/gif/탐스제로 tvc gif34.png
+2 kb                 assets/toms/fruit/slice.mat
+2 kb                 assets/toms/car/chairt 1.mat
+94 kb                assets/toms/bottle/bottle3.fbx
+185 kb               assets/toms/tree/new_kiwi_apple.fbx
+409 kb               assets/prefabs/gif/탐스제로 tvc gif26.png
+165 kb               assets/toms/tree/re_lemon.fbx
+130 kb               assets/toms/fruit/greenapple.obj
+295 kb               packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimatorv2.controller
+19 kb                assets/_resources/004_camping/[texture]/star_01.png
+828 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_turn.anim
+374 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_run_fast.anim
+406 kb               assets/prefabs/gif/탐스제로 tvc gif18.png
+7 kb                 assets/_resources/004_camping/[texture]/star_02.png
+445 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_run.anim
+5 kb                 assets/_resources/004_camping/[texture]/fx_burstglow.png
+2 kb                 assets/toms/logo/logo.mat
+2 kb                 assets/toms/toms_chart.mat
+31 kb                assets/toms/new_home/new_str.fbx
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_idle.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_off.anim
+549 kb               assets/prefabs/gif/탐스제로 tvc gif40.png
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_icon.png
+29 kb                assets/_resources/004_camping/[texture]/fxt_splash_01.png
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_icon.png
+1 kb                 assets/toms/font/font1.png
+30 kb                assets/toms/sand5.jpg
+32 kb                assets/_resources/004_camping/game_jump/mesh/gimmick/red_halfsphere_basic.fbx
+2 kb                 assets/toms/can/tomscan_apple.mat
+94 kb                assets/toms/bottle/bottle2.fbx
+123 kb               assets/toms/fruit/kiwi_slice.obj
+279 kb               assets/toms/can/toms_orange_can_new.obj
+2 kb                 assets/toms/toms_ad/lemon.mat
+2 kb                 assets/toms/can/tomscan_orange.mat
+280 kb               assets/toms/can/tams_can_lemon.png
+2 kb                 assets/toms/font/new_font.mat
+234 kb               assets/toms/board/tams board.fbx
+464 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_double.anim
+529 kb               assets/prefabs/gif/탐스제로 tvc gif45.png
+32 kb                assets/toms/font/untitled2.fbx
+3 kb                 assets/_resources/004_camping/[prefabs]/campingground/material/fxt_cp_aurora2_m.mat
+22 kb                assets/models/curve road2.fbx
+396 kb               assets/prefabs/gif/탐스제로 tvc gif08.png
+13 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_base.png
+516 kb               assets/prefabs/gif/탐스제로 tvc gif48.png
+3 kb                 assets/_resources/004_camping/[prefabs]/campingground/material/fxt_cp_aurora3_m.mat
+34 kb                assets/_resources/[scriptsshader]/dynamicstarrysky/models/skysphere.fbx
+768 kb               assets/_resources/004_camping/[texture]/fxt_flareline_01.tga
+2 kb                 assets/toms/tomsgan/ganshader.mat
+480 kb               assets/prefabs/gif/탐스제로 tvc gif37.png
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action1.anim
+6 kb                 assets/toms/tree/lemon-tree.png
+2 kb                 assets/toms/mixer/mixer 3.mat
+2 kb                 assets/toms/water/water 1.mat
+923 kb               assets/toms/fruit/apple-out-texture.png
+56 kb                assets/toms/toms_ad/kakaotalk_20220608_180816254_01.png
+388 kb               assets/prefabs/gif/탐스제로 tvc gif25.png
+59 kb                assets/toms/car/tams_logo_256.png
+787 kb               assets/models/시작로딩이미지.png
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_ziggle.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_on.anim
+744 kb               assets/toms/tomsnew/kakaotalk_20220725_104032371_01.png
+127 kb               assets/toms3/reflectionprobe-0.exr
+48 kb                assets/_resources/004_camping/[texture]/fxt_line_01.png
+248 kb               assets/toms/fruit/lemon_slice.obj
+389 kb               assets/prefabs/gif/탐스제로 tvc gif05.png
+388 kb               assets/prefabs/gif/탐스제로 tvc gif06.png
+89 kb                assets/toms/water/water2.png
+569 kb               assets/prefabs/gif/탐스제로 tvc gif31.png
+13 kb                assets/toms/shader/rainbow_toms3.png
+2 kb                 assets/toms/fruit/greenapple.mat
+576 kb               assets/prefabs/gif/탐스제로 tvc gif30.png
+2 kb                 assets/toms/new_home/house_out 1.mat
+18 kb                assets/toms/tomsgan/housegan.fbx
+5 mb                 assets/toms3/lightmap-1_comp_light.exr
+436 kb               assets/prefabs/gif/탐스제로 tvc gif16.png
+538 kb               assets/prefabs/gif/탐스제로 tvc gif44.png
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandleorigin.controller
+76 kb                assets/toms/logo/탐스제로로고.png
+2 kb                 assets/toms/toms_ad/main.mat
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action2.anim
+248 kb               assets/models/fruit/lemon_slice.obj
+17 kb                assets/_resources/[scriptsshader]/dynamicstarrysky/shaders/starrysky.shader
+42 kb                assets/toms/toms_ad/kakaotalk_20220608_180816254_02.png
+14 kb                assets/_resources/004_camping/[shader]/fx_master_addtive.shader
+4 kb                 assets/_resources/004_camping/game_jump/materials/texture/gimmick_001.png
+127 kb               assets/toms/fruit/kiwi.obj
+2 mb                 assets/toms/logo/bg_트로피칼2.jpg
+256 kb               assets/_resources/004_camping/[texture]/fxt_galaxy_star.tga
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandle.controller
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_dash.anim
+186 kb               assets/_resources/004_camping/[skybox]/texture/moon-4.png
+102 kb               assets/models/fruit/orange_slice.obj
+588 kb               assets/prefabs/gif/탐스제로 tvc gif33.png
+489 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_walk_fast.anim
+9 mb                 assets/toms/toms_ad/레이어 3.png
+2 kb                 assets/toms/tree/tree_toms.mat
+3 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/charactershadow.prefab
+1 mb                 assets/models/anim/ani_drive_pose.fbx
+1 kb                 assets/_resources/004_camping/[materials]/fxt_rind_light.mat
+12 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_base.png
+2 kb                 assets/toms/fruit/fruit_material.mat
+2 kb                 assets/toms/toms_chart 1.mat
+124 kb               assets/models/fruit/orange.obj
+120 kb               assets/toms/water/water3.png
+2 kb                 assets/_resources/004_camping/game_jump/materials/gimmick_color.mat
+108 kb               assets/toms/tomsgan/gan_defaultmaterial_basecolor.png
+4 mb                 assets/toms3/lightmap-0_comp_light.exr
+1 mb                 assets/_resources/[skybox]/sk_dayskygradient.mat
+5 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/6_dance.anim
+102 kb               assets/toms/fruit/orange_slice.obj
+5 kb                 assets/toms/tomsgan/gan_shader.shader
+130 kb               assets/models/fruit/greenapple.obj
+14 kb                assets/_resources/004_camping/[shader]/fx_master_addtive_two.shader
+1 kb                 assets/prefabs/gif/탐스제로 tvc gif00.controller
+22 kb                assets/toms/photozone/gan.fbx
+2 kb                 assets/toms/logo/주유소 다박.png
+517 kb               assets/prefabs/gif/탐스제로 tvc gif46.png
+697 kb               assets/toms/tomsnew/kakaotalk_20220725_104032371.png
+28 kb                assets/toms/car/zepeto_colorchart.png
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_on.anim
+17 kb                assets/_resources/[scriptsshader]/dynamicstarrysky/shaders/starrysky2.shader
+8 mb                 assets/toms3/lightmap-2_comp_light.exr
+425 kb               assets/prefabs/gif/탐스제로 tvc gif22.png
+2 kb                 assets/toms/water/water.mat
+530 kb               assets/prefabs/gif/탐스제로 tvc gif47.png
+373 kb               assets/prefabs/gif/탐스제로 tvc gif02.png
+507 kb               assets/prefabs/gif/탐스제로 tvc gif39.png
+2 kb                 assets/prefabs/curve road2.prefab
+3 kb                 assets/_resources/004_camping/[texture]/fxt_line_04.png
+1 kb                 assets/_resources/004_camping/[materials]/fxt_aurora_02.mat
+28 kb                assets/toms/zepeto_colorchart.png
+367 kb               assets/models/fruit/lemon.obj
+155 kb               assets/toms/tree/re_orange.fbx
+65 kb                assets/models/fruit/greenapple_slice.obj
+3 mb                 assets/toms/new_home/new_hong_house_none_basecolor.png
+10 kb                assets/prefabs/gif/gif.anim
+368 kb               assets/prefabs/gif/탐스제로 tvc gif01.png
+127 kb               assets/models/fruit/kiwi.obj
+2 kb                 assets/toms/toms_chart 2.mat
+1 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.png
+531 kb               assets/prefabs/gif/탐스제로 tvc gif43.png
+414 kb               assets/prefabs/gif/탐스제로 tvc gif15.png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/4_ok.anim
+392 kb               assets/prefabs/gif/탐스제로 tvc gif07.png
+548 kb               assets/prefabs/gif/탐스제로 tvc gif41.png
+2 kb                 assets/toms/toms_ad/orange.mat
+3 kb                 assets/_resources/004_camping/[prefabs]/campingground/material/fxt_cp_aurora_m.mat
+2 kb                 assets/toms/board/tams_board.mat
+1 mb                 assets/models/anim/ani_hand_can.fbx
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_deep.anim
+426 kb               assets/prefabs/gif/탐스제로 tvc gif23.png
+681 kb               assets/toms/bottle/tams_pet_texture.png
+2 kb                 assets/_resources/[materials]/colortexture_001.mat
+1 kb                 assets/new lighting settings 1.lighting
+2 kb                 assets/toms/mixer/mixer 2.mat
+224 kb               assets/prefabs/gif/탐스제로 tvc gif10.png
+330 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/falling.anim
+360 kb               assets/prefabs/gif/탐스제로 tvc gif00.png
+618 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_idle.anim
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/stamp.anim
+7 kb                 assets/toms/shader/rainbow_shadow.shader
+3 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/5_sleep.anim
+382 kb               assets/prefabs/gif/탐스제로 tvc gif04.png
+488 kb               assets/prefabs/gif/탐스제로 tvc gif38.png
+2 kb                 assets/toms/mixer/mixer 1.mat
+367 kb               assets/toms/fruit/lemon.obj
+335 kb               assets/prefabs/gif/탐스제로 tvc gif11.png
+10 mb                assets/toms/toms_ad/레이어 4.png
+2 kb                 assets/toms/toms_ad/tomsbh2.mat
+383 kb               assets/prefabs/gif/탐스제로 tvc gif12.png
+940 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/run.anim
+2 kb                 assets/toms/toms_ad/can_img.mat
+28 kb                assets/twinkle_effect/sparkle_effect.png
+413 kb               assets/prefabs/gif/탐스제로 tvc gif21.png
+28 kb                assets/_resources/[materials]/texture/colortexture_001.png
+63 kb                assets/_resources/004_camping/[texture]/fxt_line_03_1.png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_walk.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/eventsystem.prefab
+1014 kb              packages/zepeto.character.controller/runtime/_resources/animations/base/v2/idle.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/fall_end.anim
+498 kb               assets/prefabs/gif/탐스제로 tvc gif35.png
+683 kb               assets/toms3/lightingdata.asset
+428 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/hand_idle_01.anim
+31 kb                packages/com.unity.inputsystem/inputsystem/plugins/playerinput/defaultinputactions.inputactions
+489 kb               assets/prefabs/gif/탐스제로 tvc gif28.png
+2 kb                 assets/toms/water/water2.mat
+425 kb               assets/prefabs/gif/탐스제로 tvc gif17.png
+2 mb                 assets/toms/fruit/fruit-uv-merge.png
+399 kb               assets/prefabs/gif/탐스제로 tvc gif14.png
+2 kb                 assets/toms/toms_ad/kiwi.mat
+402 kb               assets/prefabs/gif/탐스제로 tvc gif09.png
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_ziggle.anim
+[resources]
+0 b                  assets/resources    
+[streamingAssets]

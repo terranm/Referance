@@ -1,0 +1,71 @@
+fileFormatVersion: 2
+guid: 9cf0fb5f82217c84fbabbab0f8e9c177
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nconst ZEPETO_Multiplay_1 = require(\"ZEPETO.Multiplay\");\r\nconst
+    ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nclass wayPoint extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.number
+    = 0;\r\n        this.speed = 1;\r\n        this.foodNum = 0;\r\n    }\r\n   
+    Start() {\r\n        this.multiplay = UnityEngine_1.GameObject.Find(\"WorldMultiplay\").GetComponent($typeof(ZEPETO_World_1.ZepetoWorldMultiplay));\r\n       
+    //this.transform.position = this.foodPos[this.foodNum].transform.position;\r\n       
+    if (this.number == 0)\r\n            this.StartCoroutine(this.UpSpeed());\r\n   
+    }\r\n    FixedUpdate() {\r\n        if (this.multiplay.Room != null && this.multiplay.Room.IsConnected
+    && !this.isStop)\r\n            this.MovePath();\r\n    }\r\n    MovePath() {\r\n       
+    this.transform.position = UnityEngine_1.Vector3.MoveTowards(this.transform.position,
+    this.foodPos[this.foodNum].transform.position, this.speed * UnityEngine_1.Time.deltaTime);\r\n       
+    let dir = UnityEngine_1.Vector3.zero;\r\n        dir = (UnityEngine_1.Vector3.op_Subtraction(this.foodPos[this.foodNum].transform.position,
+    this.transform.position)).normalized;\r\n        let dist = UnityEngine_1.Vector3.Distance(this.foodPos[this.foodNum].transform.position,
+    this.transform.position);\r\n        if (dist > 0.5) {\r\n            this.transform.rotation
+    = UnityEngine_1.Quaternion.Slerp(this.transform.rotation, UnityEngine_1.Quaternion.LookRotation(dir),
+    UnityEngine_1.Time.deltaTime * 0.7);\r\n        }\r\n        else {\r\n           
+    if (this.foodNum + 1 < this.foodPos.Length) {\r\n                dir = (UnityEngine_1.Vector3.op_Subtraction(this.foodPos[this.foodNum++].transform.position,
+    this.transform.position)).normalized;\r\n            }\r\n            else if
+    (this.foodNum + 1 > this.foodPos.Length) {\r\n                dir = (UnityEngine_1.Vector3.op_Subtraction(this.foodPos[0].transform.position,
+    this.transform.position)).normalized;\r\n            }\r\n            this.transform.rotation
+    = UnityEngine_1.Quaternion.Slerp(this.transform.rotation, UnityEngine_1.Quaternion.LookRotation(dir),
+    UnityEngine_1.Time.deltaTime * 0.8);\r\n        }\r\n        //this.transform.LookAt(this.foodPos[this.foodNum].transform.position);\r\n       
+    if (UnityEngine_1.Vector3.op_Equality(this.transform.position, this.foodPos[this.foodNum].transform.position))
+    {\r\n            this.dir = new UnityEngine_1.Vector3((this.foodPos[this.foodNum].transform.position.x
+    - this.transform.position.x), (this.foodPos[this.foodNum].transform.position.y
+    - this.transform.position.y), 0).normalized;\r\n            //this.transform.rotation
+    = Quaternion.LookRotation(this.dir);\r\n            this.foodNum++;\r\n       
+    }\r\n        if (this.foodNum == 11 && this.number == 0 && !this.isDown) {\r\n           
+    this.StopDown();\r\n        }\r\n        if (this.foodNum == this.foodPos.Length
+    - 1) {\r\n            this.foodNum = 0;\r\n        }\r\n        this.SendTransform(this.gameObject.transform);\r\n   
+    }\r\n    SendTransform(transform) {\r\n        const data = new ZEPETO_Multiplay_1.RoomData();\r\n       
+    const pos = new ZEPETO_Multiplay_1.RoomData();\r\n        pos.Add(\"x\", transform.position.x);\r\n       
+    pos.Add(\"y\", transform.position.y);\r\n        pos.Add(\"z\", transform.position.z);\r\n       
+    data.Add(\"position\", pos.GetObject());\r\n        const rot = new ZEPETO_Multiplay_1.RoomData();\r\n       
+    rot.Add(\"x\", transform.localEulerAngles.x);\r\n        rot.Add(\"y\", transform.localEulerAngles.y);\r\n       
+    rot.Add(\"z\", transform.localEulerAngles.z);\r\n        data.Add(\"rotation\",
+    rot.GetObject());\r\n        this.multiplay.Room.Send(\"onChangedCarTransform\",
+    data.GetObject());\r\n    }\r\n    StopDown() {\r\n        this.isDown = true;\r\n       
+    this.StartCoroutine(this.DownSpeed());\r\n    }\r\n    *UpSpeed() {\r\n       
+    while (this.speed < 20) {\r\n            yield new UnityEngine_1.WaitForSeconds(1);\r\n           
+    this.speed += 2;\r\n            if (this.speed >= 20)\r\n                return;\r\n       
+    }\r\n    }\r\n    *DownSpeed() {\r\n        while (this.speed > 0) {\r\n           
+    yield new UnityEngine_1.WaitForSeconds(2);\r\n            console.log(this.isDown);\r\n           
+    this.speed -= 2;\r\n            if (this.speed <= 0) {\r\n                this.isDown
+    = false;\r\n                this.speed = 0;\r\n                yield new UnityEngine_1.WaitForSeconds(5);\r\n               
+    console.log(\"reStart\");\r\n                this.StartCoroutine(this.UpSpeed());\r\n               
+    return;\r\n            }\r\n        }\r\n    }\r\n}\r\nexports.default = wayPoint;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoid2F5UG9pbnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ3YXlQb2ludC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLGlEQUFxRDtBQUNyRCw2Q0FBeUc7QUFDekcsdURBQTRDO0FBQzVDLCtDQUFvRDtBQUlwRCxNQUFxQixRQUFTLFNBQVEscUNBQXFCO0lBQTNEOztRQUVXLFdBQU0sR0FBVyxDQUFDLENBQUM7UUFFbkIsVUFBSyxHQUFVLENBQUMsQ0FBQztRQUNqQixZQUFPLEdBQUcsQ0FBQyxDQUFDO0lBZ0h2QixDQUFDO0lBMUdHLEtBQUs7UUFFRCxJQUFJLENBQUMsU0FBUyxHQUFHLHdCQUFVLENBQUMsSUFBSSxDQUFDLGdCQUFnQixDQUFDLENBQUMsWUFBWSxTQUFDLG1DQUFvQixFQUFHLENBQUM7UUFDeEYsMEVBQTBFO1FBQzFFLElBQUcsSUFBSSxDQUFDLE1BQU0sSUFBSSxDQUFDO1lBQ2YsSUFBSSxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsT0FBTyxFQUFFLENBQUMsQ0FBQztJQUM1QyxDQUFDO0lBRUQsV0FBVztRQUVQLElBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLElBQUksSUFBSSxJQUFJLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLFdBQVcsSUFBSSxDQUFDLElBQUksQ0FBQyxNQUFNO1lBQzdFLElBQUksQ0FBQyxRQUFRLEVBQUUsQ0FBQztJQUN4QixDQUFDO0lBRU0sUUFBUTtRQUVYLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLHFCQUFPLENBQUMsV0FBVyxDQUN4QyxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsRUFBRSxJQUFJLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsQ0FBQyxTQUFTLENBQUMsUUFBUSxFQUFFLElBQUksQ0FBQyxLQUFLLEdBQUcsa0JBQUksQ0FBQyxTQUFTLENBQUMsQ0FBQztRQUMxRyxJQUFJLEdBQUcsR0FBWSxxQkFBTyxDQUFDLElBQUks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","assetPath":"Assets/ZepetoScripts/wayPoint.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"number","type":"System.Single","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"foodPos","type":"UnityEngine.Transform[]","isArray":true,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"speed","type":"System.Single","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"foodNum","type":"System.Single","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"dir","type":"UnityEngine.Vector3","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"isStop","type":"System.Boolean","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"isDown","type":"System.Boolean","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"ZEPETO.World","name":"multiplay","type":"ZEPETO.World.ZepetoWorldMultiplay","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"wayPoint","description":""},"isCompiled":true}'
+  typescriptHash: 53ee537b6a9d01f3335841a469684e3c

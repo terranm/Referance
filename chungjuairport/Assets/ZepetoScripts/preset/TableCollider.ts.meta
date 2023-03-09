@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 302a4aca10d8f7540a8f9eea5fb8b4cb
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    TableCollider extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
+    {\r\n        this.PassportCollider.enabled = false;\r\n        this.DisembarkationCardCollider.enabled
+    = false;\r\n    }\r\n    OnTriggerEnter(col) {\r\n        this.PassportCollider.enabled
+    = true;\r\n        this.DisembarkationCardCollider.enabled = true;\r\n    }\r\n}\r\nexports.default
+    = TableCollider;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGFibGVDb2xsaWRlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlRhYmxlQ29sbGlkZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSxpREFBcUQ7QUFFckQsTUFBcUIsYUFBYyxTQUFRLHFDQUFxQjtJQUk1RCxLQUFLO1FBQ0QsSUFBSSxDQUFDLGdCQUFnQixDQUFDLE9BQU8sR0FBRyxLQUFLLENBQUM7UUFDdEMsSUFBSSxDQUFDLDBCQUEwQixDQUFDLE9BQU8sR0FBRyxLQUFLLENBQUM7SUFDcEQsQ0FBQztJQUVELGNBQWMsQ0FBQyxHQUFZO1FBQ3ZCLElBQUksQ0FBQyxnQkFBZ0IsQ0FBQyxPQUFPLEdBQUcsSUFBSSxDQUFDO1FBQ3JDLElBQUksQ0FBQywwQkFBMEIsQ0FBQyxPQUFPLEdBQUcsSUFBSSxDQUFDO0lBQ25ELENBQUM7Q0FFSjtBQWRELGdDQWNDIn0=","assetPath":"Assets/ZepetoScripts/preset/TableCollider.ts","manifest":{"properties":[{"assembly":"UnityEngine.PhysicsModule","name":"PassportCollider","type":"UnityEngine.BoxCollider","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.PhysicsModule","name":"DisembarkationCardCollider","type":"UnityEngine.BoxCollider","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"TableCollider","description":""},"isCompiled":true}'
+  typescriptHash: 6fce115515447b3c9856bf414cf06176

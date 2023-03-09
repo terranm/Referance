@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: bdb901f54171de94cb94f8d34e48d455
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nexports.TargetDisplay = void 0;\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nvar
+    TargetDisplay;\r\n(function (TargetDisplay) {\r\n    TargetDisplay[TargetDisplay[\"display1\"]
+    = 0] = \"display1\";\r\n    TargetDisplay[TargetDisplay[\"display2\"] = 1] =
+    \"display2\";\r\n})(TargetDisplay = exports.TargetDisplay || (exports.TargetDisplay
+    = {}));\r\nclass UI_Manager extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n   
+    Start() {\r\n        this.cameraBtn.onClick.AddListener(() => {\r\n           
+    let camera = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoCamera.camera;\r\n           
+    if (camera.targetDisplay == TargetDisplay.display1)\r\n                camera.targetDisplay
+    = 1;\r\n            else\r\n                camera.targetDisplay = 0;\r\n       
+    });\r\n    }\r\n}\r\nexports.default = UI_Manager;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVUlfTWFuYWdlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlVJX01hbmFnZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQ0EsNkVBQXNHO0FBQ3RHLGlEQUFxRDtBQUVyRCxJQUFZLGFBR1g7QUFIRCxXQUFZLGFBQWE7SUFDckIseURBQVEsQ0FBQTtJQUNSLHlEQUFRLENBQUE7QUFDWixDQUFDLEVBSFcsYUFBYSxHQUFiLHFCQUFhLEtBQWIscUJBQWEsUUFHeEI7QUFFRCxNQUFxQixVQUFXLFNBQVEscUNBQXFCO0lBS3pELEtBQUs7UUFFRCxJQUFJLENBQUMsU0FBUyxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQ3BDLElBQUksTUFBTSxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsTUFBTSxDQUFDO1lBQ3BFLElBQUksTUFBTSxDQUFDLGFBQWEsSUFBSSxhQUFhLENBQUMsUUFBUTtnQkFDOUMsTUFBTSxDQUFDLGFBQWEsR0FBRyxDQUFDLENBQUM7O2dCQUN4QixNQUFNLENBQUMsYUFBYSxHQUFHLENBQUMsQ0FBQztRQUNsQyxDQUFDLENBQUMsQ0FBQTtJQUNOLENBQUM7Q0FFSjtBQWZELDZCQWVDIn0=","assetPath":"Assets/ZepetoScripts/UI/UI_Manager.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"cameraBtn","type":"UnityEngine.UI.Button","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"","name":"display","type":"TargetDisplay","isArray":false,"enumKeys":["display1","display2"],"enumValues":["0","1"],"attributes":[]}],"name":"UI_Manager","description":""},"isCompiled":true}'
+  typescriptHash: f10da3be6ea89fd19a3952ba27328a6f

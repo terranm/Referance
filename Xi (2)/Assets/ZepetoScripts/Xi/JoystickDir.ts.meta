@@ -1,0 +1,118 @@
+fileFormatVersion: 2
+guid: d02a84c5e91c1fc408871e5c5de40dce
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    UnityEngine_EventSystems_1 = require(\\\"UnityEngine.EventSystems\\\");\\r\\nconst
+    UnityEngine_EventSystems_EventTrigger_1 = require(\\\"UnityEngine.EventSystems.EventTrigger\\\");\\r\\nconst
+    ZEPETO_Character_Controller_1 = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst ZEPETO_World_1 =
+    require(\\\"ZEPETO.World\\\");\\r\\nconst PlayerCtrl_1 = require(\\\"./PlayerCtrl\\\");\\r\\nclass
+    JoystickDir extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    constructor()
+    {\\r\\n        super(...arguments);\\r\\n        this.joyVec = UnityEngine_1.Vector3.zero;\\r\\n       
+    this.isPointerDown = false;\\r\\n    }\\r\\n    Start() {\\r\\n        this.multiplay
+    = UnityEngine_1.GameObject.Find(\\\"WorldMultiplay\\\").GetComponent($typeof(ZEPETO_World_1.ZepetoWorldMultiplay));\\r\\n       
+    this.staticR = this.transform.parent.GetChild(3).gameObject;\\r\\n        this.jumpBtn
+    = this.transform.parent.GetChild(2).gameObject;\\r\\n        var trigger = this.gameObject.GetComponent($typeof(UnityEngine_EventSystems_1.EventTrigger));\\r\\n       
+    var trigger2 = this.transform.parent.GetChild(2).GetComponent($typeof(UnityEngine_EventSystems_1.EventTrigger));\\r\\n       
+    var trigger3 = this.transform.parent.GetChild(3).GetComponent($typeof(UnityEngine_EventSystems_1.EventTrigger));\\r\\n       
+    //\uC67C\uCABD \uC870\uC774\uC2A4\uD2F1\\r\\n        var entry_PointerDown =
+    new UnityEngine_EventSystems_EventTrigger_1.Entry();\\r\\n        var entry_BeginDrag
+    = new UnityEngine_EventSystems_EventTrigger_1.Entry();\\r\\n        var entry_Drag
+    = new UnityEngine_EventSystems_EventTrigger_1.Entry();\\r\\n        var entry_DragEnd
+    = new UnityEngine_EventSystems_EventTrigger_1.Entry();\\r\\n        //\uC624\uB978\uCABD\\r\\n       
+    var entry_PointerDown2 = new UnityEngine_EventSystems_EventTrigger_1.Entry();\\r\\n       
+    var entry_PointerUp = new UnityEngine_EventSystems_EventTrigger_1.Entry();\\r\\n       
+    //\uC624\uB978\uCABD \uC870\uC774\uC2A4\uD2F1\\r\\n        var entry_PointerDown3
+    = new UnityEngine_EventSystems_EventTrigger_1.Entry();\\r\\n        var entry_BeginDrag2
+    = new UnityEngine_EventSystems_EventTrigger_1.Entry();\\r\\n        var entry_Drag2
+    = new UnityEngine_EventSystems_EventTrigger_1.Entry();\\r\\n        var entry_DragEnd2
+    = new UnityEngine_EventSystems_EventTrigger_1.Entry();\\r\\n        entry_PointerDown.eventID
+    = UnityEngine_EventSystems_1.EventTriggerType.PointerDown;\\r\\n        entry_PointerDown2.eventID
+    = UnityEngine_EventSystems_1.EventTriggerType.PointerDown;\\r\\n        entry_PointerDown3.eventID
+    = UnityEngine_EventSystems_1.EventTriggerType.PointerDown;\\r\\n        entry_BeginDrag.eventID
+    = UnityEngine_EventSystems_1.EventTriggerType.BeginDrag;\\r\\n        entry_BeginDrag2.eventID
+    = UnityEngine_EventSystems_1.EventTriggerType.BeginDrag;\\r\\n        entry_Drag.eventID
+    = UnityEngine_EventSystems_1.EventTriggerType.Drag;\\r\\n        entry_Drag2.eventID
+    = UnityEngine_EventSystems_1.EventTriggerType.Drag;\\r\\n        entry_DragEnd.eventID
+    = UnityEngine_EventSystems_1.EventTriggerType.EndDrag;\\r\\n        entry_DragEnd2.eventID
+    = UnityEngine_EventSystems_1.EventTriggerType.EndDrag;\\r\\n        entry_PointerUp.eventID
+    = UnityEngine_EventSystems_1.EventTriggerType.PointerUp;\\r\\n        entry_BeginDrag.callback.AddListener((event)
+    => {\\r\\n        });\\r\\n        entry_Drag.callback.AddListener((event) =>
+    {\\r\\n            this.Drag(true, event);\\r\\n        });\\r\\n        entry_Drag2.callback.AddListener((event)
+    => {\\r\\n            this.Drag(false, event);\\r\\n        });\\r\\n       
+    entry_DragEnd.callback.AddListener(() => {\\r\\n            //jetpack\\r\\n           
+    this.playerCtrl.steer = 0;\\r\\n            this.playerCtrl.isMove = false;\\r\\n           
+    this.playerCtrl.isBack = false;\\r\\n        });\\r\\n        entry_DragEnd2.callback.AddListener(()
+    => {\\r\\n            //\uC624\uB978\uCABD \uC870\uC774\uC2A4\uD2F1 \uB4DC\uB798\uADF8\uAC00
+    \uB05D\uB098\uBA74 \\r\\n            this.playerCtrl.isUp = false;\\r\\n           
+    this.playerCtrl.isDown = false;\\r\\n        });\\r\\n        entry_PointerDown.callback.AddListener((event)
+    => {\\r\\n            //\uCC98\uC74C \uD130\uCE58\uD55C \uD3EC\uC9C0\uC158\uAC12
+    \uB300\uC785\\r\\n            //\uD0C0\uC785\uC2A4\uD06C\uB9BD\uD2B8\uC5D0\uC11C
+    Vector2 to 3\uB85C \uC790\uB3D9 \uBCC0\uD658\uC774 \uB418\uC9C0 \uC54A\uC544\uC11C
+    \uB530\uB85C \uBCC0\uD658\uD558\uB294 \uD568\uC218 \uC81C\uC791\\r\\n           
+    this.stickFirstPos = this.ConvertVector3(event.position);\\r\\n        });\\r\\n       
+    entry_PointerDown3.callback.AddListener((event) => {\\r\\n            this.stickFirstPos2
+    = this.ConvertVector3(event.position);\\r\\n        });\\r\\n        entry_PointerUp.callback.AddListener((event)
+    => {\\r\\n            console.log(\\\"Up\\\");\\r\\n            this.isPointerDown
+    = false;\\r\\n        });\\r\\n        trigger.triggers.Add(entry_BeginDrag);\\r\\n       
+    trigger.triggers.Add(entry_Drag);\\r\\n        trigger.triggers.Add(entry_DragEnd);\\r\\n       
+    trigger.triggers.Add(entry_PointerDown);\\r\\n        trigger2.triggers.Add(entry_PointerDown2);\\r\\n       
+    trigger2.triggers.Add(entry_PointerUp);\\r\\n        trigger3.triggers.Add(entry_BeginDrag2);\\r\\n       
+    trigger3.triggers.Add(entry_Drag2);\\r\\n        trigger3.triggers.Add(entry_DragEnd2);\\r\\n       
+    trigger3.triggers.Add(entry_PointerDown3);\\r\\n        this.staticR.SetActive(false);\\r\\n       
+    this.StartCoroutine(this.FindCharacter());\\r\\n    }\\r\\n    *FindCharacter()
+    {\\r\\n        while (true) {\\r\\n            yield null;\\r\\n            if
+    (this.multiplay != null && this.multiplay.Room.IsConnected) {\\r\\n               
+    const hasPlayer = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.HasPlayer(this.multiplay.Room.SessionId);\\r\\n               
+    if (hasPlayer) {\\r\\n                    const myPlayer = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.GetPlayer(this.multiplay.Room.SessionId);\\r\\n                   
+    this.playerCtrl = myPlayer.character.transform.GetChild(1).GetComponent($typeof(PlayerCtrl_1.default));\\r\\n                   
+    if (this.playerCtrl != null) {\\r\\n                        this.playerCtrl.event.AddListener((ride)
+    => {\\r\\n                            if (ride == 0) {\\r\\n                               
+    this.staticR.SetActive(true);\\r\\n                                this.jumpBtn.SetActive(false);\\r\\n                               
+    //\uCE90\uB9AD\uD130 \uC0DD\uC131\uC2DC \uC790\uB3D9\uC73C\uB85C \uBD80\uCC29\uB418\uB294
+    ZepetoCharacter\uC2A4\uD06C\uB9BD\uD2B8\uB97C \uB054 \uC774 \uC2A4\uD06C\uB9BD\uD2B8\uAC00
+    \uCF1C\uC838 \uC788\uC73C\uBA74 \uCE90\uB9AD\uD130\uC758 \uC560\uB2C8\uBA54\uC774\uC158\uACFC
+    \uD68C\uC804\uAC12\uC774 \uBCC0\uACBD\uB418\uC9C0 \uC54A\uC74C\\r\\n                               
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.enabled
+    = false;\\r\\n                            }\\r\\n                           
+    else {\\r\\n                                ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.enabled
+    = true;\\r\\n                                this.staticR.SetActive(true);\\r\\n                               
+    this.jumpBtn.SetActive(true);\\r\\n                            }\\r\\n                       
+    });\\r\\n                        console.log(\\\"Find\\\");\\r\\n                       
+    return;\\r\\n                    }\\r\\n                }\\r\\n            }\\r\\n       
+    }\\r\\n    }\\r\\n    ConvertVector3(num) {\\r\\n        var vec = new UnityEngine_1.Vector3(num.x,
+    num.y, 0);\\r\\n        return vec;\\r\\n    }\\r\\n    Drag(isLeft, event) {\\r\\n       
+    let pointerPos = this.ConvertVector3(event.position);\\r\\n        //jetPack\\r\\n       
+    if (isLeft) {\\r\\n            let joyVec = (UnityEngine_1.Vector3.op_Subtraction(pointerPos,
+    this.stickFirstPos)).normalized;\\r\\n            if (joyVec.y > 0) {\\r\\n               
+    this.playerCtrl.isMove = true;\\r\\n                this.playerCtrl.isBack =
+    false;\\r\\n            }\\r\\n            else {\\r\\n                this.playerCtrl.isMove
+    = false;\\r\\n                this.playerCtrl.isBack = true;\\r\\n           
+    }\\r\\n            this.playerCtrl.steer = joyVec.x;\\r\\n        }\\r\\n       
+    if (!isLeft) {\\r\\n            let joyVec2 = (UnityEngine_1.Vector3.op_Subtraction(pointerPos,
+    this.stickFirstPos2)).normalized;\\r\\n            this.playerCtrl.GLIDER_FLY
+    = true;\\r\\n            if (joyVec2.y > 0.25) {\\r\\n                this.playerCtrl.isUp
+    = false;\\r\\n                this.playerCtrl.isDown = true;\\r\\n           
+    }\\r\\n            else if (joyVec2.y < -0.25) {\\r\\n                this.playerCtrl.isUp
+    = true;\\r\\n                this.playerCtrl.isDown = false;\\r\\n           
+    }\\r\\n        }\\r\\n    }\\r\\n}\\r\\nexports.default = JoystickDir;\\r\\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSm95c3RpY2tEaXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJKb3lzdGlja0Rpci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUE0RztBQUM1Ryx1RUFBMkc7QUFDM0csaUdBQThEO0FBQzlELDZFQUE2RTtBQUM3RSxpREFBcUQ7QUFDckQsK0NBQW9EO0FBQ3BELDZDQUFzQztBQUV0QyxNQUFxQixXQUFZLFNBQVEscUNBQXFCO0lBQTlEOztRQUtXLFdBQU0sR0FBWSxxQkFBTyxDQUFDLElBQUksQ0FBQztRQUU5QixrQkFBYSxHQUFXLEtBQUssQ0FBQztJQWdMMUMsQ0FBQztJQTFLRyxLQUFLO1FBQ0QsSUFBSSxDQUFDLFNBQVMsR0FBRyx3QkFBVSxDQUFDLElBQUksQ0FBQyxnQkFBZ0IsQ0FBQyxDQUFDLFlBQVksU0FBQyxtQ0FBb0IsRUFBRyxDQUFDO1FBQ3hGLElBQUksQ0FBQyxPQUFPLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQztRQUM1RCxJQUFJLENBQUMsT0FBTyxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxVQUFVLENBQUM7UUFDNUQsSUFBSSxPQUFPLEdBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsdUNBQVksRUFBRyxDQUFDO1FBQzNELElBQUksUUFBUSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxZQUFZLFNBQUMsdUNBQVksRUFBRyxDQUFDO1FBQzlFLElBQUksUUFBUSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxZQUFZLFNBQUMsdUNBQVksRUFBRyxDQUFDO1FBQzlFLFNBQVM7UUFDVCxJQUFJLGlCQUFpQixHQUFHLElBQUks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\",\"assetPath\":\"Assets/ZepetoScripts/Xi/JoystickDir.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"player\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"joyVec\",\"type\":\"UnityEngine.Vector3\",\"isArray\":false,\"initValue\":[\"zero\"],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"staticR\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"JoystickDir\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 74ae09d046b581bc95db87ddc2a2a8df

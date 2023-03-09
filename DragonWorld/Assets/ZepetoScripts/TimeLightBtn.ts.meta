@@ -1,0 +1,47 @@
+fileFormatVersion: 2
+guid: cddaaa1bbdf32b1439f0f8d95e8aaa04
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Chat_1 = require(\"ZEPETO.Chat\");\r\nclass TimeLightBtn extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        this.multiplay = UnityEngine_1.Object.FindObjectOfType($typeof(ZEPETO_World_1.ZepetoWorldMultiplay));\r\n       
+    this.multiplay.add_RoomJoined((room) => {\r\n            this.room = room;\r\n           
+    this.room.AddMessageHandler(\"ServerTime\", (servertime) => {\r\n               
+    //If there is a real-time physical conflict, such as a soccer ball, change the
+    update owner directly.\r\n                this.Light.transform.rotation.eulerAngles.x
+    = servertime * 0.25;\r\n                // this.m_tfHelper.ChangeOwner(OwnerSessionId.toString());\r\n           
+    });\r\n        });\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.zepetoCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n       
+    });\r\n    }\r\n    OnTriggerEnter(collider) {\r\n        if ((this.zepetoCharacter
+    == null) || (UnityEngine_1.GameObject.op_Inequality(collider.gameObject, this.zepetoCharacter.gameObject)))
+    {\r\n            return;\r\n        }\r\n        ZEPETO_Chat_1.ZepetoChat.Send(\"Time
+    Spend + 90M // now SunAngle : \" + this.Light.transform.rotation.eulerAngles.x);\r\n       
+    this.Light.transform.Rotate(0.25 * 90, 0, 0);\r\n        this.time = this.Light.transform.rotation.eulerAngles.x
+    * 4;\r\n        if (270 < this.Light.transform.eulerAngles.x && this.Light.transform.eulerAngles.x
+    < 360) {\r\n            this.time -= 1080;\r\n        }\r\n        if (0 < this.Light.transform.eulerAngles.x
+    && this.Light.transform.eulerAngles.x < 270) {\r\n            this.time += 360;\r\n       
+    }\r\n        ZEPETO_Chat_1.ZepetoChat.Send(\"Time Spend + 90M // now SunAngle
+    : \" + this.Light.transform.rotation.eulerAngles.x + \" // now Time : \" + this.time);\r\n       
+    this.room.Send(\"ServerTime\", this.time);\r\n    }\r\n}\r\nexports.default =
+    TimeLightBtn;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGltZUxpZ2h0QnRuLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVGltZUxpZ2h0QnRuLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQXNEO0FBQ3RELCtDQUF3RTtBQUN4RSw2Q0FBc0Y7QUFDdEYsNkVBQTJGO0FBQzNGLDZDQUF5QztBQUd6QyxNQUFxQixZQUFhLFNBQVEscUNBQXFCO0lBVTNELEtBQUs7UUFDRCxJQUFJLENBQUMsU0FBUyxHQUFHLG9CQUFNLENBQUMsZ0JBQWdCLFNBQUMsbUNBQW9CLEVBQUcsQ0FBQztRQUNqRSxJQUFJLENBQUMsU0FBUyxnQkFBZSxDQUFDLElBQVUsRUFBRSxFQUFFO1lBQ3hDLElBQUksQ0FBQyxJQUFJLEdBQUUsSUFBSSxDQUFDO1lBQ2hCLElBQUksQ0FBQyxJQUFJLENBQUMsaUJBQWlCLENBQUMsWUFBWSxFQUFFLENBQUMsVUFBbUIsRUFBRSxFQUFFO2dCQUM5RCxxR0FBcUc7Z0JBQ3JHLElBQUksQ0FBQyxLQUFLLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsQ0FBQyxHQUFHLFVBQVUsR0FBRyxJQUFJLENBQUM7Z0JBQ2hFLDBEQUEwRDtZQUM5RCxDQUFDLENBQUMsQ0FBQztRQUNQLENBQUMsRUFBQTtRQUNELDJDQUFhLENBQUMsUUFBUSxDQUFDLGtCQUFrQixDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDdkQsSUFBSSxDQUFDLGVBQWUsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQztRQUNyRixDQUFDLENBQUMsQ0FBQztJQUNQLENBQUM7SUFFRCxjQUFjLENBQUMsUUFBa0I7UUFDN0IsSUFBSSxDQUFDLElBQUksQ0FBQyxlQUFlLElBQUksSUFBSSxDQUFDLElBQUksQ0EvQkQsd0JBQVUsQ0ErQ2t6UixhQUFjLENBaEJ4MFIsUUFBUSxDQUFDLFVBQVUsRUFBSSxJQUFJLENBQUMsZUFBZSxDQUFDLFVBQVUsRUFBQyxFQUFFO1lBQzVGLE9BQU87U0FDVjtRQUNELHdCQUFVLENBQUMsSUFBSSxDQUFDLHFDQUFxQyxHQUFHLElBQUksQ0FBQyxLQUFLLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsQ0FBQyxDQUFDLENBQUM7UUFDckcsSUFBSSxDQUFDLEtBQUssQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLElBQUksR0FBQyxFQUFFLEVBQUMsQ0FBQyxFQUFDLENBQUMsQ0FBQyxDQUFDO1FBQ3pDLElBQUksQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDLEtBQUssQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxDQUFDLEdBQUcsQ0FBQyxDQUFDO1FBQzVELElBQUksR0FBRyxHQUFHLElBQUksQ0FBQyxLQUFLLENBQUMsU0FBUyxDQUFDLFdBQVcsQ0FBQyxDQUFDLElBQUksSUFBSSxDQUFDLEtBQUssQ0FBQyxTQUFTLENBQUMsV0FBVyxDQUFDLENBQUMsR0FBRyxHQUFHLEVBQUM7WUFDckYsSUFBSSxDQUFDLElBQUksSUFBSSxJQUFJLENBQUM7U0FDckI7UUFDRCxJQUFJLENBQUMsR0FBRyxJQUFJLENBQUMsS0FBSyxDQUFDLFNBQVMsQ0FBQyxXQUFXLENBQUMsQ0FBQyxJQUFJLElBQUksQ0FBQyxLQUFLLENBQUMsU0FBUyxDQUFDLFdBQVcsQ0FBQyxDQUFDLEdBQUcsR0FBRyxFQUFDO1lBQ25GLElBQUksQ0FBQyxJQUFJLElBQUksR0FBRyxDQUFDO1NBQ3BCO1FBQ0Qsd0JBQVUsQ0FBQyxJQUFJLENBQUMscUNBQXFDLEdBQUcsSUFBSSxDQUFDLEtBQUssQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxDQUFDLEdBQUcsaUJBQWlCLEdBQUcsSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQ3JJLElBQUksQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLFlBQVksRUFBRSxJQUFJLENBQUMsSUFBSSxDQUFDLENBQUM7SUFDNUMsQ0FBQztDQUVKO0FBMUNELCtCQTBDQyJ9","assetPath":"Assets/ZepetoScripts/TimeLightBtn.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"Light","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"time","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"TimeLightBtn","description":""},"isCompiled":true}'
+  typescriptHash: 2c15e03604c07a891d0b79b5bdea5bdf
+  onlyWriteTrigger: 0

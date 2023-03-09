@@ -1,0 +1,61 @@
+fileFormatVersion: 2
+guid: d3063ca4e9f93ef44a9a89ffc0336d46
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nexports.PositionType = void 0;\r\nconst UnityEngine_1 =
+    require(\"UnityEngine\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    GameManager_1 = require(\"./GameManager\");\r\nvar PositionType;\r\n(function
+    (PositionType) {\r\n    PositionType[PositionType[\"startPoint\"] = 0] = \"startPoint\";\r\n   
+    PositionType[PositionType[\"cf\"] = 1] = \"cf\";\r\n    PositionType[PositionType[\"quest\"]
+    = 2] = \"quest\";\r\n    PositionType[PositionType[\"lemonQuest2\"] = 3] = \"lemonQuest2\";\r\n   
+    PositionType[PositionType[\"bridge\"] = 4] = \"bridge\";\r\n    PositionType[PositionType[\"car\"]
+    = 5] = \"car\";\r\n})(PositionType = exports.PositionType || (exports.PositionType
+    = {}));\r\nclass BtnTrigger extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n   
+    Start() {\r\n        if (this.positionType == PositionType.cf) {\r\n           
+    for (let i = 0; i < this.btnObj.length; i++) {\r\n                this.btnObj[i].SetActive(false);\r\n           
+    }\r\n        }\r\n        else if (this.positionType == PositionType.quest) {\r\n           
+    this.lemonBtn.SetActive(false);\r\n        }\r\n        else if (this.positionType
+    == PositionType.car) {\r\n            this.carBtn.SetActive(false);\r\n       
+    }\r\n    }\r\n    OnTriggerEnter(col) {\r\n        if (col.gameObject.tag ==
+    \"Player\" && this.positionType == PositionType.cf) {\r\n            for (let
+    i = 0; i < this.btnObj.length; i++) {\r\n                this.btnObj[i].SetActive(true);\r\n           
+    }\r\n        }\r\n        else if (col.gameObject.tag == \"Player\" && this.positionType
+    == PositionType.startPoint) {\r\n            GameManager_1.default.UI.ShowUI(GameManager_1.default.player.quest.toString(),
+    1);\r\n        }\r\n        else if (col.gameObject.tag == \"Player\" && this.positionType
+    == PositionType.quest) {\r\n            let questLevel = GameManager_1.default.player.quest;\r\n           
+    if ((questLevel += 1) == parseInt(this.transform.GetChild(0).name))\r\n               
+    this.lemonBtn.SetActive(true);\r\n        }\r\n        else if (col.gameObject.tag
+    == \"Player\" && this.positionType == PositionType.bridge) {\r\n            let
+    questLevel = GameManager_1.default.player.quest;\r\n            if (questLevel
+    >= 19) {\r\n                for (let i = 0; i < this.wall.length; i++) {\r\n                   
+    this.wall[i].SetActive(false);\r\n                }\r\n            }\r\n           
+    else {\r\n                GameManager_1.default.UI.ShowUI(\"x2\", 1);\r\n           
+    }\r\n        }\r\n        else if (col.gameObject.tag == \"Player\" && this.positionType
+    == PositionType.car) {\r\n            this.carBtn.SetActive(true);\r\n       
+    }\r\n    }\r\n    OnTriggerExit(col) {\r\n        if (col.gameObject.tag == \"Player\"
+    && this.positionType == PositionType.cf) {\r\n            for (let i = 0; i <
+    this.btnObj.length; i++) {\r\n                this.btnObj[i].SetActive(false);\r\n           
+    }\r\n        }\r\n        else if (col.gameObject.tag == \"Player\" && this.positionType
+    == PositionType.quest) {\r\n            this.lemonBtn.SetActive(false);\r\n       
+    }\r\n        else if (col.gameObject.tag == \"Player\" && this.positionType ==
+    PositionType.car) {\r\n            this.carBtn.SetActive(false);\r\n        }\r\n   
+    }\r\n}\r\nexports.default = BtnTrigger;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQnRuVHJpZ2dlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkJ0blRyaWdnZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsNkNBQW1EO0FBQ25ELGlEQUFxRDtBQUNyRCwrQ0FBd0M7QUFFeEMsSUFBWSxZQU9YO0FBUEQsV0FBWSxZQUFZO0lBQ3BCLDJEQUFVLENBQUE7SUFDViwyQ0FBRSxDQUFBO0lBQ0YsaURBQUssQ0FBQTtJQUNMLDZEQUFXLENBQUE7SUFDWCxtREFBTSxDQUFBO0lBQ04sNkNBQUcsQ0FBQTtBQUNQLENBQUMsRUFQVyxZQUFZLEdBQVosb0JBQVksS0FBWixvQkFBWSxRQU92QjtBQUVELE1BQXFCLFVBQVcsU0FBUSxxQ0FBcUI7SUFPekQsS0FBSztRQUNELElBQUcsSUFBSSxDQUFDLFlBQVksSUFBSSxZQUFZLENBQUMsRUFBRSxFQUFDO1lBQ3BDLEtBQUksSUFBSSxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsR0FBRyxJQUFJLENBQUMsTUFBTSxDQUFDLE1BQU0sRUFBRSxDQUFDLEVBQUUsRUFBQztnQkFDdkMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxDQUFDLENBQUMsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7YUFDbkM7U0FDSjthQUNJLElBQUcsSUFBSSxDQUFDLFlBQVksSUFBSSxZQUFZLENBQUMsS0FBSyxFQUFDO1lBQzVDLElBQUksQ0FBQyxRQUFRLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1NBQ2xDO2FBQ0ksSUFBRyxJQUFJLENBQUMsWUFBWSxJQUFJLFlBQVksQ0FBQyxHQUFHLEVBQUM7WUFDMUMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7U0FDaEM7SUFFTCxDQUFDO0lBRUQsY0FBYyxDQUFDLEdBQVk7UUFDdkIsSUFBRyxHQUFHLENBQUMsVUFBVSxDQUFDLEdBQUcsSUFBSSxRQUFRLElBQUksSUFBSSxDQUFDLFlBQVksSUFBSSxZQUFZLENB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","assetPath":"Assets/ZepetoScripts/BtnTrigger.ts","manifest":{"properties":[{"assembly":"","name":"positionType","type":"PositionType","isArray":false,"initValue":[],"enumKeys":["startPoint","cf","quest","lemonQuest2","bridge","car"],"enumValues":["0","1","2","3","4","5"],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"btnObj","type":"UnityEngine.GameObject[]","isArray":true,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"lemonBtn","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"wall","type":"UnityEngine.GameObject[]","isArray":true,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"carBtn","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"BtnTrigger","description":""},"isCompiled":true}'
+  typescriptHash: 468242c9440e00df405212742a1df0ed
+  onlyWriteTrigger: 0

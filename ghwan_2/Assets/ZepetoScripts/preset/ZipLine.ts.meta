@@ -1,0 +1,31 @@
+fileFormatVersion: 2
+guid: b9a204a6cd622904ca6043da3e640b3f
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst PlayerCtrl_1 = require(\"./PlayerCtrl\");\r\nclass
+    ZipLine extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    OnTriggerEnter(coll)
+    {\r\n        let _start_position = this._point != 0 ? UnityEngine_1.Vector3.zero
+    : this._start.transform.position;\r\n        let _end_position = this._point
+    != 0 ? UnityEngine_1.Vector3.zero : this._end.transform.position;\r\n       
+    if (coll.gameObject.tag === \"Player\") {\r\n            coll.gameObject.transform.GetComponentInChildren($typeof(PlayerCtrl_1.default)).ZipLine(this._point,
+    _start_position, _end_position);\r\n        }\r\n    }\r\n}\r\nexports.default
+    = ZipLine;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiWmlwTGluZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlppcExpbmUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSw2Q0FBNEQ7QUFDNUQsaURBQXFEO0FBQ3JELDZDQUFzQztBQUV0QyxNQUFxQixPQUFRLFNBQVEscUNBQXFCO0lBSXRELGNBQWMsQ0FBQyxJQUFlO1FBQzFCLElBQUksZUFBZSxHQUFHLElBQUksQ0FBQyxNQUFNLElBQUksQ0FBQyxDQUFDLENBQUMsQ0FBQyxxQkFBTyxDQUFDLElBQUksQ0FBQyxDQUFDLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsUUFBbUIsQ0FBQztRQUNsRyxJQUFJLGFBQWEsR0FBRyxJQUFJLENBQUMsTUFBTSxJQUFJLENBQUMsQ0FBQyxDQUFDLENBQUMscUJBQU8sQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQW1CLENBQUM7UUFDOUYsSUFBRyxJQUFJLENBQUMsVUFBVSxDQUFDLEdBQUcsS0FBSyxRQUFRLEVBQUM7WUFDaEMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsc0JBQXNCLFNBQUMsb0JBQVUsR0FBSSxPQUFPLENBQUMsSUFBSSxDQUFDLE1BQU0sRUFBRSxlQUFlLEVBQUUsYUFBYSxDQUFDLENBQUM7U0FFdkg7SUFDTCxDQUFDO0NBQ0o7QUFaRCwwQkFZQyJ9","assetPath":"Assets/ZepetoScripts/preset/ZipLine.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"_point","type":"System.Single","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"_start","type":"UnityEngine.GameObject","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"_end","type":"UnityEngine.GameObject","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"ZipLine","description":""},"isCompiled":true}'
+  typescriptHash: b7de969be1ac9b755d96af8a754f2096

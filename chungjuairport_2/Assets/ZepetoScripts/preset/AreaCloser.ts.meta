@@ -1,0 +1,42 @@
+fileFormatVersion: 2
+guid: b63ed01f823ed2d409acbee562bd01ac
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst ObjAttach_1 = require(\\\"./ObjAttach\\\");\\r\\nconst
+    PlayerCtrl_1 = require(\\\"./PlayerCtrl\\\");\\r\\nclass AreaCloser extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\\r\\n    OnTriggerEnter(col) {\\r\\n        if (col.gameObject.tag == \\\"Player\\\")
+    {\\r\\n            let player = col.transform.GetComponentInChildren($typeof(PlayerCtrl_1.default));\\r\\n           
+    if (player.isGetPassport && player.isGetDisembarkationCard && !player.isGame1Clear)
+    {\\r\\n                console.log(\\\"\uD1B5\uACFC1\\\");\\r\\n               
+    player.isGame1Clear = true;\\r\\n                let passportObj = player.transform.parent.GetChild(0).GetChild(1).GetChild(2).GetChild(0).GetChild(1).GetChild(2).GetChild(1).GetChild(1).GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetChild(0).GetChild(0).GetChild(0);\\r\\n               
+    let disembarkationCardObj = player.transform.parent.GetChild(0).GetChild(1).GetChild(2).GetChild(0).GetChild(1).GetChild(2).GetChild(1).GetChild(1).GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetChild(0).GetChild(0).GetChild(1);\\r\\n               
+    passportObj.GetComponent($typeof(ObjAttach_1.default)).ObjDestory();\\r\\n               
+    disembarkationCardObj.GetComponent($typeof(ObjAttach_1.default)).ObjDestory();\\r\\n           
+    }\\r\\n            else if (!(player.isGetPassport && player.isGetDisembarkationCard))
+    {\\r\\n                this.startPoint = UnityEngine_1.GameObject.Find(\\\"StartPoint\\\").transform.position;\\r\\n               
+    player.Teleport(this.startPoint);\\r\\n                console.log(\\\"\uC5EC\uAD8C\uC744
+    \uCC59\uAE30\uACE0, \uC785\uAD6D\uC2E0\uACE0\uC11C\uB97C \uC791\uC131\uD574\uC8FC\uC138\uC694.
+    \\\" +\\r\\n                    \\\"\\\\n\\\" + col.gameObject.transform.position.x
+    + \\\", \\\" + col.gameObject.transform.position.y + \\\", \\\" + col.gameObject.transform.position.z
+    +\\r\\n                    \\\"\\\\n\\\" + this.startPoint.x + \\\", \\\" + this.startPoint.y
+    + \\\", \\\" + this.startPoint.z);\\r\\n            }\\r\\n        }\\r\\n   
+    }\\r\\n}\\r\\nexports.default = AreaCloser;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQXJlYUNsb3Nlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkFyZWFDbG9zZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBbUY7QUFFbkYsaURBQXFEO0FBQ3JELDJDQUFvQztBQUNwQyw2Q0FBc0M7QUFFdEMsTUFBcUIsVUFBVyxTQUFRLHFDQUFxQjtJQUV6RCxjQUFjLENBQUMsR0FBYztRQUN6QixJQUFHLEdBQUcsQ0FBQyxVQUFVLENBQUMsR0FBRyxJQUFJLFFBQVEsRUFBQztZQUM5QixJQUFJLE1BQU0sR0FBRyxHQUFHLENBQUMsU0FBUyxDQUFDLHNCQUFzQixTQUFDLG9CQUFVLEVBQUcsQ0FBQztZQUNoRSxJQUFJLE1BQU0sQ0FBQyxhQUFhLElBQUksTUFBTSxDQUFDLHVCQUF1QixJQUFJLENBQUMsTUFBTSxDQUFDLFlBQVksRUFBQztnQkFDL0UsT0FBTyxDQUFDLEdBQUcsQ0FBQyxLQUFLLENBQUMsQ0FBQztnQkFDbkIsTUFBTSxDQUFDLFlBQVksR0FBRyxJQUFJLENBQUM7Z0JBQzNCLElBQUksV0FBVyxHQUFHLE1BQU0sQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDO2dCQUM5TixJQUFJLHFCQUFxQixHQUFHLE1BQU0sQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDO2dCQUN4TyxXQUFXLENBQUMsWUFBWSxTQUFDLG1CQUFTLEdBQUksVUFBVSxFQUFFLENBQUM7Z0JBQ25ELHFCQUFxQixDQUFDLFlBQVksU0FBQyxtQkFBUyxHQUFJLFVBQVUsRUFBRSxDQUFDO2FBQ2hFO2lCQUNJLElBQUksQ0FBQyxDQUFDLE1BQU0sQ0FBQyxhQUFhLElBQUksTUFBTSxDQUFDLHVCQUF1QixDQUFDLEVBQUM7Z0JBQy9ELElBQUksQ0FBQyxVQUFVLEdBQUcsd0JBQVUsQ0FBQyxJQUFJLENBQUMsWUFBWSxDQUFDLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQztnQkFDbkUsTUFBTSxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsVUFBVSxDQUFDLENBQUM7Z0JBQ2pDLE9BQU8sQ0FBQyxHQUFHLENBQUMsMEJBQTBCO29CQUNsQyxJQUFJLEdBQUcsR0FBRyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsR0FBRyxJQUFJLEdBQUcsR0FBRyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsR0FBRyxJQUFJLEdBQUUsR0FBRyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUM7b0JBQ25JLElBQUksR0FBRyxJQUFJLENBQUMsVUFBVSxDQUFDLENBQUMsR0FBRyxJQUFJLEdBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQyxDQUFDLEdBQUcsSUFBSSxHQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsQ0FBQyxDQUFDLENBQUM7YUFDdkY7U0FDSjtJQUNMLENBQUM7Q0FDSjtBQXRCRCw2QkFzQkMifQ==\",\"assetPath\":\"Assets/ZepetoScripts/preset/AreaCloser.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"startPoint\",\"type\":\"UnityEngine.Vector3\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"AreaCloser\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 5543658819c0404d5ee797c2471776ae

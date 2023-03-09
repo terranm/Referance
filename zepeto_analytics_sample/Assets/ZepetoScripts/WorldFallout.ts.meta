@@ -1,0 +1,45 @@
+fileFormatVersion: 2
+guid: 73f3b36995ec90c4bb5ca8aaa4e6001b
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Character_Controller_1 = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst ClientStarter_1
+    = require(\\\"../ZepetoScripts/Multiplay/ClientStarter\\\");\\r\\nclass WorldFallout
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    Start() {\\r\\n       
+    const spawnObject = UnityEngine_1.GameObject.FindWithTag(\\\"SpawnPoint\\\");\\r\\n       
+    if (spawnObject != null)\\r\\n            this.spawnPoint = spawnObject.transform;\\r\\n   
+    }\\r\\n    OnTriggerEnter(collider) {\\r\\n        if (collider.tag != \\\"Player\\\")
+    // tag \uD655\uC778\\r\\n            return;\\r\\n        const character = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.gameObject;
+    // localPlayer \uC791\uB3D9 \uD655\uC778\\r\\n        if (collider.gameObject
+    != character)\\r\\n            return;\\r\\n        this.StartCoroutine(this.ReturnWorldSpawnPoint());\\r\\n   
+    }\\r\\n    *ReturnWorldSpawnPoint() {\\r\\n        ClientStarter_1.default.instance.SendRoomServerLog(`\uC6D4\uB4DC
+    \uBC16\uC73C\uB85C \uB5A8\uC5B4\uC84C\uC2B5\uB2C8\uB2E4.`);\\r\\n        console.log(`
+    \uC6D4\uB4DC \uBC16\uC73C\uB85C \uB5A8\uC5B4\uC84C\uC2B5\uB2C8\uB2E4. `);\\r\\n       
+    const character = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\\r\\n       
+    character.enabled = false;\\r\\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.controllerData.inputAsset.Disable();\\r\\n       
+    character.StopMoving();\\r\\n        let returnPos = UnityEngine_1.Vector3.zero;\\r\\n       
+    if (this.spawnPoint != null)\\r\\n            returnPos = this.spawnPoint.position;\\r\\n       
+    character.Teleport(returnPos, UnityEngine_1.Quaternion.identity); // \uBCF5\uADC0\\r\\n       
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.controllerData.inputAsset.Enable();\\r\\n       
+    character.enabled = true;\\r\\n    }\\r\\n}\\r\\nexports.default = WorldFallout;\\r\\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiV29ybGRGYWxsb3V0LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiV29ybGRGYWxsb3V0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQW1GO0FBQ25GLDZFQUE0RDtBQUM1RCxpREFBcUQ7QUFDckQsNEVBQXFFO0FBRXJFLE1BQXFCLFlBQWEsU0FBUSxxQ0FBcUI7SUFJM0QsS0FBSztRQUVELE1BQU0sV0FBVyxHQUFHLHdCQUFVLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxDQUFDO1FBQ3pELElBQUcsV0FBVyxJQUFJLElBQUk7WUFDbEIsSUFBSSxDQUFDLFVBQVUsR0FBRyxXQUFXLENBQUMsU0FBUyxDQUFDO0lBQ2hELENBQUM7SUFFRCxjQUFjLENBQUMsUUFBaUI7UUFFNUIsSUFBSSxRQUFRLENBQUMsR0FBRyxJQUFJLFFBQVEsRUFBMkUsU0FBUztZQUM1RyxPQUFPO1FBRVgsTUFBTSxTQUFTLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsVUFBVSxDQUFDLENBQWdCLG9CQUFvQjtRQUMzSCxJQUFHLFFBQVEsQ0FBQyxVQUFVLElBQUksU0FBUztZQUMvQixPQUFPO1FBRVgsSUFBSSxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMscUJBQXFCLEVBQUUsQ0FBQyxDQUFDO0lBQ3RELENBQUM7SUFFTyxDQUFFLHFCQUFxQjtRQUUzQix1QkFBYSxDQUFDLFFBQVEsQ0FBQyxpQkFBaUIsQ0FBQyxnQkFBZ0IsQ0FBQyxDQUFDO1FBQzNELE9BQU8sQ0FBQyxHQUFHLENBQUMsa0JBQWtCLENBQUMsQ0FBQztRQUVoQyxNQUFNLFNBQVMsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQztRQUM1RSxTQUFTLENBQUMsT0FBTyxHQUFHLEtBQUssQ0FBQztRQUMxQiwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxjQUFjLENBQUMsVUFBVSxDQUFDLE9BQU8sRUFBRSxDQUFDO1FBQzNELFNBQVMsQ0FBQyxVQUFVLEVBQUUsQ0FBQztRQUN2QixJQUFJLFNBQVMsR0FBRyxxQkFBTyxDQUFDLElBQUksQ0FBQztRQUU3QixJQUFHLElBQUksQ0FBQyxVQUFVLElBQUksSUFBSTtZQUN0QixTQUFTLEdBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQyxRQUFRLENBQUM7UUFFekMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxTQUFTLEVBQUUsd0JBQVUsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLEtBQUs7UUFDekQsMkNBQWEsQ0FBQyxRQUFRLENBQUMsY0FBYyxDQUFDLFVBQVUsQ0FBQyxNQUFNLEVBQUUsQ0FBQztRQUMxRCxTQUFTLENBQUMsT0FBTyxHQUFHLElBQUksQ0FBQztJQUM3QixDQUFDO0NBQ0o7QUF6Q0QsK0JBeUNDIn0=\",\"assetPath\":\"Assets/ZepetoScripts/WorldFallout.ts\",\"manifest\":{\"properties\":[],\"name\":\"WorldFallout\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: a04507a1e61e13418a2849f8d5008734
+  onlyWriteTrigger: 0

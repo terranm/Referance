@@ -1,0 +1,42 @@
+fileFormatVersion: 2
+guid: 9b88d8e21d489f54c96f4c7eaba4438e
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst
+    UnityEngine_UI_1 = require(\\\"UnityEngine.UI\\\");\\r\\nclass Alert extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    constructor() {\\r\\n       
+    super(...arguments);\\r\\n        this.count = 0;\\r\\n        // Update(){\\r\\n       
+    //     //count\uAC00 1\uC77C\uB54C popUp GameObject\uB97C \uD65C\uC131\uD654\\r\\n       
+    //     if(this.count == 1){\\r\\n        //         this.popUp.SetActive(true);\\r\\n       
+    //         console.log(`shown`);\\r\\n        //         this.count = this.count
+    + 1;\\r\\n        //     }\\r\\n        // }\\r\\n    }\\r\\n    // //\uC624\uBE0C\uC81D\uD2B8\uC5D0
+    \uB2FF\uC744 \uC2DC count\uB97C 1 \uC99D\uAC00\uC2DC\uD0B4\\r\\n    // OnTriggerEnter(coll:
+    Collider) {\\r\\n    //     console.log(`OnTriggerEnter ${coll.gameObject.name}.`);\\r\\n   
+    //     this.count = this.count + 1;\\r\\n    //     console.log(this.count);\\r\\n   
+    // }\\r\\n    Start() {\\r\\n        //this.event = new UnityEvent();\\r\\n       
+    this.popUp = this.transform.gameObject;\\r\\n        this.button_OK = this.transform.GetChild(0).GetComponent($typeof(UnityEngine_UI_1.Button));\\r\\n       
+    this.button_Cancel = this.transform.GetChild(1).GetComponent($typeof(UnityEngine_UI_1.Button));\\r\\n       
+    //\uBC84\uD2BC\uC744 \uB204\uB97C \uC2DC popUp GameObject\uB97C \uBE44\uD65C\uC131\uD654\\r\\n       
+    this.button_OK.onClick.AddListener(() => {\\r\\n            this.popUp.SetActive(false);\\r\\n           
+    this.event.CarStop();\\r\\n            console.log(`button OK clicked`);\\r\\n       
+    });\\r\\n        this.button_Cancel.onClick.AddListener(() => {\\r\\n           
+    this.popUp.SetActive(false);\\r\\n            console.log(`button Cancel clicked`);\\r\\n       
+    });\\r\\n    }\\r\\n}\\r\\nexports.default = Alert;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQWxlcnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJBbGVydC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLGlEQUFzRDtBQUN0RCxtREFBd0M7QUFJeEMsTUFBcUIsS0FBTSxTQUFRLHFDQUFxQjtJQUF4RDs7UUFDVyxVQUFLLEdBQUcsQ0FBQyxDQUFDO1FBaUNqQixZQUFZO1FBQ1oseUNBQXlDO1FBQ3pDLDJCQUEyQjtRQUMzQixzQ0FBc0M7UUFDdEMsZ0NBQWdDO1FBQ2hDLHVDQUF1QztRQUN2QyxRQUFRO1FBQ1IsSUFBSTtJQUNSLENBQUM7SUFsQ0csNkJBQTZCO0lBQzdCLG1DQUFtQztJQUNuQyw4REFBOEQ7SUFDOUQsbUNBQW1DO0lBQ25DLCtCQUErQjtJQUMvQixJQUFJO0lBRUosS0FBSztRQUNELGdDQUFnQztRQUNoQyxJQUFJLENBQUMsS0FBSyxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsVUFBVSxDQUFDO1FBQ3ZDLElBQUksQ0FBQyxTQUFTLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsWUFBWSxTQUFDLHVCQUFNLEVBQUcsQ0FBQztRQUNuRSxJQUFJLENBQUMsYUFBYSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFlBQVksU0FBQyx1QkFBTSxFQUFHLENBQUM7UUFFdkUsaUNBQWlDO1FBQ2pDLElBQUksQ0FBQyxTQUFTLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDcEMsSUFBSSxDQUFDLEtBQUssQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7WUFDNUIsSUFBSSxDQUFDLEtBQUssQ0FBQyxPQUFPLEVBQUUsQ0FBQztZQUNyQixPQUFPLENBQUMsR0FBRyxDQUFDLG1CQUFtQixDQUFDLENBQUM7UUFDckMsQ0FBQyxDQUFDLENBQUE7UUFDRixJQUFJLENBQUMsYUFBYSxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQ3hDLElBQUksQ0FBQyxLQUFLLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1lBQzVCLE9BQU8sQ0FBQyxHQUFHLENBQUMsdUJBQXVCLENBQUMsQ0FBQztRQUN6QyxDQUFDLENBQUMsQ0FBQTtJQUVOLENBQUM7Q0FVSjtBQTFDRCx3QkEwQ0MifQ==\",\"assetPath\":\"Assets/ZepetoScripts/preset/Alert.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"mscorlib\",\"name\":\"count\",\"type\":\"System.Single\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"uiHitbox\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"\",\"name\":\"event\",\"type\":\"D:/ZEPETO/Reseave/ghwan/Assets/ZepetoScripts/preset/PlayerCtrl.default\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"Alert\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 3df03f2bb853795bbb913d591f64469f

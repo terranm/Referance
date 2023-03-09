@@ -1,0 +1,42 @@
+fileFormatVersion: 2
+guid: 603d22ba2e0a4ab4b99949eaa9469818
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst
+    UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst ZEPETO_Chat_1 = require(\\\"ZEPETO.Chat\\\");\\r\\nclass
+    RealTimeLight extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    Start()
+    {\\r\\n        this.date = new Date();\\r\\n        this.hour = this.date.getHours();\\r\\n       
+    this.minute = this.date.getMinutes();\\r\\n        this.second = this.date.getSeconds();\\r\\n       
+    this.time = this.date.getHours() * 60 + this.date.getMinutes();\\r\\n       
+    console.log(\\\"h : \\\" + this.date.getHours() + \\\" m : \\\" + this.date.getMinutes()
+    + \\\" time : \\\" + this.time);\\r\\n        this.transform.rotation = UnityEngine_1.Quaternion.Euler(270,
+    0, 0);\\r\\n        this.transform.Rotate(0.25 * this.time, 0, 0);\\r\\n       
+    // 90\uB3C4     12 * 60 + 00 = 720 \\r\\n        // 0\uB3C4      06 * 60 + 00
+    = 360 \\r\\n        // 180\uB3C4    18 * 60 + 00 = 1080\\r\\n        // 270\uB3C4   
+    24 * 60 + 00 = 1440 = 0\\r\\n        // 50\uB3C4    \\r\\n        console.log(\\\"rotate11\\\"
+    + this.transform.rotation.eulerAngles.x);\\r\\n        this.timer = 0;\\r\\n       
+    // this.StartCoroutine(this.TimeLightUpdate());\\r\\n    }\\r\\n    Update()
+    {\\r\\n        this.timer += UnityEngine_1.Time.deltaTime;\\r\\n        // console.log(this.timer);\\r\\n       
+    if (this.timer > 6) {\\r\\n            this.timer = 0;\\r\\n            ZEPETO_Chat_1.ZepetoChat.Send(\\\"Time
+    Spend + 6sec // now SunAngle : \\\" + this.transform.rotation.eulerAngles.x);\\r\\n           
+    this.transform.Rotate(0.025, 0, 0);\\r\\n        }\\r\\n    }\\r\\n}\\r\\nexports.default
+    = RealTimeLight;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUmVhbFRpbWVMaWdodC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlJlYWxUaW1lTGlnaHQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBc0Q7QUFFdEQsNkNBQXVGO0FBRXZGLDZDQUF5QztBQUd6QyxNQUFxQixhQUFjLFNBQVEscUNBQXFCO0lBTTVELEtBQUs7UUFFRCxJQUFJLENBQUMsSUFBSSxHQUFHLElBQUksSUFBSSxFQUFFLENBQUM7UUFDdkIsSUFBSSxDQUFDLElBQUksR0FBRyxJQUFJLENBQUMsSUFBSSxDQUFDLFFBQVEsRUFBRSxDQUFDO1FBQ2pDLElBQUksQ0FBQyxNQUFNLEdBQUcsSUFBSSxDQUFDLElBQUksQ0FBQyxVQUFVLEVBQUUsQ0FBQztRQUNyQyxJQUFJLENBQUMsTUFBTSxHQUFHLElBQUksQ0FBQyxJQUFJLENBQUMsVUFBVSxFQUFFLENBQUM7UUFFckMsSUFBSSxDQUFDLElBQUksR0FBRyxJQUFJLENBQUMsSUFBSSxDQUFDLFFBQVEsRUFBRSxHQUFHLEVBQUUsR0FBRyxJQUFJLENBQUMsSUFBSSxDQUFDLFVBQVUsRUFBRSxDQUFDO1FBQy9ELE9BQU8sQ0FBQyxHQUFHLENBQUMsTUFBTSxHQUFHLElBQUksQ0FBQyxJQUFJLENBQUMsUUFBUSxFQUFFLEdBQUcsT0FBTyxHQUFHLElBQUksQ0FBQyxJQUFJLENBQUMsVUFBVSxFQUFFLEdBQUcsVUFBVSxHQUFHLElBQUksQ0FBQyxJQUFJLENBQUMsQ0FBQztRQUN2RyxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyx3QkFBVSxDQUFDLEtBQUssQ0FBQyxHQUFHLEVBQUMsQ0FBQyxFQUFDLENBQUMsQ0FBQyxDQUFDO1FBQ3BELElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLElBQUksR0FBRyxJQUFJLENBQUMsSUFBSSxFQUFDLENBQUMsRUFBQyxDQUFDLENBQUMsQ0FBQztRQUM1Qyw4QkFBOEI7UUFDOUIsOEJBQThCO1FBQzlCLDhCQUE4QjtRQUM5QixrQ0FBa0M7UUFDbEMsVUFBVTtRQUNOLE9BQU8sQ0FBQyxHQUFHLENBQUMsVUFBVSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxDQUFDLENBQUMsQ0FBQztRQUNoRSxJQUFJLENBQUMsS0FBSyxHQUFHLENBQUMsQ0FBQztRQUNuQiwrQ0FBK0M7SUFDbkQsQ0FBQztJQVlELE1BQU07UUFDRixJQUFJLENBQUMsS0FBSyxJQUFJLGtCQUFJLENBQUMsU0FBUyxDQUFDO1FBQzdCLDJCQUEyQjtRQUMzQixJQUFJLElBQUksQ0FBQyxLQUFLLEdBQUcsQ0FBQyxFQUFDO1lBQ2YsSUFBSSxDQUFDLEtBQUssR0FBRyxDQUFDLENBQUM7WUFDZix3QkFBVSxDQUFDLElBQUksQ0FBQyxzQ0FBc0MsR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsQ0FBQyxDQUFDLENBQUM7WUFDaEcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsS0FBSyxFQUFDLENBQUMsRUFBQyxDQUFDLENBQUMsQ0FBQztTQUNwQztJQUNMLENBQUM7Q0FDSjtBQTlDRCxnQ0E4Q0MifQ==\",\"assetPath\":\"Assets/ZepetoScripts/RealTimeLight.ts\",\"manifest\":{\"properties\":[],\"name\":\"RealTimeLight\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 7dba57b4e548a9afa66603d2959b4656
+  onlyWriteTrigger: 0

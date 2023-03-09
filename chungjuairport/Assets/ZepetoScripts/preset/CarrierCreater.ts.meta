@@ -1,0 +1,50 @@
+fileFormatVersion: 2
+guid: af920123f0247a44f9c588f659348815
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst GameManager_1 =
+    require(\\\"./GameManager\\\");\\r\\nclass CarrierCreater extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\\r\\n    Start() {\\r\\n        this.cnt = 50;\\r\\n        this.carrierNum
+    = 0;\\r\\n        this.carrierList = new Array();\\r\\n        for (let i = 0;
+    i < 10; i++) {\\r\\n            this.carrierList[i] = this.CreateCarrier(this.carrier,
+    i.toString(), this.mat[i % 5]);\\r\\n        }\\r\\n        this.carrierList[this.carrierList.length]
+    = this.CreateCarrier(this.carrier, \\\"MyCarrier\\\", this.mat[5]);\\r\\n       
+    // \uBC84\uD2BC \uC0DD\uC131\\r\\n        let btn = GameManager_1.default.Resource.Instantiate(\\\"MyCarrierComponent\\\");\\r\\n       
+    btn.transform.SetParent(this.carrierList[this.carrierList.length - 1].transform);\\r\\n       
+    btn.transform.position = this.gameObject.transform.position;\\r\\n    }\\r\\n   
+    FixedUpdate() {\\r\\n        this.cnt += UnityEngine_1.Time.deltaTime;\\r\\n       
+    if (this.cnt > 3) {\\r\\n            //console.log(\\\"carrier\\\" + this.carrierNum);\\r\\n           
+    let Obj = this.carrierList[this.carrierNum++];\\r\\n            this.cnt = 0;\\r\\n           
+    if (this.carrierNum >= this.carrierList.length)\\r\\n                this.carrierNum
+    = 0;\\r\\n            Obj.SetActive(true);\\r\\n        }\\r\\n    }\\r\\n   
+    CreateCarrier(carrier, name, mat) {\\r\\n        let Obj = UnityEngine_1.GameObject.Instantiate(carrier);\\r\\n       
+    Obj.name = name;\\r\\n        Obj.transform.SetParent(this.gameObject.transform);\\r\\n       
+    Obj.transform.localPosition = UnityEngine_1.Vector3.zero;\\r\\n        Obj.transform.localRotation
+    = UnityEngine_1.Quaternion.identity;\\r\\n        //Obj.transform.position =
+    this.gameObject.transform.position;\\r\\n        Obj.GetComponent($typeof(UnityEngine_1.Renderer)).material
+    = mat; //this.mat[i%5];\\r\\n        Obj.SetActive(false);\\r\\n        return
+    Obj;\\r\\n    }\\r\\n    CarrierDestory(carNum) {\\r\\n        let num = carNum
+    != \\\"MyCarrier\\\" ? parseInt(carNum) : this.carrierList.length - 1;\\r\\n       
+    let Obj = this.carrierList[num];\\r\\n        Obj.transform.localPosition = UnityEngine_1.Vector3.zero;\\r\\n       
+    Obj.transform.localRotation = UnityEngine_1.Quaternion.identity;\\r\\n       
+    Obj.SetActive(false);\\r\\n    }\\r\\n}\\r\\nexports.default = CarrierCreater;\\r\\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2FycmllckNyZWF0ZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJDYXJyaWVyQ3JlYXRlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFrRztBQUNsRyxpREFBcUQ7QUFDckQsK0NBQXdDO0FBRXhDLE1BQXFCLGNBQWUsU0FBUSxxQ0FBcUI7SUFRN0QsS0FBSztRQUNELElBQUksQ0FBQyxHQUFHLEdBQUcsRUFBRSxDQUFDO1FBQ2QsSUFBSSxDQUFDLFVBQVUsR0FBRyxDQUFDLENBQUM7UUFDcEIsSUFBSSxDQUFDLFdBQVcsR0FBRyxJQUFJLEtBQUssRUFBYyxDQUFDO1FBQzNDLEtBQUksSUFBSSxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsR0FBRyxFQUFFLEVBQUUsQ0FBQyxFQUFFLEVBQUM7WUFDdkIsSUFBSSxDQUFDLFdBQVcsQ0FBQyxDQUFDLENBQUMsR0FBRyxJQUFJLENBQUMsYUFBYSxDQUFDLElBQUksQ0FBQyxPQUFPLEVBQUUsQ0FBQyxDQUFDLFFBQVEsRUFBRSxFQUFFLElBQUksQ0FBQyxHQUFHLENBQUMsQ0FBQyxHQUFDLENBQUMsQ0FBQyxDQUFDLENBQUM7U0FDdkY7UUFDRCxJQUFJLENBQUMsV0FBVyxDQUFDLElBQUksQ0FBQyxXQUFXLENBQUMsTUFBTSxDQUFDLEdBQUcsSUFBSSxDQUFDLGFBQWEsQ0FBQyxJQUFJLENBQUMsT0FBTyxFQUFFLFdBQVcsRUFBRSxJQUFJLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUM7UUFFdkcsUUFBUTtRQUNSLElBQUksR0FBRyxHQUFHLHFCQUFXLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxvQkFBb0IsQ0FBQyxDQUFDO1FBQ2pFLEdBQUcsQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxXQUFXLENBQUMsSUFBSSxDQUFDLFdBQVcsQ0FBQyxNQUFNLEdBQUcsQ0FBQyxDQUFDLENBQUMsU0FBUyxDQUFDLENBQUM7UUFDakYsR0FBRyxDQUFDLFNBQVMsQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDO0lBQ2hFLENBQUM7SUFFRCxXQUFXO1FBQ1AsSUFBSSxDQUFDLEdBQUcsSUFBSSxrQkFBSSxDQUFDLFNBQVMsQ0FBQztRQUMzQixJQUFHLElBQUksQ0FBQyxHQUFHLEdBQUcsQ0FBQyxFQUFDO1lBQ1osMkNBQTJDO1lBQzNDLElBQUksR0FBRyxHQUFHLElBQUksQ0FBQyxXQUFXLENBQUMsSUFBSSxDQUFDLFVBQVUsRUFBRSxDQUFlLENBQUM7WUFDNUQsSUFBSSxDQUFDLEdBQUcsR0FBRyxDQUFDLENBQUM7WUFDYixJQUFJLElBQUksQ0FBQyxVQUFVLElBQUksSUFBSSxDQUFDLFdBQVcsQ0FBQyxNQUFNO2dCQUFFLElBQUksQ0FBQyxVQUFVLEdBQUcsQ0FBQyxDQUFDO1lBQ3BFLEdBQUcsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDdkI7SUFDTCxDQUFDO0lBRU8sYUFBYSxDQUFDLE9BQW9CLEVBQUUsSUFBYSxFQUFFLEdBQWM7UUFDckUsSUFBSSxHQUFHLEdBQUcsd0JBQVUsQ0FBQyxXQUFXLENBQUMsT0FBTyxDQUFlLENBQUM7UUFDeEQsR0FBRyxDQUFDLElBQUksR0FBRyxJQUFJLENBQUM7UUFDaEIsR0FBRyxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsQ0FBQztRQUNuRCxHQUFHLENBQUMsU0FBUyxDQUFDLGFBQWEsR0FBRyxxQkFBTyxDQUFDLElBQUksQ0FBQztRQUMzQyxHQUFHLENBQUMsU0FBUyxDQUFDLGFBQWEsR0FBRyx3QkFBVSxDQUFDLFFBQVEsQ0FBQztRQUNsRCw4REFBOEQ7UUFDOUQsR0FBRyxDQUFDLFlBQVksU0FBQyxzQkFBUSxHQUFJLFFBQVEsR0FBRyxHQUFHLENBQUMsQ0FBQSxnQkFBZ0I7UUFDNUQsR0FBRyxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztRQUNyQixPQUFPLEdBQUcsQ0FBQztJQUNmLENBQUM7SUFFTSxjQUFjLENBQUMsTUFBZTtRQUNqQyxJQUFJLEdBQUcsR0FBRyxNQUFNLElBQUksV0FBVyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQyxDQUFDLElBQUksQ0FBQyxXQUFXLENBQUMsTUFBTSxHQUFHLENBQUMsQ0FBQztRQUNqRixJQUFJLEdBQUcsR0FBRyxJQUFJLENBQUMsV0FBVyxDQUFDLEdBQUcsQ0FBZSxDQUFDO1FBQzlDLEdBQUcsQ0FBQyxTQUFTLENBQUMsYUFBYSxHQUFHLHFCQUFPLENBQUMsSUFBSSxDQUFDO1FBQzNDLEdBQUcsQ0FBQyxTQUFTLENBQUMsYUFBYSxHQUFHLHdCQUFVLENBQUMsUUFBUSxDQUFDO1FBQ2xELEdBQUcsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDekIsQ0FBQztDQUNKO0FBckRELGlDQXFEQyJ9\",\"assetPath\":\"Assets/ZepetoScripts/preset/CarrierCreater.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"carrier\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"mat\",\"type\":\"UnityEngine.Material[]\",\"isArray\":true,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"CarrierCreater\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: e6471759d1bd8f456fb2f227c035319a

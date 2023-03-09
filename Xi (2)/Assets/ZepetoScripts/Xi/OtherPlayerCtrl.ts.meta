@@ -1,0 +1,48 @@
+fileFormatVersion: 2
+guid: 622d77d7bef6b4e4cb381ff73169336e
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nclass OtherPlayerCtrl
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    Start() {\\r\\n       
+    this.data = UnityEngine_1.Resources.Load(\\\"ScriptableObject\\\");\\r\\n       
+    this.anim = this.transform.parent.gameObject.AddComponent($typeof(UnityEngine_1.Animator));\\r\\n       
+    this.anim.runtimeAnimatorController = this.data.get_Item(\\\"anim\\\");\\r\\n       
+    this.anim.avatar = this.data.get_Item(\\\"avatar\\\");\\r\\n        this.anim.enabled
+    = false;\\r\\n    }\\r\\n    //\uACE0\uC815 \uC2DC\uAC04(0.25 \uAC04\uACA9\uC73C\uB85C
+    \uD638\uCD9C)\\r\\n    FixedUpdate() {\\r\\n        if (this.player != null &&
+    !this.player.isRide) {\\r\\n            //\uD50C\uB808\uC774\uC5B4\uAC00 \uD0D1\uC2B9\uC0C1\uD0DC\uAC00
+    \uC544\uB2C8\uBA74 \\r\\n            //\uC560\uB2C8\uBA54\uC774\uC158 \uB054\\r\\n           
+    this.anim.enabled = false;\\r\\n            this.anim.SetBool(\\\"isFlying\\\",
+    false);\\r\\n            return;\\r\\n        }\\r\\n        else if (this.player.isRide)
+    {\\r\\n            //\uD50C\uB808\uC774\uC5B4\uAC00 \uD0D1\uC2B9\uC911\uC774\uBA74\\r\\n           
+    //\uBE44\uD589 \uC560\uB2C8\uBA54\uC774\uC158\uC73C\uB85C \uBCC0\uACBD \uD6C4
+    \uC704\uCE58 \uBC0F \uD68C\uC804\uAC12 \uBCC0\uACBD\\r\\n            this.anim.enabled
+    = true;\\r\\n            this.anim.SetBool(\\\"isFlying\\\", true);\\r\\n           
+    let position = this.ParseVector3(this.player.transform.position);\\r\\n           
+    let rotation = UnityEngine_1.Quaternion.Euler(this.ParseVector3(this.player.transform.rotation));\\r\\n           
+    this.transform.parent.transform.position = UnityEngine_1.Vector3.Lerp(this.transform.parent.transform.position,
+    position, UnityEngine_1.Time.deltaTime * 10);\\r\\n            this.transform.parent.transform.rotation
+    = UnityEngine_1.Quaternion.Slerp(this.transform.parent.transform.rotation, rotation,
+    UnityEngine_1.Time.deltaTime * 10);\\r\\n        }\\r\\n    }\\r\\n    //schemas\uC758
+    vector3\uAC12\uC744 UnityEngine Vector3\uB85C \uBCC0\uACBD\\r\\n    ParseVector3(vector3)
+    {\\r\\n        return new UnityEngine_1.Vector3(vector3.x, vector3.y, vector3.z);\\r\\n   
+    }\\r\\n}\\r\\nexports.default = OtherPlayerCtrl;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiT3RoZXJQbGF5ZXJDdHJsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiT3RoZXJQbGF5ZXJDdHJsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQThHO0FBRzlHLGlEQUE0RTtBQUc1RSxNQUFxQixlQUFnQixTQUFRLHFDQUFxQjtJQU85RCxLQUFLO1FBQ0QsSUFBSSxDQUFDLElBQUksR0FBRyx1QkFBUyxDQUFDLElBQUksQ0FBQyxrQkFBa0IsQ0FBMkIsQ0FBQztRQUN6RSxJQUFJLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsc0JBQVEsRUFBRyxDQUFDO1FBQ3RFLElBQUksQ0FBQyxJQUFJLENBQUMseUJBQXlCLEdBQUcsSUFBSSxDQUFDLElBQUksVUFBQyxNQUFNLENBQThCLENBQUM7UUFDckYsSUFBSSxDQUFDLElBQUksQ0FBQyxNQUFNLEdBQUcsSUFBSSxDQUFDLElBQUksVUFBQyxRQUFRLENBQVcsQ0FBQztRQUNqRCxJQUFJLENBQUMsSUFBSSxDQUFDLE9BQU8sR0FBRyxLQUFLLENBQUM7SUFDOUIsQ0FBQztJQUNELHFCQUFxQjtJQUNyQixXQUFXO1FBQ1AsSUFBRyxJQUFJLENBQUMsTUFBTSxJQUFJLElBQUksSUFBSSxDQUFDLElBQUksQ0FBQyxNQUFNLENBQUMsTUFBTSxFQUFDO1lBQzFDLGtCQUFrQjtZQUNsQixTQUFTO1lBQ1QsSUFBSSxDQUFDLElBQUksQ0FBQyxPQUFPLEdBQUcsS0FBSyxDQUFDO1lBQzFCLElBQUksQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLFVBQVUsRUFBRSxLQUFLLENBQUMsQ0FBQztZQUNyQyxPQUFPO1NBQ1Y7YUFDSSxJQUFHLElBQUksQ0FBQyxNQUFNLENBQUMsTUFBTSxFQUFDO1lBQ3ZCLGFBQWE7WUFDYiw2QkFBNkI7WUFDN0IsSUFBSSxDQUFDLElBQUksQ0FBQyxPQUFPLEdBQUcsSUFBSSxDQUFDO1lBQ3pCLElBQUksQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLFVBQVUsRUFBRSxJQUFJLENBQUMsQ0FBQztZQUNwQyxJQUFJLFFBQVEsR0FBRyxJQUFJLENBQUMsWUFBWSxDQUFDLElBQUksQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDO1lBQ2pFLElBQUksUUFBUSxHQUFHLHdCQUFVLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxZQUFZLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQztZQUNuRixJQUFJLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLHFCQUFPLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEVBQUUsUUFBUSxFQUFFLGtCQUFJLENBQUMsU0FBUyxHQUFHLEVBQUUsQ0FBQyxDQUFDO1lBQ2pJLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEdBQUcsd0JBQVUsQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLFFBQVEsRUFBRSxRQUFRLEVBQUUsa0JBQUksQ0FBQyxTQUFTLEdBQUcsRUFBRSxDQUFDLENBQUM7U0FDeEk7SUFFTCxDQUFDO0lBQ0QsNENBQTRDO0lBQ3BDLFlBQVksQ0FBQyxPQUFnQjtRQUNqQyxPQUFPLElBQUkscUJBQU8sQ0FFZCxPQUFPLENBQUMsQ0FBQyxFQUNULE9BQU8sQ0FBQyxDQUFDLEVBQ1QsT0FBTyxDQUFDLENBQUMsQ0FDWixDQUFDO0lBQ04sQ0FBQztDQUVKO0FBN0NELGtDQTZDQyJ9\",\"assetPath\":\"Assets/ZepetoScripts/Xi/OtherPlayerCtrl.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"\",\"name\":\"room\",\"type\":\"ZEPETO.Multiplay.Room\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"\",\"name\":\"player\",\"type\":\"ZEPETO.Multiplay.Schema.Player\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"OtherPlayerCtrl\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 6cf59136cac0193ef081fe2193a84765

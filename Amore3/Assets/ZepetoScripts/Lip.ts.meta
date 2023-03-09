@@ -1,0 +1,40 @@
+fileFormatVersion: 2
+guid: 1f58432fd4a4ce94a94b742488b2063d
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nexports.LipNum = void 0;\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nvar LipNum;\r\n(function (LipNum)
+    {\r\n    LipNum[LipNum[\"Lip\"] = 0] = \"Lip\";\r\n    LipNum[LipNum[\"MoveLip\"]
+    = 1] = \"MoveLip\";\r\n})(LipNum = exports.LipNum || (exports.LipNum = {}));\r\nclass
+    Lip extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n       
+    super(...arguments);\r\n        this.speed = 2;\r\n        this.tick = new UnityEngine_1.WaitForSeconds(0.01);\r\n   
+    }\r\n    Start() {\r\n        if (this.lipNum == LipNum.Lip) {\r\n           
+    this.material = this.transform.GetChild(0).GetChild(3).gameObject.GetComponent($typeof(UnityEngine_1.Renderer)).material;\r\n           
+    this.firstPos = UnityEngine_1.GameObject.Find(\"FirstPos\").transform;\r\n       
+    }\r\n        else {\r\n            this.material = this.transform.GetChild(0).GetChild(1).gameObject.GetComponent($typeof(UnityEngine_1.Renderer)).material;\r\n           
+    this.firstPos = UnityEngine_1.GameObject.Find(\"FirstPos\").transform;\r\n       
+    }\r\n        this.movePos = UnityEngine_1.GameObject.Find(\"MovePos\").transform;\r\n       
+    this.StartCoroutine(this.Move());\r\n    }\r\n    *Move() {\r\n        while
+    (true) {\r\n            yield this.tick;\r\n            let dist = UnityEngine_1.Vector3.Distance(this.movePos.position,
+    this.transform.position);\r\n            if (dist < 2.1) {\r\n               
+    return;\r\n            }\r\n            else {\r\n                this.transform.Translate(UnityEngine_1.Vector3.op_Multiply(UnityEngine_1.Vector3.op_Multiply(UnityEngine_1.Vector3.forward,
+    UnityEngine_1.Time.deltaTime), this.speed));\r\n            }\r\n        }\r\n   
+    }\r\n}\r\nexports.default = Lip;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTGlwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiTGlwLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLDZDQUFzRztBQUN0RyxpREFBcUQ7QUFFckQsSUFBWSxNQUlYO0FBSkQsV0FBWSxNQUFNO0lBRWQsaUNBQUcsQ0FBQTtJQUNILHlDQUFPLENBQUE7QUFDWCxDQUFDLEVBSlcsTUFBTSxHQUFOLGNBQU0sS0FBTixjQUFNLFFBSWpCO0FBRUQsTUFBcUIsR0FBSSxTQUFRLHFDQUFxQjtJQUF0RDs7UUFJSSxVQUFLLEdBQVcsQ0FBQyxDQUFDO1FBR2xCLFNBQUksR0FBbUIsSUFBSSw0QkFBYyxDQUFDLElBQUksQ0FBQyxDQUFDO0lBeUNwRCxDQUFDO0lBdENHLEtBQUs7UUFFRCxJQUFJLElBQUksQ0FBQyxNQUFNLElBQUksTUFBTSxDQUFDLEdBQUcsRUFDN0I7WUFDSSxJQUFJLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLHNCQUFRLEdBQUksUUFBUSxDQUFDO1lBQ3BHLElBQUksQ0FBQyxRQUFRLEdBQUcsd0JBQVUsQ0FBQyxJQUFJLENBQUMsVUFBVSxDQUFDLENBQUMsU0FBUyxDQUFDO1NBQ3pEO2FBRUQ7WUFDSSxJQUFJLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLHNCQUFRLEdBQUksUUFBUSxDQUFDO1lBQ3BHLElBQUksQ0FBQyxRQUFRLEdBQUcsd0JBQVUsQ0FBQyxJQUFJLENBQUMsVUFBVSxDQUFDLENBQUMsU0FBUyxDQUFDO1NBQ3pEO1FBRUQsSUFBSSxDQUFDLE9BQU8sR0FBRyx3QkFBVSxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsQ0FBQyxTQUFTLENBQUM7UUFDcEQsSUFBSSxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsSUFBSSxFQUFFLENBQUMsQ0FBQztJQUNyQyxDQUFDO0lBRUQsQ0FBQyxJQUFJO1FBRUQsT0FBTyxJQUFJLEVBQ1g7WUFDSSxNQUFNLElBQUksQ0FBQyxJQUFJLENBQUM7WUFFaEIsSUFBSSxJQUFJLEdBQUcscUJBQU8sQ0FBQyxRQUFRLENBQUMsSUFBSSxDQUFDLE9BQU8sQ0FBQyxRQUFRLEVBQUUsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQztZQUU1RSxJQUFJLElBQUksR0FBRyxHQUFHLEVBQ2Q7Z0JBRUksT0FBTzthQUNWO2lCQUVEO2dCQUNJLElBQUksQ0FBQyxTQUFTLENBQUMsU0FBUyxDQW5Ea0IscUJBQU8sQ0F5RDQ3b0IsV0FBWSxDQXpELzhvQixxQkFBTyxDQXlENDdvQixXQUFZLENBTmgrb0IscUJBQU8sQ0FBQyxPQUFPLEVBQUcsa0JBQUksQ0FBQyxTQUFTLEdBQUcsSUFBSSxDQUFDLEtBQUssRUFBQyxDQUFDO2FBQzNFO1NBQ0o7SUFFTCxDQUFDO0NBRUo7QUFoREQsc0JBZ0RDIn0=","assetPath":"Assets/ZepetoScripts/Lip.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"material","type":"UnityEngine.Material","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"speed","type":"System.Single","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"movePos","type":"UnityEngine.Transform","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"firstPos","type":"UnityEngine.Transform","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"tick","type":"UnityEngine.WaitForSeconds","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"","name":"lipNum","type":"LipNum","isArray":false,"enumKeys":["Lip","MoveLip"],"enumValues":["0","1"],"attributes":[]}],"name":"Lip","description":""},"isCompiled":true}'
+  typescriptHash: 5477429d5e63992f89fe9857a5619979

@@ -1,0 +1,36 @@
+fileFormatVersion: 2
+guid: b7a7b25106f7c8a4f86f47793fcdac05
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass SitPos extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.sec
+    = 0.2;\r\n    }\r\n    OnEnable() {\r\n        this.StartCoroutine(this.FindCamera());\r\n   
+    }\r\n    *FindCamera() {\r\n        while (true) {\r\n            yield new UnityEngine_1.WaitForSeconds(this.sec);\r\n           
+    if (this.multiplay.Room != null && this.multiplay.Room.IsConnected) {\r\n               
+    let has = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.HasPlayer(this.multiplay.Room.SessionId);\r\n               
+    if (has) {\r\n                    let camera = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoCamera.camera.gameObject;\r\n                   
+    let dir = UnityEngine_1.Quaternion.LookRotation(UnityEngine_1.Vector3.op_Subtraction(camera.transform.position,
+    this.transform.position)).normalized;\r\n                    dir.x = 0;\r\n                   
+    dir.z = 0;\r\n                    this.transform.rotation = UnityEngine_1.Quaternion.Slerp(this.transform.rotation,
+    dir, 5 * UnityEngine_1.Time.deltaTime);\r\n                }\r\n            }\r\n       
+    }\r\n    }\r\n}\r\nexports.default = SitPos;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2l0UG9zLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiU2l0UG9zLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQWtGO0FBQ2xGLDZFQUE0RDtBQUM1RCxpREFBcUQ7QUFHckQsTUFBcUIsTUFBTyxTQUFRLHFDQUFxQjtJQUF6RDs7UUFJSSxRQUFHLEdBQVcsR0FBRyxDQUFDO0lBcUJ0QixDQUFDO0lBbkJHLFFBQVE7UUFDSixJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxVQUFVLEVBQUUsQ0FBQyxDQUFDO0lBQzNDLENBQUM7SUFFRCxDQUFDLFVBQVU7UUFDUCxPQUFNLElBQUksRUFBQztZQUNQLE1BQU0sSUFBSSw0QkFBYyxDQUFDLElBQUksQ0FBQyxHQUFHLENBQUMsQ0FBQztZQUNuQyxJQUFJLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxJQUFJLElBQUksSUFBSSxJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxXQUFXLEVBQUU7Z0JBQ2hFLElBQUksR0FBRyxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsQ0FBQztnQkFDMUUsSUFBSSxHQUFHLEVBQUU7b0JBQ0wsSUFBSSxNQUFNLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxNQUFNLENBQUMsVUFBVSxDQUFDO29CQUMvRSxJQUFJLEdBQUcsR0FBRyx3QkFBVSxDQUFDLFlBQVksQ0F0QmYscUJBQU8sQ0E4QjZpcEIsY0FBZSxDQVJuanBCLE1BQU0sQ0FBQyxTQUFTLENBQUMsUUFBUSxFQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxFQUFDLENBQUMsVUFBVSxDQUFDO29CQUNsRyxHQUFHLENBQUMsQ0FBQyxHQUFHLENBQUMsQ0FBQztvQkFDVixHQUFHLENBQUMsQ0FBQyxHQUFHLENBQUMsQ0FBQztvQkFDVixJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyx3QkFBVSxDQUFDLEtBQUssQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsRUFBRSxHQUFHLEVBQUUsQ0FBQyxHQUFHLGtCQUFJLENBQUMsU0FBUyxDQUFDLENBQUM7aUJBQ2hHO2FBQ0o7U0FDSjtJQUNMLENBQUM7Q0FDSjtBQXpCRCx5QkF5QkMifQ==","assetPath":"Assets/ZepetoScripts/SitPos.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"sitPos","type":"UnityEngine.Transform","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"ZEPETO.World","name":"multiplay","type":"ZEPETO.World.ZepetoWorldMultiplay","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"sec","type":"System.Single","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"SitPos","description":""},"isCompiled":true}'
+  typescriptHash: 6419b107a5b3682e04f9725a697f3d50

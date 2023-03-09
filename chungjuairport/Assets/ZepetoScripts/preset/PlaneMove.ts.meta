@@ -1,0 +1,36 @@
+fileFormatVersion: 2
+guid: 2138a0c1bcd4ec148bbc63bdd995259b
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass PlaneMove extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        this.targetNum = 1;\r\n        this.speedAdd =
+    20;\r\n        this.speed = this.speedAdd;\r\n    }\r\n    Update() {\r\n       
+    this.gameObject.transform.position = UnityEngine_1.Vector3.MoveTowards(this.gameObject.transform.position,
+    this.moveTargetList[this.targetNum].position, this.speed * UnityEngine_1.Time.deltaTime);\r\n       
+    if (UnityEngine_1.Vector3.op_Equality(this.gameObject.transform.position, this.moveTargetList[this.targetNum].position))
+    {\r\n            this.targetNum++;\r\n            if (this.targetNum == 9) {\r\n               
+    this.targetNum = 0;\r\n                this.speed = this.speedAdd;\r\n           
+    }\r\n            this.gameObject.transform.LookAt(this.moveTargetList[this.targetNum].position);\r\n           
+    this.gameObject.transform.Rotate(new UnityEngine_1.Vector3(90, -90, -105));\r\n           
+    if (this.targetNum > 5) {\r\n                this.speed -= this.speedAdd;\r\n           
+    }\r\n            else {\r\n                this.speed += this.speedAdd;\r\n           
+    }\r\n        }\r\n    }\r\n}\r\nexports.default = PlaneMove;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUGxhbmVNb3ZlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiUGxhbmVNb3ZlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQWdFO0FBQ2hFLGlEQUFxRDtBQUVyRCxNQUFxQixTQUFVLFNBQVEscUNBQXFCO0lBT3hELEtBQUs7UUFDRCxJQUFJLENBQUMsU0FBUyxHQUFHLENBQUMsQ0FBQztRQUNuQixJQUFJLENBQUMsUUFBUSxHQUFHLEVBQUUsQ0FBQztRQUNuQixJQUFJLENBQUMsS0FBSyxHQUFHLElBQUksQ0FBQyxRQUFRLENBQUM7SUFDL0IsQ0FBQztJQUNELE1BQU07UUFDRixJQUFJLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEdBQUcscUJBQU8sQ0FBQyxXQUFXLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsUUFBUSxFQUFFLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxDQUFDLFFBQVEsRUFBRSxJQUFJLENBQUMsS0FBSyxHQUFHLGtCQUFJLENBQUMsU0FBUyxDQUFDLENBQUM7UUFDeEssSUFqQjRCLHFCQUFPLENBcUNzanFCLFdBQVksQ0FwQmxtcUIsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsUUFBUSxFQUFJLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxDQUFDLFFBQVEsR0FBQztZQUNsRixJQUFJLENBQUMsU0FBUyxFQUFFLENBQUM7WUFDakIsSUFBRyxJQUFJLENBQUMsU0FBUyxJQUFJLENBQUMsRUFBRTtnQkFDcEIsSUFBSSxDQUFDLFNBQVMsR0FBRyxDQUFDLENBQUM7Z0JBQ25CLElBQUksQ0FBQyxLQUFLLEdBQUcsSUFBSSxDQUFDLFFBQVEsQ0FBQzthQUM5QjtZQUVELElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQztZQUMvRSxJQUFJLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsSUFBSSxxQkFBTyxDQUFDLEVBQUUsRUFBQyxDQUFDLEVBQUUsRUFBQyxDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQUM7WUFDM0QsSUFBRyxJQUFJLENBQUMsU0FBUyxHQUFHLENBQUMsRUFBQztnQkFDbEIsSUFBSSxDQUFDLEtBQUssSUFBRSxJQUFJLENBQUMsUUFBUSxDQUFDO2FBQzdCO2lCQUNJO2dCQUNELElBQUksQ0FBQyxLQUFLLElBQUUsSUFBSSxDQUFDLFFBQVEsQ0FBQzthQUM3QjtTQUNKO0lBQ0wsQ0FBQztDQUlKO0FBbENELDRCQWtDQyJ9","assetPath":"Assets/ZepetoScripts/preset/PlaneMove.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"moveTargetList","type":"UnityEngine.Transform[]","isArray":true,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"targetNum","type":"System.Single","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"speed","type":"System.Single","isArray":false,"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"PlaneMove","description":""},"isCompiled":true}'
+  typescriptHash: 2b785a41205f2d4392b00b3ca8bbac8c

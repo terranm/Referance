@@ -1,0 +1,112 @@
+[World Settings]
+world id             com.chungjuairport.chungjuairport
+version              0.1                 
+max clients          8                   
+orientation          horizontal          
+disable invite       false               
+disable room list    false               
+disable private room false               
+
+[Build Manifest]
+[scenes]
+14 mb                assets/scenes/chungju_airport.unity
+[assets]
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_off.anim
+2 kb                 assets/chungju_airport/water_shader.shader
+35 kb                packages/zepeto.character.controller/runtime/_resources/inputactions/zepetoinputcontrol.inputactions
+600 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landingslight.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/walk.anim
+15 mb                assets/chungju_airport/chungjo_river_total.fbx
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_move.anim
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_horizontal.prefab
+546 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landingroll.anim
+2 mb                 assets/chungju_airport/texture/mt.png
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_vertical.prefab
+1 kb                 packages/com.unity.inputsystem/inputsystem/editor/icons/inputsystemuiinputmodule@64.png
+2 kb                 assets/chungju_airport/material/land.mat
+978 kb               assets/chungju_airport/texture/land_to_bridge_basecolor.png
+442 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jumpmove.anim
+2 kb                 assets/chungju_airport/zip_line.mat
+244 kb               assets/chungju_airport/texture/cbs_sakura_wood.png
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/gesture.anim
+18 kb                packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimator.controller
+300 kb               assets/models/zepetoanimatorv2.controller
+193 kb               assets/chungju_airport/texture/land_to_bridge_nan_basecolor.png
+560 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/idle.anim
+3 mb                 assets/models/anim/zepetobasemodel.prefab
+3 mb                 assets/chungju_airport/texture/chungju_dam_defaultmaterial_basecolor.png
+295 kb               packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimatorv2.controller
+374 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/moverunfast.anim
+828 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/moveturn.anim
+15 mb                assets/models/anim/erika_archer@flying.fbx
+26 kb                assets/models/zepetonpcanimator.controller
+416 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/moverun.anim
+2 kb                 assets/chungju_airport/material/leaf.mat
+562 kb               assets/chungju_airport/texture/land_ju_defaultmaterial_basecolor.png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_idle.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_off.anim
+2 kb                 assets/chungju_airport/material/dam.mat
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_icon.png
+2 kb                 assets/chungju_airport/material/zepeto_color.mat
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_icon.png
+2 kb                 assets/chungju_airport/material/tree.mat
+12 kb                assets/chungju_airport/chungju_setting_water.fbx
+728 kb               assets/chungju_airport/texture/cp_plants_01.png
+562 kb               assets/models/anim/xbot@driving.fbx
+3 mb                 assets/chungju_airport/texture/cp_tent_01 1.png
+1 mb                 assets/chungju_airport/texture/land_to_land.001_basecolor.png
+2 kb                 assets/chungju_airport/wood.mat
+329 kb               assets/chungju_airport/texture/bridge_tex_defaultmaterial_basecolor.png
+464 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jumpdouble.anim
+2 kb                 assets/chungju_airport/asphalt.mat
+2 kb                 assets/chungju_airport/plant.mat
+13 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_base.png
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action1.anim
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_ziggle.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_on.anim
+1 mb                 assets/models/anim/notuse/grandmother_ani_07.fbx
+632 kb               assets/chungju_airport/texture/bunsu_defaultmaterial_basecolor.png
+73 kb                assets/chungju_airport/plant.png
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandleorigin.controller
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action2.anim
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandle.controller
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jumpdash.anim
+461 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/movewalkfast.anim
+3 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/charactershadow.prefab
+360 b                assets/models/hand avatar mask.mask
+12 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_base.png
+24 kb                assets/chungju_airport/chungju_settingcolider 1.fbx
+5 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/6_dance.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_on.anim
+2 kb                 assets/chungju_airport/water_fok.mat
+1 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/4_ok.anim
+162 kb               assets/chungju_airport/texture/land.jpg
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landingdeep.anim
+1 mb                 assets/models/anim/ani_hand_can.fbx
+2 kb                 assets/chungju_airport/bunsu.mat
+2 kb                 assets/chungju_airport/board.mat
+2 kb                 assets/chungju_airport/land.mat
+301 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/falling.anim
+975 kb               assets/chungju_airport/jipline_defaultmaterial_basecolor.png
+618 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jumpidle.anim
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/stamp.anim
+162 kb               assets/chungju_airport/texture/board.png
+3 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/5_sleep.anim
+2 kb                 assets/chungju_airport/bridge.mat
+28 kb                assets/chungju_airport/texture/zepeto_colorchart.png
+940 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/run.anim
+2 kb                 assets/chungju_airport/bridge_nan.mat
+2 kb                 assets/chungju_airport/small_bridge.mat
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/movewalk.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/eventsystem.prefab
+1014 kb              packages/zepeto.character.controller/runtime/_resources/animations/base/v2/idle.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/fall_end.anim
+428 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/hand_idle_01.anim
+31 kb                packages/com.unity.inputsystem/inputsystem/plugins/playerinput/defaultinputactions.inputactions
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_ziggle.anim
+[resources]
+0 b                  assets/resources    
+0 b                  assets/zepetoscripts/resources
+[streamingAssets]
