@@ -134,7 +134,7 @@ export default class extends Sandbox {
         // 서버 시간(태양 위치) 동기화
         this.onMessage(MESSAGE.ServerTime, async (client, time) => {
             this.broadcast(MESSAGE.ServerTime, time);
-            const response = await HttpService.postAsync("http://metasuite.co.kr/00php/test/testPOST4.php", { "user_name": client.userId }, HttpContentType.ApplicationUrlEncoded);
+            const response = await HttpService.postAsync("https://metasuite.co.kr/00php/test/testPOST4.php", { "user_name": client.userId }, HttpContentType.ApplicationUrlEncoded);
             console.log(response.response);
             const json = JSON.parse(response.response);
             console.log(json);
@@ -198,7 +198,7 @@ export default class extends Sandbox {
         console.log(`[onJoin] join player, ${client.sessionId}`);
 
         try {
-            const response = await HttpService.postAsync("http://metasuite.co.kr/00php/test/testPOST3.php", { "user_name": client.userId, "user_age": Math.floor(Math.random()*100) }, HttpContentType.ApplicationUrlEncoded);
+            const response = await HttpService.postAsync("https://metasuite.co.kr/00php/test/testPOST3.php", { "user_name": client.userId, "user_age": Math.floor(Math.random()*100) }, HttpContentType.ApplicationUrlEncoded);
             console.log(response.response);
             const json = JSON.parse(response.response);
             console.log(json);
