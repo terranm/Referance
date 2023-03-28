@@ -74,7 +74,7 @@ export default class ZepetoPlayersManager extends ZepetoScriptBehaviour {
                     this.ContentRequest();
                 }
                 break;
-        }
+        }  
     }
     
     /** singleplayer Spawn **/
@@ -123,6 +123,8 @@ export default class ZepetoPlayersManager extends ZepetoScriptBehaviour {
         playerStateSync.UseZepetoGestureAPI = this.UseZepetoGestureAPI;
         playerStateSync.tfHelper = tfHelper;
 
+        console.log("playerStateSync.player" + playerStateSync.player.age);
+
         const isUseInjectSpeed:boolean = this.InterpolationType == PositionInterpolationType.MoveToward 
             || this.InterpolationType == PositionInterpolationType.Lerp 
             || this.ExtrapolationType == PositionExtrapolationType.FixedSpeed;
@@ -143,11 +145,12 @@ export default class ZepetoPlayersManager extends ZepetoScriptBehaviour {
     }
 
     private OnJoinPlayer(sessionId: string, player: Player) {
+        // this.StartCoroutine(this.waitJoinPlayer(sessionId, player));
         console.log(`[OnJoinPlayer] players - sessionId : ${sessionId}`);
         this.currentPlayers.set(sessionId, player);
-        
-        // const httpResponse = await HttpService.getAsync("http://metaindex.co.kr/zep_count.php");
-        // console.log(httpResponse.response);
+
+        console.log("player.age " + player.sessionId);
+
         if(this.ZepetoPlayerSpawnType == ZepetoPlayerSpawnType.MultiplayerSpawnOnJoinRoom) {
             const spawnInfo = new SpawnInfo();
             spawnInfo.position = this.transform.position;
@@ -156,6 +159,22 @@ export default class ZepetoPlayersManager extends ZepetoScriptBehaviour {
             ZepetoPlayers.instance.CreatePlayerWithUserId(sessionId, player.zepetoUserId, spawnInfo, isLocal);
         }
     }
+
+    // private *waitJoinPlayer(sessionId: string, player: Player){
+    //     yield new WaitForSeconds(5);
+    //     console.log(`[OnJoinPlayer] players - sessionId : ${sessionId}`);
+    //     this.currentPlayers.set(sessionId, player);
+
+    //     console.log("player.age " + player.sessionId);
+
+    //     if(this.ZepetoPlayerSpawnType == ZepetoPlayerSpawnType.MultiplayerSpawnOnJoinRoom) {
+    //         const spawnInfo = new SpawnInfo();
+    //         spawnInfo.position = this.transform.position;
+    //         spawnInfo.rotation = this.transform.rotation;
+    //         const isLocal = this.room.SessionId === player.sessionId;
+    //         ZepetoPlayers.instance.CreatePlayerWithUserId(sessionId, player.zepetoUserId, spawnInfo, isLocal);
+    //     }
+    // }
 
     private OnLeavePlayer(sessionId: string, player: Player) {
         this.currentPlayers.delete(sessionId);

@@ -34,6 +34,12 @@ export default class PlayerSync extends ZepetoScriptBehaviour {
             //If this is not a local character, do not use State Machine.
             this.zepetoPlayer.character.StateMachine.Stop();
         } 
+
+        this.room.AddMessageHandler("SyncPlayerAge", (age:number) => {
+            // let playersync = this.zepetoPlayer.character.transform.gameObject.GetComponent<PlayerSync>();
+            console.log("p : ",this.player.age, " m : ", age);
+            this.player.age = age;
+        });
     }
 
     // !isLocal(other player)
@@ -143,6 +149,11 @@ export default class PlayerSync extends ZepetoScriptBehaviour {
                 data.Add("playerAdditionalValue", playerAdditionalValue.GetObject());
 
                 this.room?.Send("SyncPlayer", data.GetObject());
+
+                // console.log(this.player.age, this.player.age==undefined, this.player.age === undefined, this.player.age ==null, this.player.age === null);
+                if(this.player.age === undefined){
+                    this.room?.Send("SyncPlayerAge");
+                }
             }
             if(state == CharacterState.Idle)             //Send 10 more frames even if stopped
                 pastIdleCount++;

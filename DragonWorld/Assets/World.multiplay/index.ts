@@ -113,6 +113,14 @@ export default class extends Sandbox {
             console.log(`master->, ${this.sessionIdQueue[0]}`);
             this.broadcast(MESSAGE.MasterResponse, this.sessionIdQueue[0]);
         });
+
+        // param sync
+        this.onMessage(MESSAGE.SyncPlayerAge, (client, message) => {
+            const player = this.state.players.get(client.sessionId);
+            console.log(`SyncPlayerAge->, ${player.age}`);
+            this.broadcast(MESSAGE.SyncPlayerAge, player.age);
+        });
+        
         this.onMessage(MESSAGE.PauseUser, (client) => {
             if(this.sessionIdQueue.includes(client.sessionId)) {
                 const pausePlayerIndex = this.sessionIdQueue.indexOf(client.sessionId);
@@ -190,32 +198,31 @@ export default class extends Sandbox {
         if (client.userId) {
             player.zepetoUserId = client.userId;
         }
+        try {
+            const response = await HttpService.postAsync("https://metasuite.co.kr/00php/test/testPOST3.php", { "user_name": client.userId, "user_age": Math.floor(Math.random()*100) }, HttpContentType.ApplicationUrlEncoded);
+            console.log("postAsync - https://metasuite.co.kr/00php/test/testPOST3.php\n" + response.response);
+            const json = JSON.parse(response.response);
+            console.log(json);
+            player.age = json.user_age;
+        } catch (error) {
+            console.error(error);
+        }
+
         const players = this.state.players;
         players.set(client.sessionId, player);
         if(!this.sessionIdQueue.includes(client.sessionId)) {
             this.sessionIdQueue.push(client.sessionId.toString());
         }
-        console.log(`[onJoin] join player, ${client.sessionId}`);
+        console.log(`[onJoin] join player, ${client.sessionId}, ${players.get(client.sessionId).age}`);
+        
 
-        try {
-            const response = await HttpService.postAsync("https://metasuite.co.kr/00php/test/testPOST3.php", { "user_name": client.userId, "user_age": Math.floor(Math.random()*100) }, HttpContentType.ApplicationUrlEncoded);
-            console.log(response.response);
-            const json = JSON.parse(response.response);
-            console.log(json);
-        } catch (error) {
-            console.error(error);
-        }
-
-        // let httpresponse2 = await HttpService.getAsync("http://52.78.99.31/00json/test.json"); //http://52.78.99.31/00php/testGET.php
-
-        // console.log("[HTTPSERVICE] httpresponse2 : " + httpresponse2.response);
         // *데이터 저장 및 수정
-        // URL : http://metasuite.co.kr/00php/test/testPOST3.php
+        // URL : https://metasuite.co.kr/00php/test/testPOST3.php
         // Key1 = user_name
         // Key2 = user_age
 
         // *데이터 불러오기
-        // URL : http://metasuite.co.kr/00php/test/testPOST4.php
+        // URL : https://metasuite.co.kr/00php/test/testPOST4.php
         // Key1 = user_name
     }
 
@@ -258,6 +265,7 @@ interface GameReport{
 
 enum MESSAGE {
     SyncPlayer = "SyncPlayer",
+    SyncPlayerAge = "SyncPlayerAge",
     SyncTransform = "SyncTransform",
     SyncTransformStatus = "SyncTransformStatus",
     ChangeOwner = "ChangeOwner",

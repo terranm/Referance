@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: 11e54d3c04fffba449d1ffa3debf1c78
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst PlayerSync_1 = require(\"./MultiplaySync/Player/PlayerSync\");\r\nclass
+    AgeText extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n       
+    this.textMesh = this.gameObject.GetComponent($typeof(UnityEngine_1.TextMesh));\r\n       
+    this.StartCoroutine(this.TextMeshUpdate());\r\n    }\r\n    *TextMeshUpdate()
+    {\r\n        while (true) {\r\n            yield new UnityEngine_1.WaitForSeconds(5);\r\n           
+    const playerSync = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetComponent($typeof(PlayerSync_1.default));\r\n           
+    console.log(\"TextMesh player age : \" + playerSync.player.age);\r\n           
+    this.textMesh.text = \"age : \" + playerSync.player.age.toString();\r\n           
+    console.log(\"TextMesh : \" + this.textMesh.text);\r\n        }\r\n        this.StopCoroutine(this.TextMeshUpdate());\r\n   
+    }\r\n}\r\nexports.default = AgeText;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQWdlVGV4dC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkFnZVRleHQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBdUQ7QUFDdkQsNkVBQTREO0FBQzVELGlEQUFxRDtBQUNyRCxrRUFBMEQ7QUFFMUQsTUFBcUIsT0FBUSxTQUFRLHFDQUFxQjtJQUt0RCxLQUFLO1FBQ0QsSUFBSSxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUMsVUFBVSxDQUFDLFlBQVksU0FBQyxzQkFBUSxFQUFHLENBQUM7UUFDekQsSUFBSSxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsY0FBYyxFQUFFLENBQUMsQ0FBQztJQUMvQyxDQUFDO0lBQ08sQ0FBQyxjQUFjO1FBQ25CLE9BQU0sSUFBSSxFQUFDO1lBQ1AsTUFBTSxJQUFJLDRCQUFjLENBQUMsQ0FBQyxDQUFDLENBQUM7WUFDNUIsTUFBTSxVQUFVLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLFlBQVksU0FBQyxvQkFBVSxFQUFHLENBQUM7WUFDbEgsT0FBTyxDQUFDLEdBQUcsQ0FBQyx3QkFBd0IsR0FBRyxVQUFVLENBQUMsTUFBTSxDQUFDLEdBQUcsQ0FBQyxDQUFDO1lBQzlELElBQUksQ0FBQyxRQUFRLENBQUMsSUFBSSxHQUFHLFFBQVEsR0FBRyxVQUFVLENBQUMsTUFBTSxDQUFDLEdBQUcsQ0FBQyxRQUFRLEVBQUUsQ0FBQztZQUNqRSxPQUFPLENBQUMsR0FBRyxDQUFDLGFBQWEsR0FBRSxJQUFJLENBQUMsUUFBUSxDQUFDLElBQUksQ0FBQyxDQUFDO1NBQ2xEO1FBQ0QsSUFBSSxDQUFDLGFBQWEsQ0FBQyxJQUFJLENBQUMsY0FBYyxFQUFFLENBQUMsQ0FBQztJQUM5QyxDQUFDO0NBQ0o7QUFuQkQsMEJBbUJDIn0=","assetPath":"Assets/ZepetoScripts/AgeText.ts","manifest":{"properties":[],"name":"AgeText","description":""},"isCompiled":true}'
+  typescriptHash: 3e174d64dfa4e90b0b4a98d19af91a14
+  onlyWriteTrigger: 0

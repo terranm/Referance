@@ -1,0 +1,260 @@
+[World Settings]
+world id             com.yongsu.yongsuworld
+version              0.1                 
+max clients          8                   
+orientation          horizontal          
+disable invite       false               
+disable room list    false               
+disable private room false               
+
+[Build Manifest]
+[scenes]
+15 mb                assets/scenes/multiplaysync/demo.unity
+110 kb               assets/scenes/multiplaysync/playersync.unity
+9 mb                 assets/scenes/multiplaysync/demomovingblock.unity
+[assets]
+13 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_base.png
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_off.anim
+1 kb                 assets/update 2022 12/renewal 2023 01 20/texture/star_02.png
+2 kb                 assets/_resources/materials/pink.mat
+2 kb                 assets/_resources/materials/yellow.mat
+35 kb                packages/zepeto.character.controller/runtime/_resources/inputactions/zepetoinputcontrol.inputactions
+37 kb                assets/_resources/_gloomy_animal/meshs/chicken.fbx
+600 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_slight.anim
+51 kb                assets/_resources/cushion/fbx/sk_cushion_002.fbx
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action1.anim
+549 b                assets/res/screenshot/ui/images/trnsbg.png
+2 kb                 assets/_resources/002_sakura/materials/water.mat
+11 kb                assets/res/screenshot/ui/images/ic_cameramode.png
+2 kb                 assets/_resources/materials/lightgreen.mat
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_ziggle.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/walk.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_on.anim
+839 b                assets/res/screenshot/zepetoscreenshotrendertexture.rendertexture
+32 kb                assets/res/screenshot/ui/images/image_gesture_dance.png
+27 kb                assets/res/screenshot/ui/images/image_gesture_sleep.png
+30 kb                assets/res/screenshot/ui/images/image_gesture_ok.png
+2 kb                 assets/update 2022 12/power_02.mat
+83 kb                assets/zepetogestureapi/zepetogesturetool_horizontal.prefab
+2 kb                 assets/update 2022 12/renewal 2023 01 20/texture/power_01.png
+169 kb               assets/_resources/002_sakura/materials/texture/sk_sakuraleaves_001.png
+5 kb                 assets/res/screenshot/ui/toastanim.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_move.anim
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_horizontal.prefab
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandleorigin.controller
+574 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_roll.anim
+2 kb                 assets/update 2022 12/power_01.mat
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action2.anim
+2 kb                 assets/_resources/_gloomy_animal/meshs/materials/chicken.mat
+2 kb                 assets/update 2022 12/magic_02.mat
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_vertical.prefab
+3 kb                 assets/res/screenshot/selfiestick/bundles/selfiestick_long.prefab
+347 kb               assets/_resources/002_sakura/materials/cbs_water.png
+1 kb                 packages/com.unity.inputsystem/inputsystem/editor/icons/inputsystemuiinputmodule@64.png
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandle.controller
+12 kb                assets/res/screenshot/ui/toasterrormessage.prefab
+4 kb                 assets/update 2022 12/renewal 2023 01 20/texture/pngwing.com (1).png
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_dash.anim
+2 kb                 assets/_resources/materials/skyblue.mat
+489 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_walk_fast.anim
+2 kb                 assets/_resources/materials/blue.mat
+3 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/charactershadow.prefab
+20 kb                assets/_resources/soccerball/meshes/soccer ball mesh.fbx
+8 kb                 assets/res/screenshot/ui/images/image_gesture_view_panel_rectangle.png
+12 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_base.png
+1 kb                 assets/zepetogestureapi/image/ic_32_close.png
+442 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_move.anim
+219 kb               assets/_resources/_gloomy_animal/textures/chicken.png
+2 kb                 assets/_resources/materials/green.mat
+10 kb                assets/res/screenshot/ui/images/ic_camera_bg.png
+4 kb                 assets/res/screenshot/selfiecamera.prefab
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/gesture.anim
+5 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/6_dance.anim
+2 kb                 assets/_resources/soccerball/materials/white-ball-material.mat
+18 kb                packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimator.controller
+2 kb                 assets/_resources/002_sakura/materials/sk_sakuratree_001.mat
+39 kb                assets/_resources/coin/mesh/default.mesh
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_on.anim
+3 kb                 assets/res/screenshot/ui/images/ic_camera.png
+8 kb                 assets/res/screenshot/ui/images/ic_transparent.png
+8 kb                 assets/zepetogestureapi/prefthumb.prefab
+1 kb                 assets/res/screenshot/ui/images/image_ellipse_red.png
+560 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/idle.anim
+12 kb                assets/res/screenshot/ui/toastsuccessmessage.prefab
+1 kb                 assets/_resources/_gloomy_animal/animations/chicken.controller
+2 kb                 assets/_resources/soccerball/materials/black-ball-material.mat
+435 b                assets/res/screenshot/ui/images/ic_arlet.png
+4 kb                 packages/zepeto.character.controller/runtime/_resources/images/ellipse 27.png
+5 kb                 assets/_resources/coin/animation/coinidle.anim
+1 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.png
+2 kb                 assets/update 2022 12/renewal 2023 01 20/texture/magic_01.png
+995 b                assets/res/screenshot/ui/images/ic_share.png
+295 kb               packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimatorv2.controller
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/4_ok.anim
+374 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_run_fast.anim
+828 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_turn.anim
+144 b                assets/res/screenshot/ui/images/image_gesture_view_title_line.png
+59 kb                assets/_resources/_gloomy_animal/animations/chicken@move.fbx
+1 kb                 assets/res/screenshot/ui/images/image_ellipse_green.png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_deep.anim
+8 kb                 assets/res/screenshot/ui/images/ic_selfiemode.png
+56 kb                assets/_resources/002_sakura/materials/texture/sk_sakuraleaves_001_alpha.png
+575 b                assets/res/screenshot/ui/images/ic_check.png
+5 kb                 assets/zepetogestureapi/image/shape_interface_tab.png
+445 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_run.anim
+2 kb                 assets/res/screenshot/ui/images/ic_gesture.png
+227 kb               assets/res/screenshot/selfiestick/fbx/selfiestick_long.fbx
+1 kb                 assets/_resources/[scriptsshader]/shaders/standardnocoloralphatexture_cutoff.shader
+100 kb               assets/_resources/balloon/fbx/valentinesday/balloon.fbx
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_idle.anim
+2 kb                 assets/_resources/materials/colortexture_001.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_off.anim
+1 kb                 assets/res/screenshot/ui/images/ic_save.png
+330 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/falling.anim
+2 kb                 assets/_resources/materials/red.mat
+835 b                assets/res/screenshot/zepetorecordrendertexture.rendertexture
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_icon.png
+618 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_idle.anim
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/stamp.anim
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_icon.png
+3 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/5_sleep.anim
+4 kb                 assets/res/screenshot/ui/images/ic_close.png
+14 kb                assets/zepetogestureapi/image/shape_interface_background.png
+1 kb                 packages/zepeto.character.controller/runtime/_resources/camera/zepetocamera.prefab
+940 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/run.anim
+330 b                assets/res/screenshot/ui/images/ic_upload.png
+28 kb                assets/_resources/materials/colortexture_001.png
+2 kb                 assets/_resources/coin/materials/coin.mat
+2 kb                 assets/update 2022 12/magic_01.mat
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_walk.anim
+229 kb               assets/res/screenshot/zepetoscreenshotmodule.prefab
+544 kb               assets/_resources/materials/new terrain 4.asset
+1 kb                 assets/_resources/coin/animation/coin.controller
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/eventsystem.prefab
+2 kb                 assets/update 2022 12/line_03.mat
+1014 kb              packages/zepeto.character.controller/runtime/_resources/animations/base/v2/idle.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/fall_end.anim
+1 kb                 assets/zepetogestureapi/image/ic_40_gesture_unselected.png
+464 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_double.anim
+428 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/hand_idle_01.anim
+31 kb                packages/com.unity.inputsystem/inputsystem/plugins/playerinput/defaultinputactions.inputactions
+520 kb               assets/_resources/soccerball/textures/soccer ball normal map.png
+24 kb                assets/res/screenshot/ui/images/ic_shutter.png
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_ziggle.anim
+13 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_base.png
+560 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/idle.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_off.anim
+2 kb                 assets/_resources/materials/yellow.mat
+2 kb                 assets/_resources/materials/pink.mat
+35 kb                packages/zepeto.character.controller/runtime/_resources/inputactions/zepetoinputcontrol.inputactions
+600 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_slight.anim
+4 kb                 packages/zepeto.character.controller/runtime/_resources/images/ellipse 27.png
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action1.anim
+1 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.png
+295 kb               packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimatorv2.controller
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/4_ok.anim
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_ziggle.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/walk.anim
+374 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_run_fast.anim
+828 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_turn.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_on.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_deep.anim
+5 kb                 assets/zepetogestureapi/image/shape_interface_tab.png
+445 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_run.anim
+83 kb                assets/zepetogestureapi/zepetogesturetool_horizontal.prefab
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_idle.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_move.anim
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_horizontal.prefab
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_off.anim
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandleorigin.controller
+574 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_roll.anim
+330 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/falling.anim
+2 kb                 assets/_resources/materials/red.mat
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action2.anim
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_vertical.prefab
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_icon.png
+618 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_idle.anim
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/stamp.anim
+1 kb                 packages/com.unity.inputsystem/inputsystem/editor/icons/inputsystemuiinputmodule@64.png
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_icon.png
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandle.controller
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_dash.anim
+14 kb                assets/zepetogestureapi/image/shape_interface_background.png
+1 kb                 packages/zepeto.character.controller/runtime/_resources/camera/zepetocamera.prefab
+2 kb                 assets/_resources/materials/blue.mat
+940 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/run.anim
+489 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_walk_fast.anim
+3 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/charactershadow.prefab
+12 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_base.png
+1 kb                 assets/zepetogestureapi/image/ic_32_close.png
+442 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_move.anim
+2 kb                 assets/_resources/materials/green.mat
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/gesture.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_walk.anim
+544 kb               assets/_resources/materials/new terrain 4.asset
+18 kb                packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimator.controller
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/eventsystem.prefab
+1014 kb              packages/zepeto.character.controller/runtime/_resources/animations/base/v2/idle.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/fall_end.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_on.anim
+1 kb                 assets/zepetogestureapi/image/ic_40_gesture_unselected.png
+464 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_double.anim
+428 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/hand_idle_01.anim
+31 kb                packages/com.unity.inputsystem/inputsystem/plugins/playerinput/defaultinputactions.inputactions
+8 kb                 assets/zepetogestureapi/prefthumb.prefab
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_ziggle.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_off.anim
+13 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_base.png
+560 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/idle.anim
+35 kb                packages/zepeto.character.controller/runtime/_resources/inputactions/zepetoinputcontrol.inputactions
+600 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_slight.anim
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action1.anim
+1 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.png
+295 kb               packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimatorv2.controller
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/4_ok.anim
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_ziggle.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/walk.anim
+374 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_run_fast.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_on.anim
+828 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_turn.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_deep.anim
+445 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_run.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_idle.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_move.anim
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_horizontal.prefab
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_off.anim
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandleorigin.controller
+574 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_roll.anim
+330 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/falling.anim
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action2.anim
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_vertical.prefab
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_icon.png
+618 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_idle.anim
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/stamp.anim
+1 kb                 packages/com.unity.inputsystem/inputsystem/editor/icons/inputsystemuiinputmodule@64.png
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_icon.png
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandle.controller
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_dash.anim
+1 kb                 packages/zepeto.character.controller/runtime/_resources/camera/zepetocamera.prefab
+940 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/run.anim
+489 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_walk_fast.anim
+3 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/charactershadow.prefab
+12 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_base.png
+442 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_move.anim
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/gesture.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_walk.anim
+18 kb                packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimator.controller
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/eventsystem.prefab
+1014 kb              packages/zepeto.character.controller/runtime/_resources/animations/base/v2/idle.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/fall_end.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_on.anim
+464 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_double.anim
+428 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/hand_idle_01.anim
+31 kb                packages/com.unity.inputsystem/inputsystem/plugins/playerinput/defaultinputactions.inputactions
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_ziggle.anim
+[resources]
+0 b                  assets/resources    
+[streamingAssets]

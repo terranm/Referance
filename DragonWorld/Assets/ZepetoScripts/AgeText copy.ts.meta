@@ -1,0 +1,40 @@
+fileFormatVersion: 2
+guid: 8308f09a956427144b1f78d6e631be8e
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nclass
+    AgeText extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n       
+    this.textMesh = this.gameObject.GetComponent($typeof(UnityEngine_1.TextMesh));\r\n       
+    this.StartCoroutine(this.TextMeshUpdate());\r\n    }\r\n    *TextMeshUpdate()
+    {\r\n        let zepetoId = \"\";\r\n        while (true) {\r\n            this.textMesh.text
+    = \"Name : \" + zepetoId;\r\n            yield new UnityEngine_1.WaitForSeconds(5);\r\n           
+    let tempUserIds = new Array();\r\n            tempUserIds.push(ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.userId);\r\n           
+    ZEPETO_World_1.ZepetoWorldHelper.GetUserIdInfo(tempUserIds, (info) => {\r\n               
+    zepetoId = info[0].name;\r\n                console.log(zepetoId + \" : \" +
+    info[0].name + \" // \" + info[0].zepetoId + \" // \" + info[0].userOid);\r\n           
+    }, (err) => {\r\n                console.error(err);\r\n            });\r\n           
+    // this.textMesh.text = \"Name : \" + zepetoId.toString();\r\n            console.log(this.textMesh.text);\r\n       
+    }\r\n        this.StopCoroutine(this.TextMeshUpdate());\r\n    }\r\n}\r\nexports.default
+    = AgeText;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQWdlVGV4dCBjb3B5LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQWdlVGV4dCBjb3B5LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXVEO0FBQ3ZELDZFQUE0RDtBQUM1RCxpREFBcUQ7QUFDckQsK0NBQXdEO0FBR3hELE1BQXFCLE9BQVEsU0FBUSxxQ0FBcUI7SUFLdEQsS0FBSztRQUNELElBQUksQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsc0JBQVEsRUFBRyxDQUFDO1FBQ3pELElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLGNBQWMsRUFBRSxDQUFDLENBQUM7SUFDL0MsQ0FBQztJQUNPLENBQUMsY0FBYztRQUNuQixJQUFJLFFBQVEsR0FBRyxFQUFFLENBQUM7UUFDbEIsT0FBTSxJQUFJLEVBQUM7WUFDUCxJQUFJLENBQUMsUUFBUSxDQUFDLElBQUksR0FBRyxTQUFTLEdBQUcsUUFBUSxDQUFDO1lBQzFDLE1BQU0sSUFBSSw0QkFBYyxDQUFDLENBQUMsQ0FBQyxDQUFDO1lBQzVCLElBQUksV0FBVyxHQUFHLElBQUksS0FBSyxFQUFFLENBQUM7WUFDOUIsV0FBVyxDQUFDLElBQUksQ0FBQywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLE1BQU0sQ0FBQyxDQUFDO1lBQ3pFLGdDQUFpQixDQUFDLGFBQWEsQ0FBQyxXQUFXLEVBQUMsQ0FBQyxJQUFZLEVBQUMsRUFBRTtnQkFDeEQsUUFBUSxHQUFHLElBQUksQ0FBQyxDQUFDLENBQUMsQ0FBQyxJQUFJLENBQUM7Z0JBQ3hCLE9BQU8sQ0FBQyxHQUFHLENBQUMsUUFBUSxHQUFHLEtBQUssR0FBRyxJQUFJLENBQUMsQ0FBQyxDQUFDLENBQUMsSUFBSSxHQUFHLE1BQU0sR0FBRyxJQUFJLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxHQUFHLE1BQU0sR0FBRyxJQUFJLENBQUMsQ0FBQyxDQUFDLENBQUMsT0FBTyxDQUFDLENBQUM7WUFDeEcsQ0FBQyxFQUFDLENBQUMsR0FBRyxFQUFDLEVBQUU7Z0JBQ0wsT0FBTyxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsQ0FBQztZQUN2QixDQUFDLENBQUMsQ0FBQztZQUNILHdEQUF3RDtZQUN4RCxPQUFPLENBQUMsR0FBRyxDQUFDLElBQUksQ0FBQyxRQUFRLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDbkM7UUFDRCxJQUFJLENBQUMsYUFBYSxDQUFDLElBQUksQ0FBQyxjQUFjLEVBQUUsQ0FBQyxDQUFDO0lBQzlDLENBQUM7Q0FDSjtBQTNCRCwwQkEyQkMifQ==","assetPath":"Assets/ZepetoScripts/AgeText
+    copy.ts","manifest":{"properties":[],"name":"AgeText","description":""},"isCompiled":true}'
+  typescriptHash: 06bb98d5a782b9c0dd52a0534175ba4a
+  onlyWriteTrigger: 0
