@@ -1,0 +1,59 @@
+fileFormatVersion: 2
+guid: 696cb705dc8241245b24cb3cc9785b82
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    UnityEngine_UI_1 = require(\"UnityEngine.UI\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nclass LevelBox extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        this.multiplay = UnityEngine_1.GameObject.Find(\"WorldMultiplay\").GetComponent($typeof(ZEPETO_World_1.ZepetoWorldMultiplay));\r\n       
+    this.multiplay.add_RoomCreated((room) => {\r\n            this.room = room;\r\n       
+    });\r\n        this.mat = this.gameObject.GetComponent($typeof(UnityEngine_1.MeshRenderer)).material;\r\n       
+    let canvas = UnityEngine_1.GameObject.Find(\"Canvas_UI\");\r\n        console.log(\"canvas
+    \" + canvas.name);\r\n        this.levelTxt = canvas.transform.GetChild(0).gameObject;\r\n       
+    this.levelText = this.levelTxt.GetComponent($typeof(UnityEngine_UI_1.Text));\r\n       
+    this.ExpTxt = canvas.transform.GetChild(1).gameObject;\r\n        this.expText
+    = this.ExpTxt.GetComponent($typeof(UnityEngine_UI_1.Text));\r\n        this.exp
+    = 0;\r\n        this.level = 1;\r\n    }\r\n    /* Start Loading Player */\r\n   
+    *StartLoading() {\r\n        const wait = new UnityEngine_1.WaitForSeconds(0.5);\r\n       
+    while (true) {\r\n            yield wait;\r\n            if (this.room != null
+    && this.room.IsConnected && ZEPETO_Character_Controller_1.ZepetoPlayers.instance.HasPlayer(this.room.SessionId))
+    {\r\n                this.player = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.GetPlayer(this.room.SessionId);\r\n               
+    this.StopCoroutine(this.StartLoading());\r\n                this.expText.text
+    = \"Exp : \" + this.exp.toString() + \" / \" + (this.level * 10).toString();\r\n               
+    this.levelText.text = \"Level : \" + this.level.toString();\r\n               
+    break;\r\n            }\r\n        }\r\n    }\r\n    OnTriggerEnter() {\r\n       
+    this.mat.SetColor(\"_Color\", this.ColorChange(this.mat.color));\r\n        console.log(this.mat.color);\r\n       
+    this.ExpCheck();\r\n    }\r\n    ColorChange(prevColor) {\r\n        return new
+    UnityEngine_1.Color(this.ColorNumCheck(prevColor.r + 50 + (Math.random() * 100)),
+    this.ColorNumCheck(prevColor.g + 50 + (Math.random() * 100)), this.ColorNumCheck(prevColor.b
+    + 50 + (Math.random() * 100)));\r\n    }\r\n    ColorNumCheck(num) {\r\n       
+    if (num > 255) {\r\n            num -= 255;\r\n        }\r\n        return num
+    / 255;\r\n    }\r\n    ExpCheck() {\r\n        this.exp++;\r\n        this.totalexp++;\r\n       
+    this.expText.text = \"Exp : \" + this.exp.toString() + \" / \" + (this.level
+    * 10).toString();\r\n        this.LevelCheck();\r\n        this.room.Send(\"Exp\",
+    this.totalexp);\r\n    }\r\n    LevelCheck() {\r\n        while (this.exp >=
+    this.level * 10) {\r\n            this.exp -= this.level * 10;\r\n           
+    this.expText.text = \"Exp : \" + this.exp.toString() + \" / \" + (this.level
+    * 10).toString();\r\n            this.level++;\r\n        }\r\n        this.levelText.text
+    = \"Level : \" + this.level.toString();\r\n    }\r\n}\r\nexports.default = LevelBox;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTGV2ZWxCb3guanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJMZXZlbEJveC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUE4RjtBQUM5RixtREFBc0M7QUFDdEMsaURBQXFEO0FBQ3JELCtDQUFvRDtBQUVwRCw2RUFBMEU7QUFFMUUsTUFBcUIsUUFBUyxTQUFRLHFDQUFxQjtJQWdCdkQsS0FBSztRQUNELElBQUksQ0FBQyxTQUFTLEdBQUcsd0JBQVUsQ0FBQyxJQUFJLENBQUMsZ0JBQWdCLENBQUMsQ0FBQyxZQUFZLFNBQUMsbUNBQW9CLEVBQUcsQ0FBQztRQUN4RixJQUFJLENBQUMsU0FBUyxpQkFBZ0IsQ0FBQyxJQUFVLEVBQUUsRUFBRTtZQUN6QyxJQUFJLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQztRQUNyQixDQUFDLEVBQUM7UUFHRixJQUFJLENBQUMsR0FBRyxHQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLDBCQUFZLEdBQUksUUFBUSxDQUFBO1FBQ2hFLElBQUksTUFBTSxHQUFHLHdCQUFVLENBQUMsSUFBSSxDQUFDLFdBQVcsQ0FBQyxDQUFDO1FBQzFDLE9BQU8sQ0FBQyxHQUFHLENBQUMsU0FBUyxHQUFHLE1BQU0sQ0FBQyxJQUFJLENBQUMsQ0FBQztRQUNyQyxJQUFJLENBQUMsUUFBUSxHQUFHLE1BQU0sQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQztRQUN4RCxJQUFJLENBQUMsU0FBUyxHQUFHLElBQUksQ0FBQyxRQUFRLENBQUMsWUFBWSxTQUFDLHFCQUFJLEVBQUcsQ0FBQztRQUNwRCxJQUFJLENBQUMsTUFBTSxHQUFHLE1BQU0sQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQztRQUN0RCxJQUFJLENBQUMsT0FBTyxHQUFHLElBQUksQ0FBQyxNQUFNLENBQUMsWUFBWSxTQUFDLHFCQUFJLEVBQUcsQ0FBQztRQUNo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","assetPath":"Assets/ZepetoScripts/LevelBox.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"levelTxt","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"ExpTxt","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"level","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"exp","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"totalexp","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"LevelBox","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 46b7eb88944c99d947e97509ec6c2955
+  onlyWriteTrigger: 0
