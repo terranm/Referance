@@ -112,7 +112,8 @@ export default class TransformSyncHelper extends ZepetoScriptBehaviour {
                 this.syncTransform.add_OnChange(() => {
                     this.OnChangeTransform();
                 });
-                this.room.OnStateChange -= this.OnStateChange;
+                // this.room.OnStateChange -= this.OnStateChange;
+                this.room.remove_OnStateChange(this.OnStateChange);
             }
             else{
                 // Initial definition if not defined on the server                
